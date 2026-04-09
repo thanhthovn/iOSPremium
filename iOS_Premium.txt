@@ -78,8 +78,11 @@ VSCO1=type=http-response,pattern=^https?:\/\/api\.revenuecat\.com\/v\d\/subscrib
 #PhotoshopExpress
 PhotoshopExpress=type=http-response,pattern=^https:\/\/lcs-mobile-cops\.adobe\.io\/mobile_profile,requires-body=1,script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/photoshop.js
 
+#指南针GPS
+compass=type=http-response,pattern=^http[s]?:\/\/compass.xinzhi.space\/api\/v1\/isVip,requires-body=1,script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/compass.js
+
 [Map Local]
 ^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad data-type=text data="" status-code=200
 
 [MITM]
-hostname = %APPEND%, *.googlevideo.com, youtubei.googleapis.com, www.youtube.com, s.youtube.com, -redirector*.googlevideo.com, premium*.truecaller.com, sub.store, api.revenuecat.com, api-mobile.soundcloud.com, api.picsart.com, us-central1-alight-creative.cloudfunctions.net, api-sub.meitu.com, api-account.kinemasters.com, ap*.intsig.net, api.mr.pixocial.com, newbeee-api.beautyplus.com, spclient.wg.spotify.com, *spclient.spotify.com, lcs-mobile-cops.adobe.io
+hostname = %APPEND%, *.googlevideo.com, youtubei.googleapis.com, www.youtube.com, s.youtube.com, -redirector*.googlevideo.com, premium*.truecaller.com, sub.store, api.revenuecat.com, api-mobile.soundcloud.com, api.picsart.com, us-central1-alight-creative.cloudfunctions.net, api-sub.meitu.com, api-account.kinemasters.com, ap*.intsig.net, api.mr.pixocial.com, newbeee-api.beautyplus.com, spclient.wg.spotify.com, *spclient.spotify.com, lcs-mobile-cops.adobe.io, compass.xinzhi.space
