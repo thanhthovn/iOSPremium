@@ -1,5 +1,6 @@
 #!name = All In One Pro Max Ultimate
 #!desc = YouTube + Locket + SoundCloud + Spotify + Nhiều App khác
+#!icon=https://raw.githubusercontent.com/deezertidal/private/main/icons/vsco.png
 #!author = G
 
 #Shadowrocket Unlock nhiều app vip
