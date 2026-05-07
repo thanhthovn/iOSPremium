@@ -1,7 +1,7 @@
 #EXTM3U url-tvg="https://vnepg.site/epg.xml"
 #EXTM3U url-tvg="https://hnlive.dramahay.xyz/epg.xml"
 
-#EXTINF:-1 tvg-id="lamdong1" group-title="Địa phương" tvg-logo="https://daknong.1cdn.vn/assets/static/images/logo-lamdong.png", LTV1 HD - Báo và PTTH Lâm Đồng
+#EXTINF:-1 tvg-id="lamdong" group-title="Địa phương" tvg-logo="https://daknong.1cdn.vn/assets/static/images/logo-lamdong.png", LTV1 HD - Báo và PTTH Lâm Đồng
 https://freem3u.xyz/api/live/play.m3u8?vid=69
 
 #EXTINF:-1 tvg-id="lamdong2" group-title="BTH" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Logo_BTV_-_B%C3%ACnh_Thu%E1%BA%ADn.png/250px-Logo_BTV_-_B%C3%ACnh_Thu%E1%BA%ADn.png", LTV2 HD - Bình Thuận HD
