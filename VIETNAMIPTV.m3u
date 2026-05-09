@@ -298,16 +298,16 @@ https://freem3u.xyz/api/live/play.m3u8?vid=81
 https://ace.hoiquan.click/module/IPTV/?id=QNgTV2&accKenh=vuminhthanh1
 
 
-#EXTINF:-1 tvg-id="quangtri" group-title="Báo và PTTH" tvg-logo="https://raw.githubusercontent.com/vuminhthanh12/vuminhthanh12/refs/heads/main/QTTV.jpg", QTTV | Báo và PTTH Quảng Trị
+#EXTINF:-1 tvg-id="quangtri" group-title="Báo và PTTH" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/quangtri.png", QTTV | Báo và PTTH Quảng Trị
 https://freem3u.xyz/api/live/play.m3u8?vid=83
 
-#EXTINF:-1 tvg-id="ninhbinh" group-title="Báo và PTTH" tvg-logo="https://img-zlr1.tv360.vn/image1/2024/10/07/16/1728293640310/9aea44bf0f8d_640_360.png", NBTV | Báo và PTTH Ninh Bình
+#EXTINF:-1 tvg-id="ninhbinh" group-title="Báo và PTTH" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/ninhbinh.png", NBTV | Báo và PTTH Ninh Bình
 https://live.mediatech.vn/live/28597f8fd7ea5064d0f84ab00b3699dfd86/chunklist.m3u8
 
-#EXTINF:-1 tvg-id="hungyen" group-title="Báo và PTTH" tvg-logo="https://hungyentv.vn/templates/frontend/hytv/Assets/img/truyenhinh.jpg", HYTV HD | Báo và PTTH Hưng Yên
+#EXTINF:-1 tvg-id="hungyen" group-title="Báo và PTTH" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/hungyen.png", HYTV HD | Báo và PTTH Hưng Yên
 https://toiyeuvietnam.dpdns.org/TuyetDoiKhongKinhDoanh/hung-yen/KenhCoBan.m3u8
 
-#EXTINF:-1 tvg-id="bacninh" group-title="Báo và PTTH" tvg-logo="https://raw.githubusercontent.com/vuminhthanh12/vuminhthanh12/refs/heads/main/BTVBACNINH.jpg", BTV | Báo và PTTH Bắc Ninh 
+#EXTINF:-1 tvg-id="bacninh" group-title="Báo và PTTH" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/bacninh.png", BTV | Báo và PTTH Bắc Ninh 
 https://toiyeuvietnam.dpdns.org/TuyetDoiKhongKinhDoanh/bac-ninh/KenhCoBan.m3u8
 
 #EXTINF:-1 tvg-id="phutho" group-title="Báo và PTTH" tvg-logo="https://img-zlr1.tv360.vn/image1/2023/05/16/02/168417957456/7016ca1be5fa_640_360.png", PTV HD | Báo và PTTH Phú Thọ
