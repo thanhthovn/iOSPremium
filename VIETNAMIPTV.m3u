@@ -4,7 +4,7 @@
 #EXTINF:-1 tvg-id="vtv9" group-title="ABC" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Kenh Test
 http://42.117.13.32:4022/udp/225.1.1.128:30120
 
-#EXTINF:-1 tvg-id="antvhd" group-title="GOV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/antv2.png", ANTV HD
+#EXTINF:-1 tvg-id="antvhd" group-title="GOV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/antv.png", ANTV HD
 #EXTVLCOPT:http-user-agent=VThanhTivi
 https://live.fptplay53.net/fnxhd2/anninhtv_vhls.smil/chunklist_b5000000.m3u8
 #EXTINF:-1 tvg-id="qpvnhd" group-title="GOV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/qpvn.png", QPVN HD
