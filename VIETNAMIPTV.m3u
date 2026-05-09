@@ -1,7 +1,7 @@
 #EXTM3U url-tvg="https://vnepg.site/epg.xml"
 #EXTM3U url-tvg="https://hnlive.dramahay.xyz/epg.xml"
 
-#EXTINF:-1 tvg-id="vtv9" group-title="ABC" tvg-logo="https://img-zlr1.tv360.vn/image1/2020_09_23/1600822568115/7f3b077aabfc_480_270.png", Kenh Test
+#EXTINF:-1 tvg-id="vtv9" group-title="ABC" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Kenh Test
 http://42.117.13.32:4022/udp/225.1.1.128:30120
 
 #EXTINF:-1 tvg-id="antvhd" group-title="GOV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/antv.png", ANTV HD
@@ -291,10 +291,10 @@ https://toiyeuvietnam.dpdns.org/TuyetDoiKhongKinhDoanh/khanh-hoa/KenhCoBan.m3u8
 #EXTINF:-1 tvg-id="gialai" group-title="Báo và PTTH" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/gialai.png", GTV | Báo và PTTH Gia Lai
 https://toiyeuvietnam.dpdns.org/TuyetDoiKhongKinhDoanh/gia-lai/KenhCoBan.m3u8
 
-#EXTINF:-1 tvg-id="quangngai" group-title="Báo và PTTH" tvg-logo="https://raw.githubusercontent.com/vuminhthanh12/vuminhthanh12/refs/heads/main/QNgTV1_QuangNgai.png", QNgTV1 | Báo và PTTH Quảng Ngãi
+#EXTINF:-1 tvg-id="quangngai" group-title="Báo và PTTH" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/quangngai1.png", QNgTV1 | Báo và PTTH Quảng Ngãi
 #EXTVLCOPT:http-user-agent=Dalvik/2.1.0
 https://freem3u.xyz/api/live/play.m3u8?vid=81
-#EXTINF:-1 tvg-id="quangngai2" group-title="Báo và PTTH" tvg-logo="https://raw.githubusercontent.com/vuminhthanh12/vuminhthanh12/refs/heads/main/QNgTV2_QuangNgai.png", QNgTV2 | Báo và PTTH Quảng Ngãi
+#EXTINF:-1 tvg-id="quangngai2" group-title="Báo và PTTH" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/quangngai2.png", QNgTV2 | Báo và PTTH Quảng Ngãi
 https://ace.hoiquan.click/module/IPTV/?id=QNgTV2&accKenh=vuminhthanh1
 
 
