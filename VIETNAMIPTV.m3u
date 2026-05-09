@@ -285,10 +285,10 @@ https://freem3u.xyz/api/live/play.m3u8?vid=72
 #EXTINF:-1 tvg-id="daklak" group-title="Báo và PTTH" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/daklak.png", DRT HD | Báo và PTTH Đắk Lắk
 https://freem3u.xyz/api/live/play.m3u8?vid=51
 
-#EXTINF:-1 tvg-id="khanhhoa" group-title="Báo và PTTH" tvg-logo="https://raw.githubusercontent.com/vuminhthanh12/vuminhthanh12/refs/heads/main/KTV_KhanhHoa.png", KTV HD | Báo và PTTH Khánh Hòa
+#EXTINF:-1 tvg-id="khanhhoa" group-title="Báo và PTTH" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/khanhhoa.png", KTV HD | Báo và PTTH Khánh Hòa
 https://toiyeuvietnam.dpdns.org/TuyetDoiKhongKinhDoanh/khanh-hoa/KenhCoBan.m3u8
 
-#EXTINF:-1 tvg-id="gialai" group-title="Báo và PTTH" tvg-logo="https://raw.githubusercontent.com/vuminhthanh12/vuminhthanh12/refs/heads/main/GTVGIALAI.png", GTV | Báo và PTTH Gia Lai
+#EXTINF:-1 tvg-id="gialai" group-title="Báo và PTTH" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/gialai.png", GTV | Báo và PTTH Gia Lai
 https://toiyeuvietnam.dpdns.org/TuyetDoiKhongKinhDoanh/gia-lai/KenhCoBan.m3u8
 
 #EXTINF:-1 tvg-id="quangngai" group-title="Báo và PTTH" tvg-logo="https://raw.githubusercontent.com/vuminhthanh12/vuminhthanh12/refs/heads/main/QNgTV1_QuangNgai.png", QNgTV1 | Báo và PTTH Quảng Ngãi
