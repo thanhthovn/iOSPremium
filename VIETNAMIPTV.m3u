@@ -311,7 +311,7 @@ https://toiyeuvietnam.dpdns.org/TuyetDoiKhongKinhDoanh/hung-yen/KenhCoBan.m3u8
 https://toiyeuvietnam.dpdns.org/TuyetDoiKhongKinhDoanh/bac-ninh/KenhCoBan.m3u8
 
 #EXTINF:-1 tvg-id="phutho" group-title="NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/phutho.png", PTV HD | Báo và PTTH Phú Thọ
-https://sgclient.duckdns.org/source/tv360.m3u8?id=255
+https://sgclient.duckdns.org/source/tv360.m3u8?id=77
 
 #EXTINF:-1 tvg-id="thainguyen" group-title="NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/thainguyen.png", TN | Báo và PTTH Thái Nguyên
 https://freem3u.xyz/api/live/play.m3u8?vid=88
