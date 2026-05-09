@@ -1,13 +1,13 @@
 #EXTM3U url-tvg="https://vnepg.site/epg.xml"
 #EXTM3U url-tvg="https://hnlive.dramahay.xyz/epg.xml"
 
-#EXTINF:-1 tvg-id="vtv9" group-title="VTV" tvg-logo="https://img-zlr1.tv360.vn/image1/2020_09_23/1600822568115/7f3b077aabfc_480_270.png", Kenh Test
+#EXTINF:-1 tvg-id="vtv9" group-title="ABC" tvg-logo="https://img-zlr1.tv360.vn/image1/2020_09_23/1600822568115/7f3b077aabfc_480_270.png", Kenh Test
 http://42.117.13.32:4022/udp/225.1.1.128:30120
 
-#EXTINF:-1 tvg-id="antvhd" group-title="VTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/antv.png", ANTV HD
+#EXTINF:-1 tvg-id="antvhd" group-title="GOV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/antv.png", ANTV HD
 #EXTVLCOPT:http-user-agent=VThanhTivi
 https://live.fptplay53.net/fnxhd2/anninhtv_vhls.smil/chunklist_b5000000.m3u8
-#EXTINF:-1 tvg-id="qpvnhd" group-title="VTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/qpvn.png", QPVN HD
+#EXTINF:-1 tvg-id="qpvnhd" group-title="GOV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/qpvn.png", QPVN HD
 #EXTVLCOPT:http-user-agent=VThanhTivi
 https://live.fptplay53.net/fnxhd2/quocphongvnhd_vhls.smil/chunklist_b5000000.m3u8
 
