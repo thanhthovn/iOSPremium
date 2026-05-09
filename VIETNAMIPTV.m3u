@@ -243,7 +243,7 @@ https://freem3u.xyz/api/live/play.m3u8?vid=58
 #EXTINF:-1 tvg-id="nghean" group-title="NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/nghean.png", NTV | Báo và PTTH Nghệ An
 https://freem3u.xyz/api/live/play.m3u8?vid=74
 
-#EXTINF:-1 tvg-id="thanhhoa" group-title="NRTV" tvg-logo="https://img-zlr1.tv360.vn/image1/2020_09_23/1600821878406/58ff77e57117_640_360.png", TTV HD | Báo và PTTH Thanh Hóa
+#EXTINF:-1 tvg-id="thanhhoa" group-title="NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/thanhhoa.png", TTV HD | Báo và PTTH Thanh Hóa
 https://freem3u.xyz/api/live/play.m3u8?vid=89
 
 #EXTINF:-1 tvg-id="quangninh1" group-title="NRTV" tvg-logo="https://media.baoquangninh.vn/upload/files/logo/logotrangchu1.png", QTV1 HD | Báo và PTTH Quảng Ninh
