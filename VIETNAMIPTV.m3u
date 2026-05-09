@@ -328,7 +328,7 @@ https://toiyeuvietnam.dpdns.org/TuyetDoiKhongKinhDoanh/tuyen-quang/KenhCoBan.m3u
 
 
 
-#EXTINF:-1 tvg-id="CartoonNetwork.us" group-title="ABC" tvg-logo="https://static.wikia.nocookie.net/dreamlogos/images/6/63/Cartoon_Network_2004_Red.png/revision/latest?cb=20180823052720", Cartoon Network
-http://23.237.104.106:8080/USA_CARTOON_NETWORK/index.m3u8
+#EXTINF:-1 tvg-id="CartoonNetworkAsia.sg@Vietnam" group-title="ABC" tvg-logo="https://static.wikia.nocookie.net/dreamlogos/images/6/63/Cartoon_Network_2004_Red.png/revision/latest?cb=20180823052720", Cartoon Network
+https://sv.tvmienphi.xyz/ok/world/cartoon1.php
 
 
