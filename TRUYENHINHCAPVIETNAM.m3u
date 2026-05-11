@@ -624,7 +624,7 @@ https://brics.bonus-tv.ru/cdn/brics/chinese/playlist.m3u8
 
 
 
-#EXTINF:-1 tvg-id="vtv1" group-title="ABC" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", beINSports-fr1
+#EXTINF:-1 tvg-id="vtv1" group-title="ABC" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", beINSports-fr1_1
 http://125.209.88.166:45793/BRN/beINSP11.stream/playlist.m3u8
 #EXTINF:-1 tvg-id="vtv1" group-title="ABC" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", beINSports-fr2
 http://125.209.88.166:45793/BRN/beINSP12.stream/playlist.m3u8
