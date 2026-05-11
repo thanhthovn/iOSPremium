@@ -392,6 +392,9 @@ https://sgclient.duckdns.org/source/tv360.m3u8?id=9904
 https://sgclient.duckdns.org/source/tv360.m3u8?id=9888
 
 
+#EXTINF:-1 tvg-id="tvbvn" group-title="ABC" tvg-logo="https://tvbaw-na.s3.us-west-1.amazonaws.com/hb/TVB%20Vietnam%20Banner_Side.jpg", TVB VIỆT NAM
+https://amg01868-amg01868c3-tvbanywhere-us-4491.playouts.now.amagi.tv/playlist1080p.m3u8
+
 
 
 
@@ -411,5 +414,18 @@ https://sgclient.duckdns.org/source/tv360.m3u8?id=9888
 #KODIPROP:inputstream.adaptive.license_key={"keys":[{"kty":"oct","k":"PeDzjc8BSCff1b7Dh0PGog","kid":"Cd3+PWOGPK+ut50FRrCYqw"}],"type":"temporary"}
 https://s2129134.cdn.mytvnet.vn/pkg20/live_dzones/hbo.smil/manifest.mpd
 
-#EXTINF:-1 tvg-id="tvbvn" group-title="ABC" tvg-logo="https://tvbaw-na.s3.us-west-1.amazonaws.com/hb/TVB%20Vietnam%20Banner_Side.jpg", TVB VIỆT NAM
-https://amg01868-amg01868c3-tvbanywhere-us-4491.playouts.now.amagi.tv/playlist1080p.m3u8
+
+
+#EXTINF:-1 tvg-id="tvbvn" group-title="ABC" tvg-logo="https://i.imgur.com/QWo0x7S.jpg", beIN Sports Haber
+https://canlitvulusal3.xyz/live/beinsportshaber/index.m3u8?checkedby:iptvcat.net
+
+
+
+
+
+
+
+
+
+
+
