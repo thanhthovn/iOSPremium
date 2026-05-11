@@ -133,11 +133,11 @@ https://liveh34.vtvprime.vn/hls/SCTV13/03.m3u8
 #EXTINF:-1 tvg-id="sctv14hd" group-title="🛰️ SCTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/sctv14.png", SCTV14
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://liveh34.vtvprime.vn/hls/SCTV14/03.m3u8
-#EXTINF:-1 tvg-id="sctv16hd" group-title="🛰️ SCTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/sctv15.png", SCTV15
+#EXTINF:-1 tvg-id="sctv15hd" group-title="🛰️ SCTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/sctv15.png", SCTV15
 https://liveh34.vtvprime.vn/hls/SCTV15/04.m3u8
 #EXTINF:-1 tvg-id="sctv16hd" group-title="🛰️ SCTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/sctv16.png", SCTV16
 https://liveh34.vtvprime.vn/hls/SCTV16/04.m3u8
-#EXTINF:-1 tvg-id="sctv16hd" group-title="🛰️ SCTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/sctv17.png", SCTV17
+#EXTINF:-1 tvg-id="sctv17hd" group-title="🛰️ SCTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/sctv17.png", SCTV17
 https://liveh34.vtvprime.vn/hls/SCTV17/04.m3u8
 #EXTINF:-1 tvg-id="sctv18hd" group-title="🛰️ SCTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/sctv18.png", SCTV18
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
