@@ -270,7 +270,9 @@ https://freem3u.xyz/api/live/play.m3u8?vid=72
 https://freem3u.xyz/api/live/play.m3u8?vid=51
 
 #EXTINF:-1 tvg-id="khanhhoa" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/khanhhoa.png", KTV HD | Báo và PTTH Khánh Hòa
-https://toiyeuvietnam.dpdns.org/TuyetDoiKhongKinhDoanh/khanh-hoa/KenhCoBan.m3u8
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0
+
+https://vips-livecdn.fptplay.net/Mzk3MTY5MDR8a2hhbmhob2FfaGxzLnNtaWx8dm5wdHwxNzc4NTQ3NzgyfDExMy4xODIuMzAuMTUzfGQ4YTE4Njg2OWI0YjI3NGMxMDUxN2FhODIyMjA1YjAz/epzsd1/khanhhoa_hls.smil/chunklist_b2500000.m3u8
 
 #EXTINF:-1 tvg-id="gialai" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/gialai.png", GTV | Báo và PTTH Gia Lai
 https://toiyeuvietnam.dpdns.org/TuyetDoiKhongKinhDoanh/gia-lai/KenhCoBan.m3u8
