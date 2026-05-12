@@ -275,7 +275,8 @@ https://freem3u.xyz/api/live/play.m3u8?vid=51
 https://vips-livecdn.fptplay.net/Mzk3MTY5MDR8a2hhbmhob2FfaGxzLnNtaWx8dm5wdHwxNzc4NTQ4MDM3fDExMy4xODIuMzAuMTUzfDkzODBkZDVmNzRkYjA2ODIyYTY0ZWZlMTg3YjNhYjE5/epzsd1/khanhhoa_hls.smil/chunklist_b2500000.m3u8
 
 #EXTINF:-1 tvg-id="gialai" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/gialai.png", GTV | Báo và PTTH Gia Lai
-https://toiyeuvietnam.dpdns.org/TuyetDoiKhongKinhDoanh/gia-lai/KenhCoBan.m3u8
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0
+https://live.fptplay53.net/epzsd1/gialai01_hls.smil/chunklist_b2500000.m3u8
 
 #EXTINF:-1 tvg-id="quangngai" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/quangngai1.png", QNgTV1 | Báo và PTTH Quảng Ngãi
 #EXTVLCOPT:http-user-agent=Dalvik/2.1.0
@@ -291,10 +292,12 @@ https://freem3u.xyz/api/live/play.m3u8?vid=83
 https://live.mediatech.vn/live/28597f8fd7ea5064d0f84ab00b3699dfd86/chunklist.m3u8
 
 #EXTINF:-1 tvg-id="hungyen" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/hungyen.png", HYTV HD | Báo và PTTH Hưng Yên
-https://toiyeuvietnam.dpdns.org/TuyetDoiKhongKinhDoanh/hung-yen/KenhCoBan.m3u8
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0
+https://vips-livecdn.fptplay.net/Mzk3MTY5MDR8aHVuZ3llbl8yMDAwLnN0cmVhbXx2bnB0fDE3Nzg1NjU0NTF8MTEzLjE4Mi4zMC4xNTN8YTk0ZDk5YWZkOWYyNjAwOGY3OWU5NjFhZjE4MjNjZWQ/fnxsd1/hungyen_2000.stream/chunklist.m3u8
 
-#EXTINF:-1 tvg-id="bacninh" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/bacninh.png", BTV | Báo và PTTH Bắc Ninh 
-https://toiyeuvietnam.dpdns.org/TuyetDoiKhongKinhDoanh/bac-ninh/KenhCoBan.m3u8
+#EXTINF:-1 tvg-id="bacninh" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/bacninh.png", BTV | Báo và PTTH Bắc Ninh
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0
+https://vips-livecdn.fptplay.net/Mzk3MTY5MDR8YmFjbmluaDAxX2hscy5zbWlsfHZucHR8MTc3ODU2NTYwMHwxMTMuMTgyLjMwLjE1M3w1YzhjZjU0MjAyMjYyMWU4NTExYTgwMDA3NjBkNjMzMQ/fnxsd1/bacninh01_hls.smil/chunklist_b2500000.m3u8
 
 #EXTINF:-1 tvg-id="phutho" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/phutho.png", PTV HD | Báo và PTTH Phú Thọ
 https://sgclient.duckdns.org/source/tv360.m3u8?id=77
@@ -305,7 +308,8 @@ https://freem3u.xyz/api/live/play.m3u8?vid=88
 #EXTINF:-1 tvg-id="laocai" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/laocai.png", THLC HD | Báo và PTTH Lào Cai
 https://freem3u.xyz/api/live/play.m3u8?vid=71
 #EXTINF:-1 tvg-id="tuyenquang" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/tuyenquang.png", TTV HD | Báo và PTTH Tuyên Quang
-https://toiyeuvietnam.dpdns.org/TuyetDoiKhongKinhDoanh/tuyen-quang/KenhCoBan.m3u8
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0
+https://vips-livecdn.fptplay.net/Mzk3MTY5MDR8dHV5ZW5xdWFuZ19obHMuc21pbHx2bnB0fDE3Nzg1NjU1NDV8MTEzLjE4Mi4zMC4xNTN8YmYyOGI1NjcyNjU5ZDM1Yzk1ODJhOWNlMWFkYjg0YzQ/fnxsd1/tuyenquang_hls.smil/chunklist_b2500000.m3u8
 
 
 #EXTINF:-1 tvg-id="onviegiaitri" group-title="🛰️ VTVcab" tvg-logo="https://img-zlr1.tv360.vn/image1/2024/01/02/23/1704211446236/d1503bd3566e_480_270.png", ON Vie Giải Trí
