@@ -29,7 +29,7 @@ https://1011154949.vnns.net/CDN-FPT/HTV7-HD-1080p/chunks.m3u8
 
 #EXTINF:-1 tvg-id="htv9hd" group-title="🇸🇴 HTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/htv9.png", HTV9 | Đài PTTH TP Hồ Chí Minh
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
-https://live.fptplay53.net/epzhd1/htv9hd_vhls.smil/chunklist_b5000000.m3u8
+https://ec01-pop5-hht.tv360.vn/bpk-token/z2engjp2apksk7ja5oim7cgtexhiruzf/bpk-tv/157/output/157-audio_208000_eng_iv_4=206000-video_iv_4=1884800.m3u8
 
 
 #EXTINF:-1 tvg-id="lamdong2" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/binhthuan.png", LTV2 HD | Bình Thuận HD
