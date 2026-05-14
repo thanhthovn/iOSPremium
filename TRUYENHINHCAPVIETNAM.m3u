@@ -211,7 +211,7 @@ https://1.org.vn/dnrtv3
 
 #EXTINF:-1 tvg-id="hue" group-title="📡 NRTV" tvg-logo="https://i.imgur.com/q5MBibm.png", Huế TV | Báo và PTTH TP Huế
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0
-https://live.huetv.com.vn/Radio-online/chunklist.m3u8
+https://live.huetv.com.vn/TRT-Online/chunklist.m3u8
 
 #EXTINF:-1 tvg-id="danang1" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/danang1.png", ĐNRT1 | Báo và PTTH TP Đà Nẵng
 https://freem3u.xyz/api/live/play.m3u8?vid=49
