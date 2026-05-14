@@ -76,7 +76,7 @@ https://live.fptplay53.net/fnxhd1/vtv5taynguyen_vhls.smil/chunklist_b5000000.m3u
 https://live.fptplay53.net/epzhd1/vtv8hd_vhls.smil/chunklist_b5000000.m3u8
 #EXTINF:-1 tvg-id="vtv9hd" group-title="🇻🇳 VTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/vtv9.png", VTV9
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
-http://hodam:87654321@hothanhdam.dsmynas.com:9981/stream/channelid/1841573868?profile=pass
+https://vtvgolive-vtv.vtvdigital.vn/Bj616uQ3d76-TfhpbOdbOA/1778762170/vtvgo/vtv9-720p.m3u8
 
 
 #EXTINF:-1 tvg-id="vietnamtoday" group-title="🇻🇳 VTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/vietnamtoday.png", Vietnam Today
