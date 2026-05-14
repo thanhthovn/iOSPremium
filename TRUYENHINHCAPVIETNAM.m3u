@@ -272,8 +272,7 @@ https://freem3u.xyz/api/live/play.m3u8?vid=51
 
 #EXTINF:-1 tvg-id="khanhhoa" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/khanhhoa.png", KTV HD | Báo và PTTH Khánh Hòa
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0
-#EXTVLCOPT:http-referrer=https://fptplay.vn/
-https://vips-livecdn.fptplay.net/Mzk3MTY5MDR8a2hhbmhob2FfaGxzLnNtaWx8dm5wdHwxNzc4NTQ4MDM3fDExMy4xODIuMzAuMTUzfDkzODBkZDVmNzRkYjA2ODIyYTY0ZWZlMTg3YjNhYjE5/epzsd1/khanhhoa_hls.smil/chunklist_b2500000.m3u8
+https://vtvgolive-liveh12.vtvdigital.vn/6HWyH_sU8JOZS1s0nOGnuA/1778763742/hls/KHANHHOATV/03.m3u8
 
 #EXTINF:-1 tvg-id="gialai" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/gialai.png", GTV | Báo và PTTH Gia Lai
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0
