@@ -311,8 +311,7 @@ https://freem3u.xyz/api/live/play.m3u8?vid=88
 https://freem3u.xyz/api/live/play.m3u8?vid=71
 #EXTINF:-1 tvg-id="tuyenquang" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/tuyenquang.png", TTV HD | Báo và PTTH Tuyên Quang
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0
-https://vips-livecdn.fptplay.net/Mzk3MTY5MDR8dHV5ZW5xdWFuZ19obHMuc21pbHx2bnB0fDE3Nzg1NjU1NDV8MTEzLjE4Mi4zMC4xNTN8YmYyOGI1NjcyNjU5ZDM1Yzk1ODJhOWNlMWFkYjg0YzQ/fnxsd1/tuyenquang_hls.smil/chunklist_b2500000.m3u8
-
+https://vips-livecdn.fptplay.net/Mzk3MTY5MDR8dHV5ZW5xdWFuZ19obHMuc21pbHx2bnB0fDE3Nzg3NDc0MjR8MTEzLjE4Mi4zMC4xNTN8MTI1YWYzNzI3MjgyOWFmN2FmZWQ2NGIwZmIzZmM3Yzc/fnxsd1/tuyenquang_hls.smil/chunklist_b2500000.m3u8
 
 #EXTINF:-1 tvg-id="onviegiaitri" group-title="🛰️ VTVcab" tvg-logo="https://img-zlr1.tv360.vn/image1/2024/01/02/23/1704211446236/d1503bd3566e_480_270.png", ON Vie Giải Trí
 https://freem3u.xyz/api/live/play.m3u8?vid=180
