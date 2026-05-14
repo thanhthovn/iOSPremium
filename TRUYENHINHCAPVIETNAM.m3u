@@ -293,7 +293,7 @@ https://live.mediatech.vn/live/28597f8fd7ea5064d0f84ab00b3699dfd86/chunklist.m3u
 
 #EXTINF:-1 tvg-id="hungyen" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/hungyen.png", HYTV HD | Báo và PTTH Hưng Yên
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0
-https://vips-livecdn.fptplay.net/Mzk3MTY5MDR8aHVuZ3llbl8yMDAwLnN0cmVhbXx2bnB0fDE3Nzg1NjU0NTF8MTEzLjE4Mi4zMC4xNTN8YTk0ZDk5YWZkOWYyNjAwOGY3OWU5NjFhZjE4MjNjZWQ/fnxsd1/hungyen_2000.stream/chunklist.m3u8
+https://1253218859.e.cdneverest.net/llXJNzSkqxtlgXyvb9gstw/1778789905/live/285f5449d7d7d2946e0bd2d54b7e60f25a4/chunklist.m3u8
 
 #EXTINF:-1 tvg-id="bacninh" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/bacninh.png", BTV | Báo và PTTH Bắc Ninh
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0
