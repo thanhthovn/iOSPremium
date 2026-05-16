@@ -2,571 +2,515 @@
 
 
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 100
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
-https://freem3u.xyz/api/live/play.m3u8?vid=100
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 101
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
-https://freem3u.xyz/api/live/play.m3u8?vid=101
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 102
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
-https://freem3u.xyz/api/live/play.m3u8?vid=102
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 103
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
-https://freem3u.xyz/api/live/play.m3u8?vid=103
-
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 104
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
-https://freem3u.xyz/api/live/play.m3u8?vid=104
-
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 105
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
-https://freem3u.xyz/api/live/play.m3u8?vid=105
-
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 106
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
-https://freem3u.xyz/api/live/play.m3u8?vid=106
-
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 107
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
-https://freem3u.xyz/api/live/play.m3u8?vid=107
-
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 108
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
-https://freem3u.xyz/api/live/play.m3u8?vid=108
-
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 109
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", DW TV
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=109
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 110
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", VTV5
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=110
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 111
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", ARIRANG KOREA
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=111
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 112
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", CNA - Channel NewsAsia
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=112
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 113
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
-https://freem3u.xyz/api/live/play.m3u8?vid=113
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 114
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
-https://freem3u.xyz/api/live/play.m3u8?vid=114
-
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 115
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
-https://freem3u.xyz/api/live/play.m3u8?vid=115
-
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 116
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
-https://freem3u.xyz/api/live/play.m3u8?vid=116
-
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 117
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
-https://freem3u.xyz/api/live/play.m3u8?vid=117
-
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 118
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
-https://freem3u.xyz/api/live/play.m3u8?vid=118
-
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 119
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 119
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=119
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 120
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 120
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=120
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 121
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 121
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=121
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 122
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 122
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=122
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 123
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 123
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=123
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 124
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 124
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=124
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 125
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 125
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=125
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 126
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 126
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=126
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 127
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 127
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=127
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 128
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 128
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=128
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 129
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 129
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=129
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 130
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 130
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=130
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 131
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 131
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=131
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 132
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 132
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=132
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 133
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 133
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=133
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 134
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 134
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=134
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 135
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 135
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=135
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 136
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 136
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=136
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 137
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 137
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=137
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 138
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 138
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=138
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 139
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 139
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=139
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 140
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 140
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=140
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 141
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 141
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=141
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 142
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 142
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=142
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 143
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 143
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=143
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 144
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 144
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=144
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 145
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 145
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=145
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 146
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 146
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=146
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 147
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 147
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=147
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 148
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 148
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=148
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 149
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 149
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=149
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 150
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 150
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=150
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 151
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 151
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=151
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 152
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 152
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=152
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 153
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 153
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=153
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 154
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 154
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=154
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 155
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 155
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=155
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 156
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 156
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=156
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 157
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 157
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=157
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 158
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 158
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=158
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 159
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 159
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=159
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 160
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 160
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=160
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 161
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 161
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=161
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 162
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 162
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=162
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 163
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 163
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=163
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 164
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 164
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=164
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 165
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 165
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=165
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 166
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 166
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=166
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 167
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 167
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=167
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 168
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 168
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=168
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 169
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 169
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=169
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 170
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 170
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=170
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 171
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 171
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=171
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 172
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 172
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=172
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 173
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 173
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=173
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 174
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 174
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=174
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 175
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 175
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=175
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 176
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 176
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=176
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 177
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 177
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=177
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 178
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 178
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=178
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 179
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 179
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=179
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 180
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 180
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=180
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 181
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 181
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=181
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 182
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 182
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=182
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 183
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 183
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=183
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 184
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 184
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=184
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 185
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 185
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=185
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 186
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 186
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=186
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 187
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 187
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=187
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 188
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 188
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=188
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 189
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 189
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=189
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 190
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 190
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=190
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 191
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 191
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=191
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 192
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 192
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=192
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 193
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 193
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=193
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 194
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 194
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=194
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 195
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 195
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=195
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 196
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 196
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=196
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 197
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 197
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=197
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 198
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 198
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=198
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 199
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 199
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=199
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 200
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 200
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=200
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 201
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 201
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=201
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 202
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 202
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=202
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 203
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 203
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=203
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 204
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 204
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=204
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 205
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 205
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=205
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 206
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 206
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=206
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 207
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 207
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=207
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 208
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 208
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=208
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 209
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 209
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=209
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 210
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 210
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=210
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 211
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 211
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=211
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 212
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 212
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=212
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 213
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 213
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=213
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 214
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 214
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=214
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 215
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 215
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=215
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 216
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 216
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=216
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 217
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 217
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=217
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 218
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 218
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=218
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 219
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 219
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=219
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 220
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 220
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=220
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 221
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 221
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=221
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 222
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 222
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=222
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 223
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 223
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=223
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 224
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 224
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=224
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 225
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 225
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=225
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 226
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 226
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=226
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 227
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 227
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=227
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 228
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 228
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=228
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 229
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 229
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=229
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 230
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 230
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=230
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 231
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 231
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=231
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 232
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 232
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=232
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 232
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 232
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=232
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 233
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 233
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=233
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 234
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 234
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=234
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 235
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 235
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=235
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 236
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 236
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=236
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 237
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 237
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=237
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 238
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 238
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=238
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 239
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 239
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=239
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 240
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 240
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=240
 
@@ -586,254 +530,254 @@ https://freem3u.xyz/api/live/play.m3u8?vid=240
 
 
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", VTV1
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", VTV1
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=2
 
 
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", HTV4
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", HTV4
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=9
 
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", HTVC GIA ĐÌNH
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", HTVC GIA ĐÌNH
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=11
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", HTVC PHỤ NỮ
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", HTVC PHỤ NỮ
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=12
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", THUẦN VIỆT
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", THUẦN VIỆT
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=13
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", HTVC CA NHẠC
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", HTVC CA NHẠC
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=14
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", HTVC PHIM
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", HTVC PHIM
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=15
 
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", QPVN HD
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", QPVN HD
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=19
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", ANTV HD
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", ANTV HD
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=20
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", VINH LONG 1
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", VINH LONG 1
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=25
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", VINH LONG 2
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", VINH LONG 2
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=26
 
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", YOU TV
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", YOU TV
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=31
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", HI TV
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", HI TV
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=32
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", HA NOI 1
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", HA NOI 1
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=33
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", HA NOI 2
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", HA NOI 2
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=34
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", AN GIANG 2
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", AN GIANG 2
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=35
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", BAC NINH
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", BAC NINH
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=39
 
 
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", BINH THUAN
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", BINH THUAN
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=45
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", CA MAU
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", CA MAU
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=46
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", CAN THO 1
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", CAN THO 1
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=47
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", CAO BANG
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", CAO BANG
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=48
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", DA NANG 1
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", DA NANG 1
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=49
 
 
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", DAK LAK
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", DAK LAK
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=51
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", DIEN BIEN PHU
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", DIEN BIEN PHU
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=52
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", DONG NAI 1
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", DONG NAI 1
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=53
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", DONG THAP 1
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", DONG THAP 1
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=54
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", GIA LAI
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", GIA LAI
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=55
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", HA TINH
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", HA TINH
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=58
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", HAI PHONG 3
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", HAI PHONG 3
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=59
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", HAI PHONG
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", HAI PHONG
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=60
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", CAN THO 2
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", CAN THO 2
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=61
 
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", HUE
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", HUE
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=63
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", HUNG YEN
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", HUNG YEN
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=64
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", KHANH HOA
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", KHANH HOA
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=65
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", AN GIANG 1
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", AN GIANG 1
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=66
 
 
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", LAI CHAU
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", LAI CHAU
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=68
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", LAM DONG
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", LAM DONG
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=69
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", LANG SON
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", LANG SON
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=70
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", LAO CAI
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", LAO CAI
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=71
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", TAY NINH
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", TAY NINH
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=72
 
 
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", NGHE AN
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", NGHE AN
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=74
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", NINH BINH
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", NINH BINH
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=75
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", KHANH HOA 1 HD
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", KHANH HOA 1 HD
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=76
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", PHU THO
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", PHU THO
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=77
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", DA NANG 2
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", DA NANG 2
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=80
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", QUANG NGAI 1
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", QUANG NGAI 1
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=81
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", QUANG NINH 1
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", QUANG NINH 1
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=82
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", QUNAG TRI
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", QUNAG TRI
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=83
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", CAN THO 3
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", CAN THO 3
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=84
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", SON LA
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", SON LA
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=85
 
 
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", THAI NGUYEN
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", THAI NGUYEN
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=88
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", THANH HOA
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", THANH HOA
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=89
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", DONG THAP 2
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", DONG THAP 2
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=90
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", VINH LONG 5
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", VINH LONG 5
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=91
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", TUYEN QUANG
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", TUYEN QUANG
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=92
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 93
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 93
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=93
 
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", OUT
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", OUT
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=96
 
 
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 NRTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", HGTV
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", HGTV
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=99
 
