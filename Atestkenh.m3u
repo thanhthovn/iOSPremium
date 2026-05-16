@@ -277,7 +277,7 @@ https://freem3u.xyz/api/live/play.m3u8?vid=231
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=232
 
-#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", Thanh Tho 232
+#EXTINF:-1 tvg-id="vtv3hd" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", SCTV6
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=232
 
