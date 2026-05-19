@@ -395,6 +395,21 @@ https://freem3u.xyz/api/live/play.m3u8?vid=99
 #EXTINF:-1 tvg-name="CCTV-8 电视剧" group-title="🇨🇳CCTV" tvg-logo="https://i.imgur.com/Qg1opg9.png" tvg-id="CCTV8.cn",CCTV-8 电视剧
 https://cdn.inteltelevision.com/4987/cctv8hd/playlist.m3u8?t=1779156466&token=500e97de8f291bdc41ef449faf94e205
 
+#EXTINF:-1 group-title="🎬CINEMA🎥" tvg-logo="#EXTINF:-1 group-title="🎬CINEMA🎥" tvg-logo="https://static.vieon.vn/vieplay-image/thumbnail_v4/2021/02/08/10s0sy03_1920x1080-latmat.jpg", Lật Mặt 1
+https://vip.opstream90.com/20251028/16262_8b4f4048/3000k/hls/mixed.m3u8
+#EXTINF:-1 group-title="🎬CINEMA🎥" tvg-logo="#EXTINF:-1 group-title="🎬CINEMA🎥" tvg-logo="https://i.ytimg.com/vi/pHDyf03UNiM/maxresdefault.jpg", Lật Mặt 2: Phim Trường
+https://vip.opstream90.com/20251028/16260_314ae9d8/3000k/hls/mixed.m3u8
+#EXTINF:-1 group-title="🎬CINEMA🎥" tvg-logo="#EXTINF:-1 group-title="🎬CINEMA🎥" tvg-logo="https://homepage.momocdn.net/cinema/momo-cdn-api-220615135209-637908979299777136.jpg", Lật Mặt 3: Ba Chàng Khuyết
+https://vip.opstream90.com/20251028/16261_4803eb7e/3000k/hls/mixed.m3u8
+#EXTINF:-1 group-title="🎬CINEMA🎥" tvg-logo="#EXTINF:-1 group-title="🎬CINEMA🎥" tvg-logo="https://dep.com.vn/wp-content/uploads/2019/01/lat-mat-nha-co-khach-1.jpg", Lật Mặt 4: Nhà Có Khách
+https://vip.opstream16.com/20220303/476_47af98b7/3000k/hls/mixed.m3u8
+#EXTINF:-1 group-title="🎬CINEMA🎥" tvg-logo="#EXTINF:-1 group-title="🎬CINEMA🎥" tvg-logo="https://pic.bstarstatic.com/ugc/b1acde8a5538b98415e9d061fec7abc1.jpg", Lật Mặt 5: 48h
+https://vip.opstream13.com/20251028/14850_db0d4963/3000k/hls/mixed.m3u8
+#EXTINF:-1 group-title="🎬CINEMA🎥" tvg-logo="#EXTINF:-1 group-title="🎬CINEMA🎥" tvg-logo="https://images2.thanhnien.vn/528068263637045248/2023/5/19/poster-ngang-1684472039478119300321.jpg", Lật Mặt 6: Tấm Vé Định Mệnh
+https://vip.opstream17.com/20240318/2854_137bf151/3000k/hls/mixed.m3u8
+
+
+
 
 #EXTINF:-1 group-title="🎬CINEMA🎥" tvg-logo="https://baokhanhhoa.vn/file/e7837c02857c8ca30185a8c39b582c03/112025/1_20251116070652.jpg", Mưa Đỏ
 https://vip.opstream90.com/20251118/17952_7bf57028/3000k/hls/mixed.m3u8
@@ -419,8 +434,7 @@ https://vodcdn.fptplay.net/POVOD/encoded/2025/12/28/thamtulungdanhconanduanhcuad
 https://vip.opstream90.com/20251129/18758_e33bdf72/3000k/hls/mixed.m3u8
 #EXTINF:-1 group-title="🎬CINEMA🎥" tvg-logo="https://images.fptplay53.net/media/OTT/VOD/2025/12/26/trai-tim-que-quat-fpt-play-1766744170691_Landscape.jpg", Trái Tim Què Quặt
 https://s6.kkphimplayer6.com/20251228/0HQf0tP2/3500kb/hls/index.m3u8
-#EXTINF:-1 group-title="🎬CINEMA🎥" tvg-logo="https://static2.vieon.vn/vieplay-image/carousel_web_v4/2026/04/29/qgf1pdmz_nhahaichu_1920x1080_1920_1080.jpeg", Nhà Hai Chủ
-https://embed12.streamc.xyz/embed.php?hash=cc3c1b33b718c2cf69a4cb0100939a78
+
 #EXTINF:-1 group-title="🎬CINEMA🎥" tvg-logo="https://images.fptplay53.net/media/OTT/VOD/2026/01/27/quy-nhap-trang-fpt-play-1769508575571_Landscape.jpg", Quỷ Nhập Tràng
 https://s6.kkphimplayer6.com/20260129/HDz8Fu0F/3500kb/hls/index.m3u8
 #EXTINF:-1 group-title="🎬CINEMA🎥" tvg-logo="https://images.fptplay53.net/media/OTT/VOD/2026/01/23/tu-chien-tren-khong-fpt-play-1769164011330_Landscape.jpg", Tử Chiến Trên Không
