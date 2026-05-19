@@ -361,6 +361,304 @@ https://toiyeuvietnam.dpdns.org/TuyetDoiKhongKinhDoanh/vtvcab-23-golf-channel/Ke
 
 
 
+
+#EXTINF:-1 tvg-id="tvbvn" group-title="🌐QUỐC TẾ" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/tvbvn.png", TVB VIỆT NAM
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
+https://amg01868-amg01868c3-tvbanywhere-us-4491.playouts.now.amagi.tv/playlist1080p.m3u8
+#EXTINF:-1 tvg-id="dw" group-title="🌐QUỐC TẾ" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Deutsche_Welle_symbol_2012.svg/250px-Deutsche_Welle_symbol_2012.svg.png", DW TV HD
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
+https://freem3u.xyz/api/live/play.m3u8?vid=109
+#EXTINF:-1 tvg-id="arirang" group-title="🌐QUỐC TẾ" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Arirang_logo.png/960px-Arirang_logo.png", ARIRANG KOREA
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
+https://freem3u.xyz/api/live/play.m3u8?vid=111
+#EXTINF:-1 tvg-id="tvbvn" group-title="🌐QUỐC TẾ" tvg-logo="https://www.vhv.rs/dpng/d/170-1703908_channel-news-asia-logo-hd-png-download.png", CNA - Channel NewsAsia
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
+https://freem3u.xyz/api/live/play.m3u8?vid=112
+#EXTINF:-1 tvg-id="kbsworld" group-title="🌐QUỐC TẾ" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/kbsworld.png", KBS WORLD
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
+https://freem3u.xyz/api/live/play.m3u8?vid=213
+#EXTINF:-1 tvg-id="davinci" group-title="🌐QUỐC TẾ" tvg-logo="https://static.wikia.nocookie.net/logos/images/9/92/Da_Vinci_TV.png/revision/latest?cb=20231123014725&path-prefix=vi", DA VINCI
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
+https://freem3u.xyz/api/live/play.m3u8?vid=214
+#EXTINF:-1 tvg-id="afnhd" group-title="🌐QUỐC TẾ" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Asian_Food_Network.svg/250px-Asian_Food_Network.svg.png", AFN HD
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
+https://freem3u.xyz/api/live/play.m3u8?vid=215
+#EXTINF:-1 tvg-id="outdoorhd" group-title="🌐QUỐC TẾ" tvg-logo="https://static.wikia.nocookie.net/logos/images/3/3d/Outdoor.png/revision/latest?cb=20231230015001&path-prefix=vi", OUT DOOR HD
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
+https://freem3u.xyz/api/live/play.m3u8?vid=216
+#EXTINF:-1 tvg-id="france24eng" group-title="🌐QUỐC TẾ" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/France_24_logo_%282013%29.svg/250px-France_24_logo_%282013%29.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail", FRANCE 24
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
+https://freem3u.xyz/api/live/play.m3u8?vid=96
+#EXTINF:-1 tvg-id="hgtv" group-title="🌐QUỐC TẾ" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/HGTV_2010.svg/250px-HGTV_2010.svg.png", HGTV
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
+https://freem3u.xyz/api/live/play.m3u8?vid=99
+#EXTINF:-1 tvg-name="CCTV-8 电视剧" group-title="🇨🇳CCTV" tvg-logo="https://i.imgur.com/Qg1opg9.png" tvg-id="CCTV8.cn",CCTV-8 电视剧
+https://cdn.inteltelevision.com/4987/cctv8hd/playlist.m3u8?t=1779156466&token=500e97de8f291bdc41ef449faf94e205
+
+
+
+#EXTINF:-1 group-title="🎬CINEMA🎥" tvg-logo="https://daknong.1cdn.vn/2025/02/06/den-am-hon-review-phim-va-lich-chieu-tai-viet-nam.jpg", Đèn Âm Hồn: Người Con Gái Nam Xương
+https://s6.kkphimplayer6.com/20250811/miyJKDrj/3500kb/hls/index.m3u8
+#EXTINF:-1 group-title="🎬CINEMA🎥" tvg-logo="https://haniff.vn/wp-content/uploads/2024/10/Lam-giau-voi-ma-2.jpg", Làm Giàu Với Ma (Betting With Ghost)
+https://s4.phim1280.tv/20250323/KmdatGKe/3000kb/hls/index.m3u8
+#EXTINF:-1 group-title="🎬CINEMA🎥" tvg-logo="https://assets.glxplay.io/images/w700/title/ngay-xua-co-mot-chuyen-tinh_web_backdrop_8b7a5b8cbb5fe245d3a6f7aea524c796.jpg", Ngày Xưa Có Một Chuyện Tình
+https://s6.kkphimplayer6.com/20250901/w8LN0LND/3500kb/hls/index.m3u8
+#EXTINF:-1 group-title="🎬CINEMA🎥" tvg-logo="https://images.fptplay53.net/media/OTT/VOD/2025/08/28/bo-tu-bao-thu-fpt-play-1756374565016_Landscape.jpg", Bộ Tứ Báo Thủ
+https://s6.kkphimplayer6.com/20250901/2RZvePPZ/3500kb/hls/index.m3u8
+#EXTINF:-1 group-title="🎬CINEMA🎥" tvg-logo="https://i.imgur.com/q05fNtW.png", Mưa Trên Cánh Bướm
+https://s6.kkphimplayer6.com/20250918/48nrktLm/3500kb/hls/index.m3u8
+#EXTINF:-1 group-title="🎬CINEMA🎥" tvg-logo="https://images.fptplay53.net/media/OTT/VOD/2025/09/29/tham-tu-kien-ky-an-khong-dau-fpt-play-1759139646462_Landscape.jpg", Thám Tử Kiên: Kỳ Án Không Đầu
+https://s6.kkphimplayer6.com/20251010/86AEDncn/3500kb/hls/index.m3u8
+#EXTINF:-1 group-title="🎬CINEMA🎥" tvg-logo="https://baokhanhhoa.vn/file/e7837c02857c8ca30185a8c39b582c03/112025/1_20251116070652.jpg", Mưa Đỏ
+https://vip.opstream90.com/20251118/17952_7bf57028/3000k/hls/mixed.m3u8
+#EXTINF:-1 group-title="🎬CINEMA🎥" tvg-logo="https://images.fptplay53.net/media/OTT/VOD/2025/12/26/tham-tu-lung-danh-conan-du-anh-cua-doc-nhan-fpt-play-1766741539032_Landscape.jpg", Conan Movie 28 - Dư Ảnh Của Độc Nhãn
+https://vodcdn.fptplay.net/POVOD/encoded/2025/12/28/thamtulungdanhconanduanhcuadocnhan-detectiveconanoneeyedflashback-2025-dolby-mav-bb8d776e6f35fe41/H264/stream.mpd?st=8PSyksBMiL_tvRpq4B3-eg&expires=1767859023
+#EXTINF:-1 group-title="🎬CINEMA🎥" tvg-logo="https://hnm.1cdn.vn/thumbs/600x315/2025/05/08/mmdb_poster_first-look_2000x2500px.jpg", Mang Mẹ Đi Bỏ
+https://vip.opstream90.com/20251129/18758_e33bdf72/3000k/hls/mixed.m3u8
+#EXTINF:-1 group-title="🎬CINEMA🎥" tvg-logo="https://images.fptplay53.net/media/OTT/VOD/2025/12/26/trai-tim-que-quat-fpt-play-1766744170691_Landscape.jpg", Trái Tim Què Quặt
+https://s6.kkphimplayer6.com/20251228/0HQf0tP2/3500kb/hls/index.m3u8
+#EXTINF:-1 group-title="🎬CINEMA🎥" tvg-logo="https://images.fptplay53.net/media/OTT/VOD/2025/12/30/lam-giau-voi-ma-cuoc-chien-hot-xoan-fpt-play-1767066672824_Landscape.jpg", Làm Giàu Với Ma Phần 2: Cuộc Chiến Hột Xoàn
+https://vip.opstream90.com/20260102/21537_fe1af53e/3000k/hls/mixed.m3u8
+#EXTINF:-1 group-title="🎬CINEMA🎥" tvg-logo="https://images.fptplay53.net/media/OTT/VOD/2026/01/27/quy-nhap-trang-fpt-play-1769508575571_Landscape.jpg", Quỷ Nhập Tràng
+https://s6.kkphimplayer6.com/20260129/HDz8Fu0F/3500kb/hls/index.m3u8
+#EXTINF:-1 group-title="🎬CINEMA🎥" tvg-logo="https://images.fptplay53.net/media/OTT/VOD/2026/01/23/tu-chien-tren-khong-fpt-play-1769164011330_Landscape.jpg", Tử Chiến Trên Không
+https://rumble.com/hls-vod/72x1ns/playlist.m3u8
+
+#EXTINF:-1 group-title="🎬CINEMA🎥" tvg-logo="https://raw.githubusercontent.com/vuminhthanh12/vuminhthanh12/refs/heads/main/Th%E1%BA%BF%20H%E1%BB%87%20K%E1%BB%B3%20T%C3%ADch.jpg", Thế Hệ Kỳ Tích
+https://rumble.com/hls-vod/745t9a/playlist.m3u8
+#EXTINF:-1 group-title="🎬CINEMA🎥" tvg-logo="https://thegioidienanh.vn/stores/news_dataimages/2025/092025/14/13/in_social/tay-anh-giu-mot-vi-sao-payoff-poster-social-khoi-chieu-0310202520250914134014.jpg", Tay Anh Giữ Một Vì Sao
+https://vip.opstream90.com/20260102/21538_3a9ba451/3000k/hls/mixed.m3u8
+#EXTINF:-1 group-title="🎬CINEMA🎥" tvg-logo="https://cdn-images.vtv.vn/zoom/554_346/66349b6076cb4dee98746cf1/2025/09/19/truy-tim-long-dien-huong-67756442926310209483416-92025497027105625698228.jpg", Truy Tìm Long Diên Hương
+https://rumble.com/hls-vod/74h9mw/playlist.m3u8
+#EXTINF:-1 group-title="🎬CINEMA🎥" tvg-logo="https://images.fptplay53.net/media/OTT/VOD/2026/03/13/ut-lan-oan-linh-giu-cua-fpt-play-1773395168032_Background_origin.jpg", Út Lan: Oán Linh Giữ Của
+https://vip.opstream90.com/20260213/24963_b4f6926d/3000k/hls/mixed.m3u8
+#EXTINF:-1 group-title="🎬CINEMA🎥" tvg-logo="https://tintuc-divineshop.cdn.vccloud.vn/wp-content/uploads/2025/08/164142635_khe-uoc-ban-dau.webp", Khế Ước Bán Dâu
+https://s6.kkphimplayer6.com/20260118/tdyKqxYZ/3500kb/hls/index.m3u8
+#EXTINF:-1 group-title="🎬CINEMA🎥" tvg-logo="https://images.fptplay53.net/media/OTT/VOD/2026/03/13/thien-duong-mau-fpt-play-1773396128871_Landscape.jpg", Thiên Đường Máu
+https://s6.kkphimplayer6.com/20260320/02bq9QLy/3500kb/hls/index.m3u8
+#EXTINF:-1 group-title="🎬CINEMA🎥" tvg-logo="https://images.fptplay53.net/media/OTT/VOD/2026/03/27/cuc-vang-cua-ngoai-fpt-play-1774595783778_Landscape.jpg", Cục Vàng Của Ngoại
+https://s6.kkphimplayer6.com/20260403/6UwV8LAv/3500kb/hls/index.m3u8
+#EXTINF:-1 group-title="🎬CINEMA🎥" tvg-logo="https://raw.githubusercontent.com/vuminhthanh12/Logo/refs/heads/main/huyentinhdatrach.jpg", Huyền Tình Dạ Trạch
+https://rumble.com/hls-vod/76srew/playlist.m3u8
+#EXTINF:-1 group-title="🎬CINEMA🎥" tvg-logo="https://images.fptplay53.net/media/OTT/VOD/2026/04/29/nha-minh-di-thoi-fpt-play-1777439633547_Landscape.jpg", Nhà Mình Đi Thôi
+https://vip.opstream90.com/20260502/30774_da58e2e4/3000k/hls/mixed.m3u8
+
+#EXTINF:-1 group-title="🎬CINEMA🎥" tvg-logo="https://images.fptplay53.net/media/OTT/VOD/2026/04/30/cuoc-xe-am-phu-fpt-play-1777541165464_Background_origin.jpg", Cuốc Xe Âm Phủ - Tập 1
+https://v7.kkphimplayer7.com/20260502/89qXv3Fa/3500kb/hls/index.m3u8
+#EXTINF:-1 group-title="🎬CINEMA🎥" tvg-logo="https://images.fptplay53.net/media/OTT/VOD/2026/04/30/cuoc-xe-am-phu-fpt-play-1777541165464_Background_origin.jpg", Cuốc Xe Âm Phủ - Tập 2
+https://v7.kkphimplayer7.com/20260503/Lp2p18eb/3500kb/hls/index.m3u8
+
+
+
+
+#EXTINF:-1 group-title="🎬THIEN LONG BAT BO🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/thienlongbatbo2003.png", THIÊN LONG BÁT BỘ 2003 - T1
+https://vip.opstream11.com/20220816/35563_37b19c22/3000k/hls/mixed.m3u8
+#EXTINF:-1 group-title="🎬THIEN LONG BAT BO🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/thienlongbatbo2003.png", THIÊN LONG BÁT BỘ 2003 - T2
+https://vip.opstream11.com/20220816/35564_d3808a91/3000k/hls/mixed.m3u8
+#EXTINF:-1 group-title="🎬THIEN LONG BAT BO🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/thienlongbatbo2003.png", THIÊN LONG BÁT BỘ 2003 - T3
+https://vip.opstream11.com/20220816/35565_5b68ca73/3000k/hls/mixed.m3u8
+#EXTINF:-1 group-title="🎬THIEN LONG BAT BO🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/thienlongbatbo2003.png", THIÊN LONG BÁT BỘ 2003 - T4
+https://vip.opstream11.com/20220816/35566_9fb68bf1/3000k/hls/mixed.m3u8
+#EXTINF:-1 group-title="🎬THIEN LONG BAT BO🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/thienlongbatbo2003.png", THIÊN LONG BÁT BỘ 2003 - T5
+https://vip.opstream11.com/20220816/35567_aae2dde4/3000k/hls/mixed.m3u8
+#EXTINF:-1 group-title="🎬THIEN LONG BAT BO🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/thienlongbatbo2003.png", THIÊN LONG BÁT BỘ 2003 - T6
+https://vip.opstream11.com/20220816/35568_90f189ad/3000k/hls/mixed.m3u8
+#EXTINF:-1 group-title="🎬THIEN LONG BAT BO🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/thienlongbatbo2003.png", THIÊN LONG BÁT BỘ 2003 - T7
+https://vip.opstream11.com/20220816/35569_ec70d887/3000k/hls/mixed.m3u8
+#EXTINF:-1 group-title="🎬THIEN LONG BAT BO🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/thienlongbatbo2003.png", THIÊN LONG BÁT BỘ 2003 - T8
+https://vip.opstream11.com/20220816/35570_df526b0b/3000k/hls/mixed.m3u8
+#EXTINF:-1 group-title="🎬THIEN LONG BAT BO🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/thienlongbatbo2003.png", THIÊN LONG BÁT BỘ 2003 - T9
+https://vip.opstream11.com/20220816/35571_9d887400/3000k/hls/mixed.m3u8
+#EXTINF:-1 group-title="🎬THIEN LONG BAT BO🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/thienlongbatbo2003.png", THIÊN LONG BÁT BỘ 2003 - T10
+https://vip.opstream11.com/20220816/35572_3428bcd1/3000k/hls/mixed.m3u8
+#EXTINF:-1 group-title="🎬THIEN LONG BAT BO🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/thienlongbatbo2003.png", THIÊN LONG BÁT BỘ 2003 - T11
+https://vip.opstream11.com/20220816/35573_1b7a05cc/3000k/hls/mixed.m3u8
+#EXTINF:-1 group-title="🎬THIEN LONG BAT BO🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/thienlongbatbo2003.png", THIÊN LONG BÁT BỘ 2003 - T12
+https://vip.opstream11.com/20220816/35574_71198e71/3000k/hls/mixed.m3u8
+#EXTINF:-1 group-title="🎬THIEN LONG BAT BO🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/thienlongbatbo2003.png", THIÊN LONG BÁT BỘ 2003 - T13
+https://vip.opstream11.com/20220816/35575_11cb2496/3000k/hls/mixed.m3u8
+#EXTINF:-1 group-title="🎬THIEN LONG BAT BO🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/thienlongbatbo2003.png", THIÊN LONG BÁT BỘ 2003 - T14
+https://vip.opstream11.com/20220816/35576_05b98fb8/3000k/hls/mixed.m3u8
+#EXTINF:-1 group-title="🎬THIEN LONG BAT BO🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/thienlongbatbo2003.png", THIÊN LONG BÁT BỘ 2003 - T15
+https://vip.opstream11.com/20220816/35577_28c3a1cd/3000k/hls/mixed.m3u8
+#EXTINF:-1 group-title="🎬THIEN LONG BAT BO🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/thienlongbatbo2003.png", THIÊN LONG BÁT BỘ 2003 - T16
+https://vip.opstream11.com/20220816/35578_9cf6c583/3000k/hls/mixed.m3u8
+#EXTINF:-1 group-title="🎬THIEN LONG BAT BO🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/thienlongbatbo2003.png", THIÊN LONG BÁT BỘ 2003 - T17
+https://vip.opstream11.com/20220816/35579_b813a235/3000k/hls/mixed.m3u8
+#EXTINF:-1 group-title="🎬THIEN LONG BAT BO🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/thienlongbatbo2003.png", THIÊN LONG BÁT BỘ 2003 - T18
+https://vip.opstream11.com/20220816/35580_dd8b744d/3000k/hls/mixed.m3u8
+#EXTINF:-1 group-title="🎬THIEN LONG BAT BO🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/thienlongbatbo2003.png", THIÊN LONG BÁT BỘ 2003 - T19
+https://vip.opstream11.com/20220816/35581_d02ad692/3000k/hls/mixed.m3u8
+#EXTINF:-1 group-title="🎬THIEN LONG BAT BO🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/thienlongbatbo2003.png", THIÊN LONG BÁT BỘ 2003 - T20
+https://vip.opstream11.com/20220816/35582_12d14a9a/3000k/hls/mixed.m3u8
+#EXTINF:-1 group-title="🎬THIEN LONG BAT BO🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/thienlongbatbo2003.png", THIÊN LONG BÁT BỘ 2003 - T21
+https://vip.opstream11.com/20220816/35583_1e000410/3000k/hls/mixed.m3u8
+#EXTINF:-1 group-title="🎬THIEN LONG BAT BO🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/thienlongbatbo2003.png", THIÊN LONG BÁT BỘ 2003 - T22
+https://vip.opstream11.com/20220816/35584_fd4ebc93/3000k/hls/mixed.m3u8
+#EXTINF:-1 group-title="🎬THIEN LONG BAT BO🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/thienlongbatbo2003.png", THIÊN LONG BÁT BỘ 2003 - T23
+https://vip.opstream11.com/20220816/35585_7a9681ff/3000k/hls/mixed.m3u8
+#EXTINF:-1 group-title="🎬THIEN LONG BAT BO🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/thienlongbatbo2003.png", THIÊN LONG BÁT BỘ 2003 - T24
+https://vip.opstream11.com/20220816/35586_24621cd7/3000k/hls/mixed.m3u8
+#EXTINF:-1 group-title="🎬THIEN LONG BAT BO🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/thienlongbatbo2003.png", THIÊN LONG BÁT BỘ 2003 - T25
+https://vip.opstream11.com/20220816/35587_e540e9c8/3000k/hls/mixed.m3u8
+#EXTINF:-1 group-title="🎬THIEN LONG BAT BO🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/thienlongbatbo2003.png", THIÊN LONG BÁT BỘ 2003 - T26
+https://vip.opstream11.com/20220816/35588_314499b4/3000k/hls/mixed.m3u8
+#EXTINF:-1 group-title="🎬THIEN LONG BAT BO🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/thienlongbatbo2003.png", THIÊN LONG BÁT BỘ 2003 - T27
+https://vip.opstream11.com/20220816/35589_92dff16f/3000k/hls/mixed.m3u8
+#EXTINF:-1 group-title="🎬THIEN LONG BAT BO🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/thienlongbatbo2003.png", THIÊN LONG BÁT BỘ 2003 - T28
+https://vip.opstream11.com/20220816/35590_bccc27f1/3000k/hls/mixed.m3u8
+#EXTINF:-1 group-title="🎬THIEN LONG BAT BO🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/thienlongbatbo2003.png", THIÊN LONG BÁT BỘ 2003 - T29
+https://vip.opstream11.com/20220816/35591_f1832880/3000k/hls/mixed.m3u8
+#EXTINF:-1 group-title="🎬THIEN LONG BAT BO🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/thienlongbatbo2003.png", THIÊN LONG BÁT BỘ 2003 - T30
+https://vip.opstream11.com/20220816/35592_bd5ad73c/3000k/hls/mixed.m3u8
+#EXTINF:-1 group-title="🎬THIEN LONG BAT BO🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/thienlongbatbo2003.png", THIÊN LONG BÁT BỘ 2003 - T31
+https://vip.opstream11.com/20220816/35593_4ebe7bb1/3000k/hls/mixed.m3u8
+#EXTINF:-1 group-title="🎬THIEN LONG BAT BO🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/thienlongbatbo2003.png", THIÊN LONG BÁT BỘ 2003 - T32
+https://vip.opstream11.com/20220816/35595_a7ccf2ef/3000k/hls/mixed.m3u8
+#EXTINF:-1 group-title="🎬THIEN LONG BAT BO🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/thienlongbatbo2003.png", THIÊN LONG BÁT BỘ 2003 - T33
+https://vip.opstream11.com/20220816/35594_fdfd49b0/3000k/hls/mixed.m3u8
+#EXTINF:-1 group-title="🎬THIEN LONG BAT BO🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/thienlongbatbo2003.png", THIÊN LONG BÁT BỘ 2003 - T34
+https://vip.opstream11.com/20220816/35596_6f93b1ff/3000k/hls/mixed.m3u8
+#EXTINF:-1 group-title="🎬THIEN LONG BAT BO🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/thienlongbatbo2003.png", THIÊN LONG BÁT BỘ 2003 - T35
+https://vip.opstream11.com/20220816/35597_fbcd05ae/3000k/hls/mixed.m3u8
+#EXTINF:-1 group-title="🎬THIEN LONG BAT BO🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/thienlongbatbo2003.png", THIÊN LONG BÁT BỘ 2003 - T36
+https://vip.opstream11.com/20220816/35598_91b4c87c/3000k/hls/mixed.m3u8
+#EXTINF:-1 group-title="🎬THIEN LONG BAT BO🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/thienlongbatbo2003.png", THIÊN LONG BÁT BỘ 2003 - T37
+https://vip.opstream11.com/20220816/35599_c8d80d19/3000k/hls/mixed.m3u8
+#EXTINF:-1 group-title="🎬THIEN LONG BAT BO🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/thienlongbatbo2003.png", THIÊN LONG BÁT BỘ 2003 - T38
+https://vip.opstream11.com/20220816/35600_9b4e8fb3/3000k/hls/mixed.m3u8
+#EXTINF:-1 group-title="🎬THIEN LONG BAT BO🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/thienlongbatbo2003.png", THIÊN LONG BÁT BỘ 2003 - T39
+https://vip.opstream11.com/20220816/35599_c8d80d19/3000k/hls/mixed.m3u8
+#EXTINF:-1 group-title="🎬THIEN LONG BAT BO🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/thienlongbatbo2003.png", THIÊN LONG BÁT BỘ 2003 - T40
+https://vip.opstream11.com/20220816/35600_9b4e8fb3/3000k/hls/mixed.m3u8
+
+
+
+#EXTINF:-1 group-title="🎬Y THIEN DO LONG KY🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/ythiendolongky.png", Ỷ THIÊN ĐỒ LONG KÝ - T1
+https://vip.opstream11.com/20220411/13095_798f0226/3000k/hls/mixed.m3u8
+#EXTINF:-1 group-title="🎬Y THIEN DO LONG KY🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/ythiendolongky.png", Ỷ THIÊN ĐỒ LONG KÝ - T2
+https://vip.opstream11.com/20220411/13096_a68fdf96/3000k/hls/mixed.m3u8
+#EXTINF:-1 group-title="🎬Y THIEN DO LONG KY🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/ythiendolongky.png", Ỷ THIÊN ĐỒ LONG KÝ - T3
+https://vip.opstream11.com/20220411/13097_8025cea5/3000k/hls/mixed.m3u8
+#EXTINF:-1 group-title="🎬Y THIEN DO LONG KY🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/ythiendolongky.png", Ỷ THIÊN ĐỒ LONG KÝ - T4
+https://vip.opstream11.com/20220411/13098_a086ef77/3000k/hls/mixed.m3u8
+#EXTINF:-1 group-title="🎬Y THIEN DO LONG KY🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/ythiendolongky.png", Ỷ THIÊN ĐỒ LONG KÝ - T5
+https://vip.opstream11.com/20220411/13099_647da6b3/3000k/hls/mixed.m3u8
+#EXTINF:-1 group-title="🎬Y THIEN DO LONG KY🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/ythiendolongky.png", Ỷ THIÊN ĐỒ LONG KÝ - T6
+https://vip.opstream11.com/20220411/13100_4b43ebc8/3000k/hls/mixed.m3u8
+#EXTINF:-1 group-title="🎬Y THIEN DO LONG KY🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/ythiendolongky.png", Ỷ THIÊN ĐỒ LONG KÝ - T7
+https://vip.opstream11.com/20220411/13101_024f5138/3000k/hls/mixed.m3u8
+#EXTINF:-1 group-title="🎬Y THIEN DO LONG KY🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/ythiendolongky.png", Ỷ THIÊN ĐỒ LONG KÝ - T8
+https://vip.opstream11.com/20220411/13102_2bb97403/3000k/hls/mixed.m3u8
+#EXTINF:-1 group-title="🎬Y THIEN DO LONG KY🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/ythiendolongky.png", Ỷ THIÊN ĐỒ LONG KÝ - T9
+https://vip.opstream11.com/20220411/13103_8f958e93/3000k/hls/mixed.m3u8
+#EXTINF:-1 group-title="🎬Y THIEN DO LONG KY🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/ythiendolongky.png", Ỷ THIÊN ĐỒ LONG KÝ - T10
+
+#EXTINF:-1 group-title="🎬Y THIEN DO LONG KY🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/ythiendolongky.png", Ỷ THIÊN ĐỒ LONG KÝ - T11
+
+#EXTINF:-1 group-title="🎬Y THIEN DO LONG KY🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/ythiendolongky.png", Ỷ THIÊN ĐỒ LONG KÝ - T12
+
+#EXTINF:-1 group-title="🎬Y THIEN DO LONG KY🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/ythiendolongky.png", Ỷ THIÊN ĐỒ LONG KÝ - T13
+
+#EXTINF:-1 group-title="🎬Y THIEN DO LONG KY🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/ythiendolongky.png", Ỷ THIÊN ĐỒ LONG KÝ - T14
+
+#EXTINF:-1 group-title="🎬Y THIEN DO LONG KY🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/ythiendolongky.png", Ỷ THIÊN ĐỒ LONG KÝ - T15
+
+#EXTINF:-1 group-title="🎬Y THIEN DO LONG KY🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/ythiendolongky.png", Ỷ THIÊN ĐỒ LONG KÝ - T16
+
+#EXTINF:-1 group-title="🎬Y THIEN DO LONG KY🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/ythiendolongky.png", Ỷ THIÊN ĐỒ LONG KÝ - T17
+
+#EXTINF:-1 group-title="🎬Y THIEN DO LONG KY🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/ythiendolongky.png", Ỷ THIÊN ĐỒ LONG KÝ - T18
+
+#EXTINF:-1 group-title="🎬Y THIEN DO LONG KY🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/ythiendolongky.png", Ỷ THIÊN ĐỒ LONG KÝ - T19
+
+#EXTINF:-1 group-title="🎬Y THIEN DO LONG KY🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/ythiendolongky.png", Ỷ THIÊN ĐỒ LONG KÝ - T20
+
+#EXTINF:-1 group-title="🎬Y THIEN DO LONG KY🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/ythiendolongky.png", Ỷ THIÊN ĐỒ LONG KÝ - T21
+
+#EXTINF:-1 group-title="🎬Y THIEN DO LONG KY🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/ythiendolongky.png", Ỷ THIÊN ĐỒ LONG KÝ - T22
+
+#EXTINF:-1 group-title="🎬Y THIEN DO LONG KY🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/ythiendolongky.png", Ỷ THIÊN ĐỒ LONG KÝ - T23
+
+#EXTINF:-1 group-title="🎬Y THIEN DO LONG KY🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/ythiendolongky.png", Ỷ THIÊN ĐỒ LONG KÝ - T24
+
+#EXTINF:-1 group-title="🎬Y THIEN DO LONG KY🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/ythiendolongky.png", Ỷ THIÊN ĐỒ LONG KÝ - T25
+
+#EXTINF:-1 group-title="🎬Y THIEN DO LONG KY🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/ythiendolongky.png", Ỷ THIÊN ĐỒ LONG KÝ - T26
+
+#EXTINF:-1 group-title="🎬Y THIEN DO LONG KY🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/ythiendolongky.png", Ỷ THIÊN ĐỒ LONG KÝ - T27
+
+#EXTINF:-1 group-title="🎬Y THIEN DO LONG KY🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/ythiendolongky.png", Ỷ THIÊN ĐỒ LONG KÝ - T28
+
+#EXTINF:-1 group-title="🎬Y THIEN DO LONG KY🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/ythiendolongky.png", Ỷ THIÊN ĐỒ LONG KÝ - T29
+
+#EXTINF:-1 group-title="🎬Y THIEN DO LONG KY🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/ythiendolongky.png", Ỷ THIÊN ĐỒ LONG KÝ - T30
+
+#EXTINF:-1 group-title="🎬Y THIEN DO LONG KY🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/ythiendolongky.png", Ỷ THIÊN ĐỒ LONG KÝ - T31
+
+#EXTINF:-1 group-title="🎬Y THIEN DO LONG KY🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/ythiendolongky.png", Ỷ THIÊN ĐỒ LONG KÝ - T32
+
+#EXTINF:-1 group-title="🎬Y THIEN DO LONG KY🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/ythiendolongky.png", Ỷ THIÊN ĐỒ LONG KÝ - T33
+
+#EXTINF:-1 group-title="🎬Y THIEN DO LONG KY🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/ythiendolongky.png", Ỷ THIÊN ĐỒ LONG KÝ - T34
+
+#EXTINF:-1 group-title="🎬Y THIEN DO LONG KY🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/ythiendolongky.png", Ỷ THIÊN ĐỒ LONG KÝ - T35
+
+#EXTINF:-1 group-title="🎬Y THIEN DO LONG KY🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/ythiendolongky.png", Ỷ THIÊN ĐỒ LONG KÝ - T36
+
+#EXTINF:-1 group-title="🎬Y THIEN DO LONG KY🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/ythiendolongky.png", Ỷ THIÊN ĐỒ LONG KÝ - T37
+
+#EXTINF:-1 group-title="🎬Y THIEN DO LONG KY🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/ythiendolongky.png", Ỷ THIÊN ĐỒ LONG KÝ - T38
+
+#EXTINF:-1 group-title="🎬Y THIEN DO LONG KY🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/ythiendolongky.png", Ỷ THIÊN ĐỒ LONG KÝ - T39
+
+#EXTINF:-1 group-title="🎬Y THIEN DO LONG KY🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/ythiendolongky.png", Ỷ THIÊN ĐỒ LONG KÝ - T40
+
+
+
+
+
+#EXTINF:-1 group-title="🎬OSHI NO KO🎥" tvg-logo="https://images.fptplay53.net/media/OTT/VOD/2026/01/12/dua-con-cua-than-tuong-phan-3-fpt-play-1768204408459_Background_origin.jpg", Oshi No Ko Phần 3 - Tập 1
+https://rumble.com/hls-vod/72av32/playlist.m3u8
+#EXTINF:-1 group-title="🎬OSHI NO KO🎥" tvg-logo="https://images.fptplay53.net/media/OTT/VOD/2026/01/12/dua-con-cua-than-tuong-phan-3-fpt-play-1768204408459_Background_origin.jpg", Oshi No Ko Phần 3 - Tập 2
+https://rumble.com/hls-vod/72nhy6/playlist.m3u8
+#EXTINF:-1 group-title="🎬OSHI NO KO🎥" tvg-logo="https://images.fptplay53.net/media/OTT/VOD/2026/01/12/dua-con-cua-than-tuong-phan-3-fpt-play-1768204408459_Background_origin.jpg", Oshi No Ko Phần 3 - Tập 3
+https://rumble.com/hls-vod/73bg84/playlist.m3u8
+#EXTINF:-1 group-title="🎬OSHI NO KO🎥" tvg-logo="https://images.fptplay53.net/media/OTT/VOD/2026/01/12/dua-con-cua-than-tuong-phan-3-fpt-play-1768204408459_Background_origin.jpg", Oshi No Ko Phần 3 - Tập 4
+https://rumble.com/hls-vod/73gpe4/playlist.m3u8
+#EXTINF:-1 group-title="🎬OSHI NO KO🎥" tvg-logo="https://images.fptplay53.net/media/OTT/VOD/2026/01/12/dua-con-cua-than-tuong-phan-3-fpt-play-1768204408459_Background_origin.jpg", Oshi No Ko Phần 3 - Tập 5
+https://rumble.com/hls-vod/73uq6q/playlist.m3u8
+#EXTINF:-1 group-title="🎬OSHI NO KO🎥" tvg-logo="https://images.fptplay53.net/media/OTT/VOD/2026/01/12/dua-con-cua-than-tuong-phan-3-fpt-play-1768204408459_Background_origin.jpg", Oshi No Ko Phần 3 - Tập 6
+https://vip.opstream90.com/20260219/25424_5534491f/3000k/hls/mixed.m3u8
+#EXTINF:-1 group-title="🎬OSHI NO KO🎥" tvg-logo="https://images.fptplay53.net/media/OTT/VOD/2026/01/12/dua-con-cua-than-tuong-phan-3-fpt-play-1768204408459_Background_origin.jpg", Oshi No Ko Phần 3 - Tập 7
+https://rumble.com/hls-vod/74da00/playlist.m3u8
+#EXTINF:-1 group-title="🎬OSHI NO KO🎥" tvg-logo="https://images.fptplay53.net/media/OTT/VOD/2026/01/12/dua-con-cua-than-tuong-phan-3-fpt-play-1768204408459_Background_origin.jpg", Oshi No Ko Phần 3 - Tập 8
+https://vip.opstream90.com/20260305/26504_404d52bf/3000k/hls/mixed.m3u8
+#EXTINF:-1 group-title="🎬OSHI NO KO🎥" tvg-logo="https://images.fptplay53.net/media/OTT/VOD/2026/01/12/dua-con-cua-than-tuong-phan-3-fpt-play-1768204408459_Background_origin.jpg", Oshi No Ko Phần 3 - Tập 9
+https://vip.opstream90.com/20260312/26990_72417e4a/3000k/hls/mixed.m3u8
+#EXTINF:-1 group-title="🎬OSHI NO KO🎥" tvg-logo="https://images.fptplay53.net/media/OTT/VOD/2026/01/12/dua-con-cua-than-tuong-phan-3-fpt-play-1768204408459_Background_origin.jpg", Oshi No Ko Phần 3 - Tập 10
+https://rumble.com/hls-vod/757w6u/playlist.m3u8
+#EXTINF:-1 group-title="🎬OSHI NO KO🎥" tvg-logo="https://images.fptplay53.net/media/OTT/VOD/2026/01/12/dua-con-cua-than-tuong-phan-3-fpt-play-1768204408459_Background_origin.jpg", Oshi No Ko Phần 3 - Tập 11
+https://rumble.com/hls-vod/75uhgc/playlist.m3u8
+#EXTINF:-1 group-title="🎬OSHI NO KO🎥" tvg-logo="https://images.fptplay53.net/media/OTT/VOD/2026/01/12/dua-con-cua-than-tuong-phan-3-fpt-play-1768204408459_Background_origin.jpg", KIM BÌNH MAI 2008 - Phần 1
+https://vip.opstream14.com/20230628/38286_fb9b3709/3000k/hls/mixed.m3u8
+
+#EXTINF:-1 group-title="🎬HUNG LONG PHONG BA🎥" tvg-logo="https://images.fptplay53.net/media/OTT/VOD/2026/02/11/hung-long-phong-ba-4-fpt-play-1770804850859_Landscape.jpg", Hùng Long Phong Bá Phần 4 - Tập 1
+https://rumble.com/hls-vod/73gr0i/playlist.m3u8
+#EXTINF:-1 group-title="🎬HUNG LONG PHONG BA🎥" tvg-logo="https://images.fptplay53.net/media/OTT/VOD/2026/02/11/hung-long-phong-ba-4-fpt-play-1770804850859_Landscape.jpg", Hùng Long Phong Bá Phần 4 - Tập 2
+https://rumble.com/hls-vod/73k35o/playlist.m3u8
+#EXTINF:-1 group-title="🎬HUNG LONG PHONG BA🎥" tvg-logo="https://images.fptplay53.net/media/OTT/VOD/2026/02/11/hung-long-phong-ba-4-fpt-play-1770804850859_Landscape.jpg", Hùng Long Phong Bá Phần 4 - Tập 3
+https://rumble.com/hls-vod/73os1q/playlist.m3u8
+#EXTINF:-1 group-title="🎬HUNG LONG PHONG BA🎥" tvg-logo="https://images.fptplay53.net/media/OTT/VOD/2026/02/11/hung-long-phong-ba-4-fpt-play-1770804850859_Landscape.jpg", Hùng Long Phong Bá Phần 4 - Tập 4
+https://rumble.com/hls-vod/73s4u6/playlist.m3u8
+#EXTINF:-1 group-title="🎬HUNG LONG PHONG BA🎥" tvg-logo="https://images.fptplay53.net/media/OTT/VOD/2026/02/11/hung-long-phong-ba-4-fpt-play-1770804850859_Landscape.jpg", Hùng Long Phong Bá Phần 4 - Tập 5
+https://rumble.com/hls-vod/73txdq/playlist.m3u8
+#EXTINF:-1 group-title="🎬HUNG LONG PHONG BA🎥" tvg-logo="https://images.fptplay53.net/media/OTT/VOD/2026/02/11/hung-long-phong-ba-4-fpt-play-1770804850859_Landscape.jpg", Hùng Long Phong Bá Phần 4 - Tập Cuối
+https://rumble.com/hls-vod/73vrdu/playlist.m3u8
+
+
+
+
 #EXTINF:-1 tvg-id="tv360plus1" group-title="🛰️TV360🔴" tvg-logo="https://img-zlr1.tv360.vn/image1/2026/04/15/22/1776266760359/ba1ca843cd06_480_270.png", TV360+1
 #EXTVLCOPT:http-user-agent=Dalvik/2.1.0
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
@@ -493,302 +791,6 @@ https://liveh34byt.vtvprime.vn/hls/SKSS6/04.m3u8
 
 
 
-#EXTINF:-1 tvg-id="tvbvn" group-title="🌐QUỐC TẾ" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/tvbvn.png", TVB VIỆT NAM
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
-https://amg01868-amg01868c3-tvbanywhere-us-4491.playouts.now.amagi.tv/playlist1080p.m3u8
-#EXTINF:-1 tvg-id="dw" group-title="🌐QUỐC TẾ" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Deutsche_Welle_symbol_2012.svg/250px-Deutsche_Welle_symbol_2012.svg.png", DW TV HD
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
-https://freem3u.xyz/api/live/play.m3u8?vid=109
-#EXTINF:-1 tvg-id="arirang" group-title="🌐QUỐC TẾ" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Arirang_logo.png/960px-Arirang_logo.png", ARIRANG KOREA
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
-https://freem3u.xyz/api/live/play.m3u8?vid=111
-#EXTINF:-1 tvg-id="tvbvn" group-title="🌐QUỐC TẾ" tvg-logo="https://www.vhv.rs/dpng/d/170-1703908_channel-news-asia-logo-hd-png-download.png", CNA - Channel NewsAsia
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
-https://freem3u.xyz/api/live/play.m3u8?vid=112
-#EXTINF:-1 tvg-id="kbsworld" group-title="🌐QUỐC TẾ" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/kbsworld.png", KBS WORLD
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
-https://freem3u.xyz/api/live/play.m3u8?vid=213
-#EXTINF:-1 tvg-id="davinci" group-title="🌐QUỐC TẾ" tvg-logo="https://static.wikia.nocookie.net/logos/images/9/92/Da_Vinci_TV.png/revision/latest?cb=20231123014725&path-prefix=vi", DA VINCI
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
-https://freem3u.xyz/api/live/play.m3u8?vid=214
-#EXTINF:-1 tvg-id="afnhd" group-title="🌐QUỐC TẾ" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Asian_Food_Network.svg/250px-Asian_Food_Network.svg.png", AFN HD
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
-https://freem3u.xyz/api/live/play.m3u8?vid=215
-#EXTINF:-1 tvg-id="outdoorhd" group-title="🌐QUỐC TẾ" tvg-logo="https://static.wikia.nocookie.net/logos/images/3/3d/Outdoor.png/revision/latest?cb=20231230015001&path-prefix=vi", OUT DOOR HD
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
-https://freem3u.xyz/api/live/play.m3u8?vid=216
-#EXTINF:-1 tvg-id="france24eng" group-title="🌐QUỐC TẾ" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/France_24_logo_%282013%29.svg/250px-France_24_logo_%282013%29.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail", FRANCE 24
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
-https://freem3u.xyz/api/live/play.m3u8?vid=96
-#EXTINF:-1 tvg-id="hgtv" group-title="🌐QUỐC TẾ" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/HGTV_2010.svg/250px-HGTV_2010.svg.png", HGTV
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
-https://freem3u.xyz/api/live/play.m3u8?vid=99
-
-
-#EXTINF:-1 group-title="🎬THIEN LONG BAT BO🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/thienlongbatbo2003.png", THIÊN LONG BÁT BỘ 2003 - T1
-https://vip.opstream11.com/20220816/35563_37b19c22/3000k/hls/mixed.m3u8
-#EXTINF:-1 group-title="🎬THIEN LONG BAT BO🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/thienlongbatbo2003.png", THIÊN LONG BÁT BỘ 2003 - T2
-https://vip.opstream11.com/20220816/35564_d3808a91/3000k/hls/mixed.m3u8
-#EXTINF:-1 group-title="🎬THIEN LONG BAT BO🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/thienlongbatbo2003.png", THIÊN LONG BÁT BỘ 2003 - T3
-https://vip.opstream11.com/20220816/35565_5b68ca73/3000k/hls/mixed.m3u8
-#EXTINF:-1 group-title="🎬THIEN LONG BAT BO🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/thienlongbatbo2003.png", THIÊN LONG BÁT BỘ 2003 - T4
-https://vip.opstream11.com/20220816/35566_9fb68bf1/3000k/hls/mixed.m3u8
-#EXTINF:-1 group-title="🎬THIEN LONG BAT BO🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/thienlongbatbo2003.png", THIÊN LONG BÁT BỘ 2003 - T5
-https://vip.opstream11.com/20220816/35567_aae2dde4/3000k/hls/mixed.m3u8
-#EXTINF:-1 group-title="🎬THIEN LONG BAT BO🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/thienlongbatbo2003.png", THIÊN LONG BÁT BỘ 2003 - T6
-https://vip.opstream11.com/20220816/35568_90f189ad/3000k/hls/mixed.m3u8
-#EXTINF:-1 group-title="🎬THIEN LONG BAT BO🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/thienlongbatbo2003.png", THIÊN LONG BÁT BỘ 2003 - T7
-https://vip.opstream11.com/20220816/35569_ec70d887/3000k/hls/mixed.m3u8
-#EXTINF:-1 group-title="🎬THIEN LONG BAT BO🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/thienlongbatbo2003.png", THIÊN LONG BÁT BỘ 2003 - T8
-https://vip.opstream11.com/20220816/35570_df526b0b/3000k/hls/mixed.m3u8
-#EXTINF:-1 group-title="🎬THIEN LONG BAT BO🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/thienlongbatbo2003.png", THIÊN LONG BÁT BỘ 2003 - T9
-https://vip.opstream11.com/20220816/35571_9d887400/3000k/hls/mixed.m3u8
-#EXTINF:-1 group-title="🎬THIEN LONG BAT BO🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/thienlongbatbo2003.png", THIÊN LONG BÁT BỘ 2003 - T10
-https://vip.opstream11.com/20220816/35572_3428bcd1/3000k/hls/mixed.m3u8
-#EXTINF:-1 group-title="🎬THIEN LONG BAT BO🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/thienlongbatbo2003.png", THIÊN LONG BÁT BỘ 2003 - T11
-https://vip.opstream11.com/20220816/35573_1b7a05cc/3000k/hls/mixed.m3u8
-#EXTINF:-1 group-title="🎬THIEN LONG BAT BO🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/thienlongbatbo2003.png", THIÊN LONG BÁT BỘ 2003 - T12
-https://vip.opstream11.com/20220816/35574_71198e71/3000k/hls/mixed.m3u8
-#EXTINF:-1 group-title="🎬THIEN LONG BAT BO🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/thienlongbatbo2003.png", THIÊN LONG BÁT BỘ 2003 - T13
-https://vip.opstream11.com/20220816/35575_11cb2496/3000k/hls/mixed.m3u8
-#EXTINF:-1 group-title="🎬THIEN LONG BAT BO🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/thienlongbatbo2003.png", THIÊN LONG BÁT BỘ 2003 - T14
-https://vip.opstream11.com/20220816/35576_05b98fb8/3000k/hls/mixed.m3u8
-#EXTINF:-1 group-title="🎬THIEN LONG BAT BO🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/thienlongbatbo2003.png", THIÊN LONG BÁT BỘ 2003 - T15
-https://vip.opstream11.com/20220816/35577_28c3a1cd/3000k/hls/mixed.m3u8
-#EXTINF:-1 group-title="🎬THIEN LONG BAT BO🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/thienlongbatbo2003.png", THIÊN LONG BÁT BỘ 2003 - T16
-https://vip.opstream11.com/20220816/35578_9cf6c583/3000k/hls/mixed.m3u8
-#EXTINF:-1 group-title="🎬THIEN LONG BAT BO🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/thienlongbatbo2003.png", THIÊN LONG BÁT BỘ 2003 - T17
-https://vip.opstream11.com/20220816/35579_b813a235/3000k/hls/mixed.m3u8
-#EXTINF:-1 group-title="🎬THIEN LONG BAT BO🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/thienlongbatbo2003.png", THIÊN LONG BÁT BỘ 2003 - T18
-https://vip.opstream11.com/20220816/35580_dd8b744d/3000k/hls/mixed.m3u8
-#EXTINF:-1 group-title="🎬THIEN LONG BAT BO🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/thienlongbatbo2003.png", THIÊN LONG BÁT BỘ 2003 - T19
-https://vip.opstream11.com/20220816/35581_d02ad692/3000k/hls/mixed.m3u8
-#EXTINF:-1 group-title="🎬THIEN LONG BAT BO🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/thienlongbatbo2003.png", THIÊN LONG BÁT BỘ 2003 - T20
-https://vip.opstream11.com/20220816/35582_12d14a9a/3000k/hls/mixed.m3u8
-#EXTINF:-1 group-title="🎬THIEN LONG BAT BO🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/thienlongbatbo2003.png", THIÊN LONG BÁT BỘ 2003 - T21
-https://vip.opstream11.com/20220816/35583_1e000410/3000k/hls/mixed.m3u8
-#EXTINF:-1 group-title="🎬THIEN LONG BAT BO🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/thienlongbatbo2003.png", THIÊN LONG BÁT BỘ 2003 - T22
-https://vip.opstream11.com/20220816/35584_fd4ebc93/3000k/hls/mixed.m3u8
-#EXTINF:-1 group-title="🎬THIEN LONG BAT BO🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/thienlongbatbo2003.png", THIÊN LONG BÁT BỘ 2003 - T23
-https://vip.opstream11.com/20220816/35585_7a9681ff/3000k/hls/mixed.m3u8
-#EXTINF:-1 group-title="🎬THIEN LONG BAT BO🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/thienlongbatbo2003.png", THIÊN LONG BÁT BỘ 2003 - T24
-https://vip.opstream11.com/20220816/35586_24621cd7/3000k/hls/mixed.m3u8
-#EXTINF:-1 group-title="🎬THIEN LONG BAT BO🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/thienlongbatbo2003.png", THIÊN LONG BÁT BỘ 2003 - T25
-https://vip.opstream11.com/20220816/35587_e540e9c8/3000k/hls/mixed.m3u8
-#EXTINF:-1 group-title="🎬THIEN LONG BAT BO🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/thienlongbatbo2003.png", THIÊN LONG BÁT BỘ 2003 - T26
-https://vip.opstream11.com/20220816/35588_314499b4/3000k/hls/mixed.m3u8
-#EXTINF:-1 group-title="🎬THIEN LONG BAT BO🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/thienlongbatbo2003.png", THIÊN LONG BÁT BỘ 2003 - T27
-https://vip.opstream11.com/20220816/35589_92dff16f/3000k/hls/mixed.m3u8
-#EXTINF:-1 group-title="🎬THIEN LONG BAT BO🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/thienlongbatbo2003.png", THIÊN LONG BÁT BỘ 2003 - T28
-https://vip.opstream11.com/20220816/35590_bccc27f1/3000k/hls/mixed.m3u8
-#EXTINF:-1 group-title="🎬THIEN LONG BAT BO🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/thienlongbatbo2003.png", THIÊN LONG BÁT BỘ 2003 - T29
-https://vip.opstream11.com/20220816/35591_f1832880/3000k/hls/mixed.m3u8
-#EXTINF:-1 group-title="🎬THIEN LONG BAT BO🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/thienlongbatbo2003.png", THIÊN LONG BÁT BỘ 2003 - T30
-https://vip.opstream11.com/20220816/35592_bd5ad73c/3000k/hls/mixed.m3u8
-#EXTINF:-1 group-title="🎬THIEN LONG BAT BO🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/thienlongbatbo2003.png", THIÊN LONG BÁT BỘ 2003 - T31
-https://vip.opstream11.com/20220816/35593_4ebe7bb1/3000k/hls/mixed.m3u8
-#EXTINF:-1 group-title="🎬THIEN LONG BAT BO🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/thienlongbatbo2003.png", THIÊN LONG BÁT BỘ 2003 - T32
-https://vip.opstream11.com/20220816/35595_a7ccf2ef/3000k/hls/mixed.m3u8
-#EXTINF:-1 group-title="🎬THIEN LONG BAT BO🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/thienlongbatbo2003.png", THIÊN LONG BÁT BỘ 2003 - T33
-https://vip.opstream11.com/20220816/35594_fdfd49b0/3000k/hls/mixed.m3u8
-#EXTINF:-1 group-title="🎬THIEN LONG BAT BO🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/thienlongbatbo2003.png", THIÊN LONG BÁT BỘ 2003 - T34
-https://vip.opstream11.com/20220816/35596_6f93b1ff/3000k/hls/mixed.m3u8
-#EXTINF:-1 group-title="🎬THIEN LONG BAT BO🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/thienlongbatbo2003.png", THIÊN LONG BÁT BỘ 2003 - T35
-https://vip.opstream11.com/20220816/35597_fbcd05ae/3000k/hls/mixed.m3u8
-#EXTINF:-1 group-title="🎬THIEN LONG BAT BO🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/thienlongbatbo2003.png", THIÊN LONG BÁT BỘ 2003 - T36
-https://vip.opstream11.com/20220816/35598_91b4c87c/3000k/hls/mixed.m3u8
-#EXTINF:-1 group-title="🎬THIEN LONG BAT BO🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/thienlongbatbo2003.png", THIÊN LONG BÁT BỘ 2003 - T37
-https://vip.opstream11.com/20220816/35599_c8d80d19/3000k/hls/mixed.m3u8
-#EXTINF:-1 group-title="🎬THIEN LONG BAT BO🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/thienlongbatbo2003.png", THIÊN LONG BÁT BỘ 2003 - T38
-https://vip.opstream11.com/20220816/35600_9b4e8fb3/3000k/hls/mixed.m3u8
-#EXTINF:-1 group-title="🎬THIEN LONG BAT BO🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/thienlongbatbo2003.png", THIÊN LONG BÁT BỘ 2003 - T39
-https://vip.opstream11.com/20220816/35599_c8d80d19/3000k/hls/mixed.m3u8
-#EXTINF:-1 group-title="🎬THIEN LONG BAT BO🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/thienlongbatbo2003.png", THIÊN LONG BÁT BỘ 2003 - T40
-https://vip.opstream11.com/20220816/35600_9b4e8fb3/3000k/hls/mixed.m3u8
-
-
-
-
-#EXTINF:-1 group-title="🎬Y THIEN DO LONG KY🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/ythiendolongky.png", Ỷ THIÊN ĐỒ LONG KÝ - T1
-https://vip.opstream11.com/20220411/13095_798f0226/3000k/hls/mixed.m3u8
-#EXTINF:-1 group-title="🎬Y THIEN DO LONG KY🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/ythiendolongky.png", Ỷ THIÊN ĐỒ LONG KÝ - T2
-https://vip.opstream11.com/20220411/13096_a68fdf96/3000k/hls/mixed.m3u8
-#EXTINF:-1 group-title="🎬Y THIEN DO LONG KY🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/ythiendolongky.png", Ỷ THIÊN ĐỒ LONG KÝ - T3
-https://vip.opstream11.com/20220411/13097_8025cea5/3000k/hls/mixed.m3u8
-#EXTINF:-1 group-title="🎬Y THIEN DO LONG KY🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/ythiendolongky.png", Ỷ THIÊN ĐỒ LONG KÝ - T4
-https://vip.opstream11.com/20220411/13098_a086ef77/3000k/hls/mixed.m3u8
-#EXTINF:-1 group-title="🎬Y THIEN DO LONG KY🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/ythiendolongky.png", Ỷ THIÊN ĐỒ LONG KÝ - T5
-https://vip.opstream11.com/20220411/13099_647da6b3/3000k/hls/mixed.m3u8
-#EXTINF:-1 group-title="🎬Y THIEN DO LONG KY🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/ythiendolongky.png", Ỷ THIÊN ĐỒ LONG KÝ - T6
-https://vip.opstream11.com/20220411/13100_4b43ebc8/3000k/hls/mixed.m3u8
-#EXTINF:-1 group-title="🎬Y THIEN DO LONG KY🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/ythiendolongky.png", Ỷ THIÊN ĐỒ LONG KÝ - T7
-https://vip.opstream11.com/20220411/13101_024f5138/3000k/hls/mixed.m3u8
-#EXTINF:-1 group-title="🎬Y THIEN DO LONG KY🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/ythiendolongky.png", Ỷ THIÊN ĐỒ LONG KÝ - T8
-https://vip.opstream11.com/20220411/13102_2bb97403/3000k/hls/mixed.m3u8
-#EXTINF:-1 group-title="🎬Y THIEN DO LONG KY🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/ythiendolongky.png", Ỷ THIÊN ĐỒ LONG KÝ - T9
-https://vip.opstream11.com/20220411/13103_8f958e93/3000k/hls/mixed.m3u8
-#EXTINF:-1 group-title="🎬Y THIEN DO LONG KY🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/ythiendolongky.png", Ỷ THIÊN ĐỒ LONG KÝ - T10
-
-#EXTINF:-1 group-title="🎬Y THIEN DO LONG KY🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/ythiendolongky.png", Ỷ THIÊN ĐỒ LONG KÝ - T11
-
-#EXTINF:-1 group-title="🎬Y THIEN DO LONG KY🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/ythiendolongky.png", Ỷ THIÊN ĐỒ LONG KÝ - T12
-
-#EXTINF:-1 group-title="🎬Y THIEN DO LONG KY🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/ythiendolongky.png", Ỷ THIÊN ĐỒ LONG KÝ - T13
-
-#EXTINF:-1 group-title="🎬Y THIEN DO LONG KY🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/ythiendolongky.png", Ỷ THIÊN ĐỒ LONG KÝ - T14
-
-#EXTINF:-1 group-title="🎬Y THIEN DO LONG KY🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/ythiendolongky.png", Ỷ THIÊN ĐỒ LONG KÝ - T15
-
-#EXTINF:-1 group-title="🎬Y THIEN DO LONG KY🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/ythiendolongky.png", Ỷ THIÊN ĐỒ LONG KÝ - T16
-
-#EXTINF:-1 group-title="🎬Y THIEN DO LONG KY🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/ythiendolongky.png", Ỷ THIÊN ĐỒ LONG KÝ - T17
-
-#EXTINF:-1 group-title="🎬Y THIEN DO LONG KY🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/ythiendolongky.png", Ỷ THIÊN ĐỒ LONG KÝ - T18
-
-#EXTINF:-1 group-title="🎬Y THIEN DO LONG KY🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/ythiendolongky.png", Ỷ THIÊN ĐỒ LONG KÝ - T19
-
-#EXTINF:-1 group-title="🎬Y THIEN DO LONG KY🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/ythiendolongky.png", Ỷ THIÊN ĐỒ LONG KÝ - T20
-
-#EXTINF:-1 group-title="🎬Y THIEN DO LONG KY🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/ythiendolongky.png", Ỷ THIÊN ĐỒ LONG KÝ - T21
-
-#EXTINF:-1 group-title="🎬Y THIEN DO LONG KY🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/ythiendolongky.png", Ỷ THIÊN ĐỒ LONG KÝ - T22
-
-#EXTINF:-1 group-title="🎬Y THIEN DO LONG KY🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/ythiendolongky.png", Ỷ THIÊN ĐỒ LONG KÝ - T23
-
-#EXTINF:-1 group-title="🎬Y THIEN DO LONG KY🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/ythiendolongky.png", Ỷ THIÊN ĐỒ LONG KÝ - T24
-
-#EXTINF:-1 group-title="🎬Y THIEN DO LONG KY🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/ythiendolongky.png", Ỷ THIÊN ĐỒ LONG KÝ - T25
-
-#EXTINF:-1 group-title="🎬Y THIEN DO LONG KY🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/ythiendolongky.png", Ỷ THIÊN ĐỒ LONG KÝ - T26
-
-#EXTINF:-1 group-title="🎬Y THIEN DO LONG KY🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/ythiendolongky.png", Ỷ THIÊN ĐỒ LONG KÝ - T27
-
-#EXTINF:-1 group-title="🎬Y THIEN DO LONG KY🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/ythiendolongky.png", Ỷ THIÊN ĐỒ LONG KÝ - T28
-
-#EXTINF:-1 group-title="🎬Y THIEN DO LONG KY🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/ythiendolongky.png", Ỷ THIÊN ĐỒ LONG KÝ - T29
-
-#EXTINF:-1 group-title="🎬Y THIEN DO LONG KY🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/ythiendolongky.png", Ỷ THIÊN ĐỒ LONG KÝ - T30
-
-#EXTINF:-1 group-title="🎬Y THIEN DO LONG KY🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/ythiendolongky.png", Ỷ THIÊN ĐỒ LONG KÝ - T31
-
-#EXTINF:-1 group-title="🎬Y THIEN DO LONG KY🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/ythiendolongky.png", Ỷ THIÊN ĐỒ LONG KÝ - T32
-
-#EXTINF:-1 group-title="🎬Y THIEN DO LONG KY🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/ythiendolongky.png", Ỷ THIÊN ĐỒ LONG KÝ - T33
-
-#EXTINF:-1 group-title="🎬Y THIEN DO LONG KY🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/ythiendolongky.png", Ỷ THIÊN ĐỒ LONG KÝ - T34
-
-#EXTINF:-1 group-title="🎬Y THIEN DO LONG KY🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/ythiendolongky.png", Ỷ THIÊN ĐỒ LONG KÝ - T35
-
-#EXTINF:-1 group-title="🎬Y THIEN DO LONG KY🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/ythiendolongky.png", Ỷ THIÊN ĐỒ LONG KÝ - T36
-
-#EXTINF:-1 group-title="🎬Y THIEN DO LONG KY🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/ythiendolongky.png", Ỷ THIÊN ĐỒ LONG KÝ - T37
-
-#EXTINF:-1 group-title="🎬Y THIEN DO LONG KY🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/ythiendolongky.png", Ỷ THIÊN ĐỒ LONG KÝ - T38
-
-#EXTINF:-1 group-title="🎬Y THIEN DO LONG KY🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/ythiendolongky.png", Ỷ THIÊN ĐỒ LONG KÝ - T39
-
-#EXTINF:-1 group-title="🎬Y THIEN DO LONG KY🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/ythiendolongky.png", Ỷ THIÊN ĐỒ LONG KÝ - T40
-
-
-
-
-
-
-
-#EXTINF:-1 group-title="🎬CINEMA🎥" tvg-logo="https://imgs.vietnamnet.vn/Images/vnn/2013/04/01/15/20130401151403-a.jpg?width=0&s=hmSdK8qhN0JN6ccguPuBpg", PHUM
-https://vip.opstream90.com/20260213/24963_b4f6926d/3000k/hls/mixed.m3u8
-
-#EXTINF:-1 group-title="🎬CINEMA🎥" tvg-logo="https://daknong.1cdn.vn/2025/02/06/den-am-hon-review-phim-va-lich-chieu-tai-viet-nam.jpg", Đèn Âm Hồn: Người Con Gái Nam Xương
-https://s6.kkphimplayer6.com/20250811/miyJKDrj/3500kb/hls/index.m3u8
-#EXTINF:-1 group-title="🎬CINEMA🎥" tvg-logo="https://haniff.vn/wp-content/uploads/2024/10/Lam-giau-voi-ma-2.jpg", Làm Giàu Với Ma (Betting With Ghost)
-https://s4.phim1280.tv/20250323/KmdatGKe/3000kb/hls/index.m3u8
-#EXTINF:-1 group-title="🎬CINEMA🎥" tvg-logo="https://assets.glxplay.io/images/w700/title/ngay-xua-co-mot-chuyen-tinh_web_backdrop_8b7a5b8cbb5fe245d3a6f7aea524c796.jpg", Ngày Xưa Có Một Chuyện Tình
-https://s6.kkphimplayer6.com/20250901/w8LN0LND/3500kb/hls/index.m3u8
-#EXTINF:-1 group-title="🎬CINEMA🎥" tvg-logo="https://images.fptplay53.net/media/OTT/VOD/2025/08/28/bo-tu-bao-thu-fpt-play-1756374565016_Landscape.jpg", Bộ Tứ Báo Thủ
-https://s6.kkphimplayer6.com/20250901/2RZvePPZ/3500kb/hls/index.m3u8
-#EXTINF:-1 group-title="🎬CINEMA🎥" tvg-logo="https://i.imgur.com/q05fNtW.png", Mưa Trên Cánh Bướm
-https://s6.kkphimplayer6.com/20250918/48nrktLm/3500kb/hls/index.m3u8
-#EXTINF:-1 group-title="🎬CINEMA🎥" tvg-logo="https://images.fptplay53.net/media/OTT/VOD/2025/09/29/tham-tu-kien-ky-an-khong-dau-fpt-play-1759139646462_Landscape.jpg", Thám Tử Kiên: Kỳ Án Không Đầu
-https://s6.kkphimplayer6.com/20251010/86AEDncn/3500kb/hls/index.m3u8
-#EXTINF:-1 group-title="🎬CINEMA🎥" tvg-logo="https://baokhanhhoa.vn/file/e7837c02857c8ca30185a8c39b582c03/112025/1_20251116070652.jpg", Mưa Đỏ
-https://vip.opstream90.com/20251118/17952_7bf57028/3000k/hls/mixed.m3u8
-#EXTINF:-1 group-title="🎬CINEMA🎥" tvg-logo="https://images.fptplay53.net/media/OTT/VOD/2025/12/26/tham-tu-lung-danh-conan-du-anh-cua-doc-nhan-fpt-play-1766741539032_Landscape.jpg", Conan Movie 28 - Dư Ảnh Của Độc Nhãn
-https://vodcdn.fptplay.net/POVOD/encoded/2025/12/28/thamtulungdanhconanduanhcuadocnhan-detectiveconanoneeyedflashback-2025-dolby-mav-bb8d776e6f35fe41/H264/stream.mpd?st=8PSyksBMiL_tvRpq4B3-eg&expires=1767859023
-#EXTINF:-1 group-title="🎬CINEMA🎥" tvg-logo="https://hnm.1cdn.vn/thumbs/600x315/2025/05/08/mmdb_poster_first-look_2000x2500px.jpg", Mang Mẹ Đi Bỏ
-https://vip.opstream90.com/20251129/18758_e33bdf72/3000k/hls/mixed.m3u8
-#EXTINF:-1 group-title="🎬CINEMA🎥" tvg-logo="https://images.fptplay53.net/media/OTT/VOD/2025/12/26/trai-tim-que-quat-fpt-play-1766744170691_Landscape.jpg", Trái Tim Què Quặt
-https://s6.kkphimplayer6.com/20251228/0HQf0tP2/3500kb/hls/index.m3u8
-#EXTINF:-1 group-title="🎬CINEMA🎥" tvg-logo="https://images.fptplay53.net/media/OTT/VOD/2025/12/30/lam-giau-voi-ma-cuoc-chien-hot-xoan-fpt-play-1767066672824_Landscape.jpg", Làm Giàu Với Ma Phần 2: Cuộc Chiến Hột Xoàn
-https://vip.opstream90.com/20260102/21537_fe1af53e/3000k/hls/mixed.m3u8
-#EXTINF:-1 group-title="🎬CINEMA🎥" tvg-logo="https://images.fptplay53.net/media/OTT/VOD/2026/01/27/quy-nhap-trang-fpt-play-1769508575571_Landscape.jpg", Quỷ Nhập Tràng
-https://s6.kkphimplayer6.com/20260129/HDz8Fu0F/3500kb/hls/index.m3u8
-#EXTINF:-1 group-title="🎬CINEMA🎥" tvg-logo="https://images.fptplay53.net/media/OTT/VOD/2026/01/23/tu-chien-tren-khong-fpt-play-1769164011330_Landscape.jpg", Tử Chiến Trên Không
-https://rumble.com/hls-vod/72x1ns/playlist.m3u8
-#EXTINF:-1 group-title="🎬HUNG LONG PHONG BA🎥" tvg-logo="https://images.fptplay53.net/media/OTT/VOD/2026/02/11/hung-long-phong-ba-4-fpt-play-1770804850859_Landscape.jpg", Hùng Long Phong Bá Phần 4 - Tập 1
-https://rumble.com/hls-vod/73gr0i/playlist.m3u8
-#EXTINF:-1 group-title="🎬HUNG LONG PHONG BA🎥" tvg-logo="https://images.fptplay53.net/media/OTT/VOD/2026/02/11/hung-long-phong-ba-4-fpt-play-1770804850859_Landscape.jpg", Hùng Long Phong Bá Phần 4 - Tập 2
-https://rumble.com/hls-vod/73k35o/playlist.m3u8
-#EXTINF:-1 group-title="🎬HUNG LONG PHONG BA🎥" tvg-logo="https://images.fptplay53.net/media/OTT/VOD/2026/02/11/hung-long-phong-ba-4-fpt-play-1770804850859_Landscape.jpg", Hùng Long Phong Bá Phần 4 - Tập 3
-https://rumble.com/hls-vod/73os1q/playlist.m3u8
-#EXTINF:-1 group-title="🎬HUNG LONG PHONG BA🎥" tvg-logo="https://images.fptplay53.net/media/OTT/VOD/2026/02/11/hung-long-phong-ba-4-fpt-play-1770804850859_Landscape.jpg", Hùng Long Phong Bá Phần 4 - Tập 4
-https://rumble.com/hls-vod/73s4u6/playlist.m3u8
-#EXTINF:-1 group-title="🎬HUNG LONG PHONG BA🎥" tvg-logo="https://images.fptplay53.net/media/OTT/VOD/2026/02/11/hung-long-phong-ba-4-fpt-play-1770804850859_Landscape.jpg", Hùng Long Phong Bá Phần 4 - Tập 5
-https://rumble.com/hls-vod/73txdq/playlist.m3u8
-#EXTINF:-1 group-title="🎬HUNG LONG PHONG BA🎥" tvg-logo="https://images.fptplay53.net/media/OTT/VOD/2026/02/11/hung-long-phong-ba-4-fpt-play-1770804850859_Landscape.jpg", Hùng Long Phong Bá Phần 4 - Tập Cuối
-https://rumble.com/hls-vod/73vrdu/playlist.m3u8
-#EXTINF:-1 group-title="🎬CINEMA🎥" tvg-logo="https://raw.githubusercontent.com/vuminhthanh12/vuminhthanh12/refs/heads/main/Th%E1%BA%BF%20H%E1%BB%87%20K%E1%BB%B3%20T%C3%ADch.jpg", Thế Hệ Kỳ Tích
-https://rumble.com/hls-vod/745t9a/playlist.m3u8
-#EXTINF:-1 group-title="🎬CINEMA🎥" tvg-logo="https://thegioidienanh.vn/stores/news_dataimages/2025/092025/14/13/in_social/tay-anh-giu-mot-vi-sao-payoff-poster-social-khoi-chieu-0310202520250914134014.jpg", Tay Anh Giữ Một Vì Sao
-https://vip.opstream90.com/20260102/21538_3a9ba451/3000k/hls/mixed.m3u8
-#EXTINF:-1 group-title="🎬CINEMA🎥" tvg-logo="https://cdn-images.vtv.vn/zoom/554_346/66349b6076cb4dee98746cf1/2025/09/19/truy-tim-long-dien-huong-67756442926310209483416-92025497027105625698228.jpg", Truy Tìm Long Diên Hương
-https://rumble.com/hls-vod/74h9mw/playlist.m3u8
-#EXTINF:-1 group-title="🎬CINEMA🎥" tvg-logo="https://images.fptplay53.net/media/OTT/VOD/2026/03/13/ut-lan-oan-linh-giu-cua-fpt-play-1773395168032_Background_origin.jpg", Út Lan: Oán Linh Giữ Của
-https://vip.opstream90.com/20260213/24963_b4f6926d/3000k/hls/mixed.m3u8
-#EXTINF:-1 group-title="🎬CINEMA🎥" tvg-logo="https://tintuc-divineshop.cdn.vccloud.vn/wp-content/uploads/2025/08/164142635_khe-uoc-ban-dau.webp", Khế Ước Bán Dâu
-https://s6.kkphimplayer6.com/20260118/tdyKqxYZ/3500kb/hls/index.m3u8
-#EXTINF:-1 group-title="🎬CINEMA🎥" tvg-logo="https://images.fptplay53.net/media/OTT/VOD/2026/03/13/thien-duong-mau-fpt-play-1773396128871_Landscape.jpg", Thiên Đường Máu
-https://s6.kkphimplayer6.com/20260320/02bq9QLy/3500kb/hls/index.m3u8
-#EXTINF:-1 group-title="🎬CINEMA🎥" tvg-logo="https://images.fptplay53.net/media/OTT/VOD/2026/03/27/cuc-vang-cua-ngoai-fpt-play-1774595783778_Landscape.jpg", Cục Vàng Của Ngoại
-https://s6.kkphimplayer6.com/20260403/6UwV8LAv/3500kb/hls/index.m3u8
-#EXTINF:-1 group-title="🎬CINEMA🎥" tvg-logo="https://raw.githubusercontent.com/vuminhthanh12/Logo/refs/heads/main/huyentinhdatrach.jpg", Huyền Tình Dạ Trạch
-https://rumble.com/hls-vod/76srew/playlist.m3u8
-#EXTINF:-1 group-title="🎬CINEMA🎥" tvg-logo="https://images.fptplay53.net/media/OTT/VOD/2026/04/29/nha-minh-di-thoi-fpt-play-1777439633547_Landscape.jpg", Nhà Mình Đi Thôi
-https://vip.opstream90.com/20260502/30774_da58e2e4/3000k/hls/mixed.m3u8
-#EXTINF:-1 group-title="🎬CINEMA🎥" tvg-logo="https://images.fptplay53.net/media/OTT/VOD/2026/04/30/cuoc-xe-am-phu-fpt-play-1777541165464_Background_origin.jpg", Cuốc Xe Âm Phủ - Tập 1
-https://v7.kkphimplayer7.com/20260502/89qXv3Fa/3500kb/hls/index.m3u8
-#EXTINF:-1 group-title="🎬CINEMA🎥" tvg-logo="https://images.fptplay53.net/media/OTT/VOD/2026/04/30/cuoc-xe-am-phu-fpt-play-1777541165464_Background_origin.jpg", Cuốc Xe Âm Phủ - Tập 2
-https://v7.kkphimplayer7.com/20260503/Lp2p18eb/3500kb/hls/index.m3u8
-#EXTINF:-1 group-title="🎬OSHI NO KO🎥" tvg-logo="https://images.fptplay53.net/media/OTT/VOD/2026/01/12/dua-con-cua-than-tuong-phan-3-fpt-play-1768204408459_Background_origin.jpg", Oshi No Ko Phần 3 - Tập 1
-https://rumble.com/hls-vod/72av32/playlist.m3u8
-#EXTINF:-1 group-title="🎬OSHI NO KO🎥" tvg-logo="https://images.fptplay53.net/media/OTT/VOD/2026/01/12/dua-con-cua-than-tuong-phan-3-fpt-play-1768204408459_Background_origin.jpg", Oshi No Ko Phần 3 - Tập 2
-https://rumble.com/hls-vod/72nhy6/playlist.m3u8
-#EXTINF:-1 group-title="🎬OSHI NO KO🎥" tvg-logo="https://images.fptplay53.net/media/OTT/VOD/2026/01/12/dua-con-cua-than-tuong-phan-3-fpt-play-1768204408459_Background_origin.jpg", Oshi No Ko Phần 3 - Tập 3
-https://rumble.com/hls-vod/73bg84/playlist.m3u8
-#EXTINF:-1 group-title="🎬OSHI NO KO🎥" tvg-logo="https://images.fptplay53.net/media/OTT/VOD/2026/01/12/dua-con-cua-than-tuong-phan-3-fpt-play-1768204408459_Background_origin.jpg", Oshi No Ko Phần 3 - Tập 4
-https://rumble.com/hls-vod/73gpe4/playlist.m3u8
-#EXTINF:-1 group-title="🎬OSHI NO KO🎥" tvg-logo="https://images.fptplay53.net/media/OTT/VOD/2026/01/12/dua-con-cua-than-tuong-phan-3-fpt-play-1768204408459_Background_origin.jpg", Oshi No Ko Phần 3 - Tập 5
-https://rumble.com/hls-vod/73uq6q/playlist.m3u8
-#EXTINF:-1 group-title="🎬OSHI NO KO🎥" tvg-logo="https://images.fptplay53.net/media/OTT/VOD/2026/01/12/dua-con-cua-than-tuong-phan-3-fpt-play-1768204408459_Background_origin.jpg", Oshi No Ko Phần 3 - Tập 6
-https://vip.opstream90.com/20260219/25424_5534491f/3000k/hls/mixed.m3u8
-#EXTINF:-1 group-title="🎬OSHI NO KO🎥" tvg-logo="https://images.fptplay53.net/media/OTT/VOD/2026/01/12/dua-con-cua-than-tuong-phan-3-fpt-play-1768204408459_Background_origin.jpg", Oshi No Ko Phần 3 - Tập 7
-https://rumble.com/hls-vod/74da00/playlist.m3u8
-#EXTINF:-1 group-title="🎬OSHI NO KO🎥" tvg-logo="https://images.fptplay53.net/media/OTT/VOD/2026/01/12/dua-con-cua-than-tuong-phan-3-fpt-play-1768204408459_Background_origin.jpg", Oshi No Ko Phần 3 - Tập 8
-https://vip.opstream90.com/20260305/26504_404d52bf/3000k/hls/mixed.m3u8
-#EXTINF:-1 group-title="🎬OSHI NO KO🎥" tvg-logo="https://images.fptplay53.net/media/OTT/VOD/2026/01/12/dua-con-cua-than-tuong-phan-3-fpt-play-1768204408459_Background_origin.jpg", Oshi No Ko Phần 3 - Tập 9
-https://vip.opstream90.com/20260312/26990_72417e4a/3000k/hls/mixed.m3u8
-#EXTINF:-1 group-title="🎬OSHI NO KO🎥" tvg-logo="https://images.fptplay53.net/media/OTT/VOD/2026/01/12/dua-con-cua-than-tuong-phan-3-fpt-play-1768204408459_Background_origin.jpg", Oshi No Ko Phần 3 - Tập 10
-https://rumble.com/hls-vod/757w6u/playlist.m3u8
-#EXTINF:-1 group-title="🎬OSHI NO KO🎥" tvg-logo="https://images.fptplay53.net/media/OTT/VOD/2026/01/12/dua-con-cua-than-tuong-phan-3-fpt-play-1768204408459_Background_origin.jpg", Oshi No Ko Phần 3 - Tập 11
-https://rumble.com/hls-vod/75uhgc/playlist.m3u8
-#EXTINF:-1 group-title="🎬OSHI NO KO🎥" tvg-logo="https://images.fptplay53.net/media/OTT/VOD/2026/01/12/dua-con-cua-than-tuong-phan-3-fpt-play-1768204408459_Background_origin.jpg", KIM BÌNH MAI 2008 - Phần 1
-https://vip.opstream14.com/20230628/38286_fb9b3709/3000k/hls/mixed.m3u8
-
-
-
-
-
-
-
 
 
 
@@ -811,8 +813,7 @@ https://node1.olelive.com:6443/live/CCTV5HD/hls.m3u8
 https://node1.olelive.com:6443/live/CCTV5PHD/hls.m3u8
 #EXTINF:-1 tvg-name="CCTV-7 国防军事" group-title="🇨🇳 CCTV" tvg-logo="https://i.imgur.com/GhXlUpM.png" tvg-id="CCTV7.cn",CCTV-7 国防军事
 https://node1.olelive.com:6443/live/CCTV7HD/hls.m3u8
-#EXTINF:-1 tvg-name="CCTV-8 电视剧" group-title="🇨🇳 CCTV" tvg-logo="https://i.imgur.com/Qg1opg9.png" tvg-id="CCTV8.cn",CCTV-8 电视剧
-https://node1.olelive.com:6443/live/CCTV8HD/hls.m3u8
+
 #EXTINF:-1 tvg-name="CCTV-9 纪录" group-title="🇨🇳 CCTV" tvg-logo="https://i.imgur.com/Ruyzhu5.png" tvg-id="CCTV9.cn" ,CCTV-9 纪录
 https://node1.olelive.com:6443/live/CCTV9HD/hls.m3u8
 #EXTINF:-1 tvg-name="CCTV-10 科教" group-title="🇨🇳 CCTV" tvg-logo="https://i.imgur.com/W8JNs1s.png" tvg-id="CCTV10.cn" ,CCTV-10 科教
