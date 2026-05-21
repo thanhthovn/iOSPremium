@@ -371,6 +371,12 @@ http://47a63631.edemist.com/iptv/LVFGLXHUW45A8PBECGUURD6K/9261/index.m3u8
 #EXTINF:-1 tvg-id="cartoonhd" group-title="🌐QUỐC TẾ" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/8/80/Cartoon_Network_2010_logo.svg", Cartoon Network HD 2
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://cdn4.skygo.mn/live/disk1/Cartoon_Network/HLSv3-FTA/Cartoon_Network-avc1_2000000=13-mp4a_256000_eng=6.m3u8
+#EXTINF:-1 tvg-id="discoveryhd" group-title="🌐QUỐC TẾ" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/8/80/Cartoon_Network_2010_logo.svg", Discovery Channel HD
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
+http://47a63631.edemist.com/iptv/LVFGLXHUW45A8PBECGUURD6K/9011/index.m3u8
+#EXTINF:-1 tvg-id="hbohd" group-title="🌐QUỐC TẾ" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/8/80/Cartoon_Network_2010_logo.svg", HBO HD
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
+http://47a63631.edemist.com/iptv/LVFGLXHUW45A8PBECGUURD6K/19428/index.m3u8
 #EXTINF:-1 tvg-id="dw" group-title="🌐QUỐC TẾ" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Deutsche_Welle_symbol_2012.svg/250px-Deutsche_Welle_symbol_2012.svg.png", DW TV HD
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=109
