@@ -411,17 +411,17 @@ https://freem3u.xyz/api/live/play.m3u8?vid=99
 #EXTINF:-1 tvg-name="CCTV-8 电视剧" group-title="🇨🇳CCTV" tvg-logo="https://i.imgur.com/Qg1opg9.png" tvg-id="CCTV8.cn",CCTV-8 电视剧
 https://cdn.inteltelevision.com/4987/cctv8hd/playlist.m3u8?t=1779156466&token=500e97de8f291bdc41ef449faf94e205
 
-#EXTINF:-1 group-title="🎬LẬT MẶT SERIES🎥" tvg-logo="#EXTINF:-1 group-title="🎬CINEMA🎥" tvg-logo="https://static.vieon.vn/vieplay-image/thumbnail_v4/2021/02/08/10s0sy03_1920x1080-latmat.jpg", Lật Mặt 1
+#EXTINF:-1 group-title="🎬LẬT MẶT SERIES🎥" tvg-logo="#EXTINF:-1 group-title="🎬CINEMA🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/latmat1.png", Lật Mặt 1
 https://vip.opstream90.com/20251028/16262_8b4f4048/3000k/hls/mixed.m3u8
-#EXTINF:-1 group-title="🎬LẬT MẶT SERIES🎥" tvg-logo="#EXTINF:-1 group-title="🎬CINEMA🎥" tvg-logo="https://i.ytimg.com/vi/pHDyf03UNiM/maxresdefault.jpg", Lật Mặt 2: Phim Trường
+#EXTINF:-1 group-title="🎬LẬT MẶT SERIES🎥" tvg-logo="#EXTINF:-1 group-title="🎬CINEMA🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/latmat2.png", Lật Mặt 2: Phim Trường
 https://vip.opstream90.com/20251028/16260_314ae9d8/3000k/hls/mixed.m3u8
-#EXTINF:-1 group-title="🎬LẬT MẶT SERIES🎥" tvg-logo="#EXTINF:-1 group-title="🎬CINEMA🎥" tvg-logo="https://homepage.momocdn.net/cinema/momo-cdn-api-220615135209-637908979299777136.jpg", Lật Mặt 3: Ba Chàng Khuyết
+#EXTINF:-1 group-title="🎬LẬT MẶT SERIES🎥" tvg-logo="#EXTINF:-1 group-title="🎬CINEMA🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/latmat3.png", Lật Mặt 3: Ba Chàng Khuyết
 https://vip.opstream90.com/20251028/16261_4803eb7e/3000k/hls/mixed.m3u8
-#EXTINF:-1 group-title="🎬LẬT MẶT SERIES🎥" tvg-logo="#EXTINF:-1 group-title="🎬CINEMA🎥" tvg-logo="https://dep.com.vn/wp-content/uploads/2019/01/lat-mat-nha-co-khach-1.jpg", Lật Mặt 4: Nhà Có Khách
+#EXTINF:-1 group-title="🎬LẬT MẶT SERIES🎥" tvg-logo="#EXTINF:-1 group-title="🎬CINEMA🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/latmat4.png", Lật Mặt 4: Nhà Có Khách
 https://vip.opstream16.com/20220303/476_47af98b7/3000k/hls/mixed.m3u8
-#EXTINF:-1 group-title="🎬LẬT MẶT SERIES🎥" tvg-logo="#EXTINF:-1 group-title="🎬CINEMA🎥" tvg-logo="https://pic.bstarstatic.com/ugc/b1acde8a5538b98415e9d061fec7abc1.jpg", Lật Mặt 5: 48h
+#EXTINF:-1 group-title="🎬LẬT MẶT SERIES🎥" tvg-logo="#EXTINF:-1 group-title="🎬CINEMA🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/latmat5.png", Lật Mặt 5: 48h
 https://vip.opstream13.com/20251028/14850_db0d4963/3000k/hls/mixed.m3u8
-#EXTINF:-1 group-title="🎬LẬT MẶT SERIES🎥" tvg-logo="#EXTINF:-1 group-title="🎬CINEMA🎥" tvg-logo="https://images2.thanhnien.vn/528068263637045248/2023/5/19/poster-ngang-1684472039478119300321.jpg", Lật Mặt 6: Tấm Vé Định Mệnh
+#EXTINF:-1 group-title="🎬LẬT MẶT SERIES🎥" tvg-logo="#EXTINF:-1 group-title="🎬CINEMA🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/latmat6.png", Lật Mặt 6: Tấm Vé Định Mệnh
 https://vip.opstream17.com/20240318/2854_137bf151/3000k/hls/mixed.m3u8
 
 
