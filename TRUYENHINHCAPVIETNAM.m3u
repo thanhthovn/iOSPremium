@@ -226,7 +226,6 @@ https://freem3u.xyz/api/live/play.m3u8?vid=65
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0
 https://freem3u.xyz/api/live/play.m3u8?vid=76
 
-
 #EXTINF:-1 tvg-id="gialai" group-title="📡ĐỊA PHƯƠNG" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/gialai.png", GTV | Báo và PTTH Gia Lai
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0
 https://live.fptplay53.net/epzsd1/gialai01_hls.smil/chunklist_b2500000.m3u8
@@ -235,8 +234,7 @@ https://live.fptplay53.net/epzsd1/gialai01_hls.smil/chunklist_b2500000.m3u8
 #EXTVLCOPT:http-user-agent=Dalvik/2.1.0
 https://freem3u.xyz/api/live/play.m3u8?vid=81
 #EXTINF:-1 tvg-id="quangngai2" group-title="📡ĐỊA PHƯƠNG" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/quangngai2.png", QNgTV2 | Báo và PTTH Quảng Ngãi
-https://vietanhtv.id.vn/vieon.php?type=tivi&kenh=kon-tum-1
-
+http://iptv.hainghia.net:50000/rtp/232.84.3.80:11572?r2h-token=QSHgutx3qu8MGDHT
 
 #EXTINF:-1 tvg-id="quangtri" group-title="📡ĐỊA PHƯƠNG" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/quangtri.png", QTTV | Báo và PTTH Quảng Trị
 https://freem3u.xyz/api/live/play.m3u8?vid=83
@@ -409,26 +407,26 @@ https://freem3u.xyz/api/live/play.m3u8?vid=215
 #EXTINF:-1 tvg-id="outdoorhd" group-title="🌐QUỐC TẾ" tvg-logo="https://static.wikia.nocookie.net/logos/images/3/3d/Outdoor.png/revision/latest?cb=20231230015001&path-prefix=vi", OUT DOOR HD
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=216
-#EXTINF:-1 tvg-id="france24eng" group-title="🌐QUỐC TẾ" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/France_24_logo_%282013%29.svg/250px-France_24_logo_%282013%29.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail", FRANCE 24
+#EXTINF:-1 tvg-id="france24eng" group-title="🌐QUỐC TẾ" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/France_24_logo_%282013%29.svg/250px-France_24_logo_%282013%29.svg.png", FRANCE 24
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=96
 #EXTINF:-1 tvg-id="hgtv" group-title="🌐QUỐC TẾ" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/HGTV_2010.svg/250px-HGTV_2010.svg.png", HGTV
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=99
-#EXTINF:-1 tvg-name="CCTV-8 电视剧" group-title="🇨🇳CCTV" tvg-logo="https://i.imgur.com/Qg1opg9.png" tvg-id="CCTV8.cn",CCTV-8 电视剧
+#EXTINF:-1 tvg-name="CCTV-8 电视剧" group-title="🌐QUỐC TẾ" tvg-logo="https://i.imgur.com/Qg1opg9.png" tvg-id="CCTV8.cn", CCTV-8 电视剧
 https://cdn.inteltelevision.com/4987/cctv8hd/playlist.m3u8?t=1779156466&token=500e97de8f291bdc41ef449faf94e205
 
-#EXTINF:-1 group-title="🎬LẬT MẶT SERIES🎥" tvg-logo="#EXTINF:-1 group-title="🎬CINEMA🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/onsportsplus.png", Lật Mặt 1
+#EXTINF:-1 group-title="🎬LẬT MẶT SERIES🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/latmat1.png", Lật Mặt 1
 https://vip.opstream90.com/20251028/16262_8b4f4048/3000k/hls/mixed.m3u8
-#EXTINF:-1 group-title="🎬LẬT MẶT SERIES🎥" tvg-logo="#EXTINF:-1 group-title="🎬CINEMA🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/latmat2.png", Lật Mặt 2: Phim Trường
+#EXTINF:-1 group-title="🎬LẬT MẶT SERIES🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/latmat2.png", Lật Mặt 2: Phim Trường
 https://vip.opstream90.com/20251028/16260_314ae9d8/3000k/hls/mixed.m3u8
-#EXTINF:-1 group-title="🎬LẬT MẶT SERIES🎥" tvg-logo="#EXTINF:-1 group-title="🎬CINEMA🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/latmat3.png", Lật Mặt 3: Ba Chàng Khuyết
+#EXTINF:-1 group-title="🎬LẬT MẶT SERIES🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/latmat3.png", Lật Mặt 3: Ba Chàng Khuyết
 https://vip.opstream90.com/20251028/16261_4803eb7e/3000k/hls/mixed.m3u8
-#EXTINF:-1 group-title="🎬LẬT MẶT SERIES🎥" tvg-logo="#EXTINF:-1 group-title="🎬CINEMA🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/latmat4.png", Lật Mặt 4: Nhà Có Khách
+#EXTINF:-1 group-title="🎬LẬT MẶT SERIES🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/latmat4.png", Lật Mặt 4: Nhà Có Khách
 https://vip.opstream16.com/20220303/476_47af98b7/3000k/hls/mixed.m3u8
-#EXTINF:-1 group-title="🎬LẬT MẶT SERIES🎥" tvg-logo="#EXTINF:-1 group-title="🎬CINEMA🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/latmat5.png", Lật Mặt 5: 48h
+#EXTINF:-1 group-title="🎬LẬT MẶT SERIES🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/latmat5.png", Lật Mặt 5: 48h
 https://vip.opstream13.com/20251028/14850_db0d4963/3000k/hls/mixed.m3u8
-#EXTINF:-1 group-title="🎬LẬT MẶT SERIES🎥" tvg-logo="#EXTINF:-1 group-title="🎬CINEMA🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/latmat6.png", Lật Mặt 6: Tấm Vé Định Mệnh
+#EXTINF:-1 group-title="🎬LẬT MẶT SERIES🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/latmat6.png", Lật Mặt 6: Tấm Vé Định Mệnh
 https://vip.opstream17.com/20240318/2854_137bf151/3000k/hls/mixed.m3u8
 
 #EXTINF:-1 group-title="🎬CÂY TÁO NỞ HOA🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/caytaonohoa.png", Cây Táo Nở Hoa - Tập 1
@@ -455,7 +453,7 @@ https://vip.opstream17.com/20251003/19017_6d3b4379/3000k/hls/mixed.m3u8
 
 
 
-#EXTINF:-1 group-title="🎬CINEMA🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/slgsl.png"", Siêu Lừa Gặp Siêu Lầy
+#EXTINF:-1 group-title="🎬CINEMA🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/slgsl.png", Siêu Lừa Gặp Siêu Lầy
 https://vip.opstream13.com/20251028/14854_70522cd4/3000k/hls/mixed.m3u8
 #EXTINF:-1 group-title="🎬CINEMA🎥" tvg-logo="https://cdn.tgdd.vn/Files/2020/12/24/1315788/review-phim-me-chong-2017-khi-nhung-thu-doan-tan-doc-duoc-day-len-cao-trao-202201151421583746.jpg", Mẹ Chồng
 https://vip.opstream14.com/20220624/15414_76671a17/3000k/hls/mixed.m3u8
