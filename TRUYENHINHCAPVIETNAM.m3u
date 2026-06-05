@@ -324,9 +324,19 @@ https://liveh34.vtvprime.vn/hls/SCTV22/04.m3u8
 https://liveh12.vtvprime.vn/hls/SCTVPHIM/03.m3u8
 
 
+#EXTINF:-1 group-title="VTV" tvg-logo="https://i.imgur.com/B9AVT2i.png" tvg-id="f707c3db13b115874144aed50dfbaf4b",WBTV (HD 8Mbps)
+http://hothanhdam:thanhdam1010@tvh.hothanhdam.dsmynas.com/stream/channelid/1539508215?profile=pass
 
-
-
+#EXTINF:-1 group-title="VTVcab" tvg-logo="https://i.imgur.com/WAxiIfP.png" tvg-id="2687eb64e4802c8b574cf3d693ecb724",ON Football HD (HD 8.5Mbps)
+http://hothanhdam:thanhdam1010@tvh.hothanhdam.dsmynas.com/stream/channelid/1693157158?profile=pass
+#EXTINF:-1 group-title="VTVcab" tvg-logo="https://i.imgur.com/WAxiIfP.png" tvg-id="12ca9df0d8b5d1ac91c7e6b4a34991c6",ON Football HD (HD 8Mbps)
+http://hothanhdam:thanhdam1010@tvh.hothanhdam.dsmynas.com/stream/channelid/1889389074?profile=pass
+#EXTINF:-1 group-title="VTVcab" tvg-logo="https://i.imgur.com/moYwxwf.png" tvg-id="7c440defe3886f7358c31f76e4a97baf",ON Sports HD (HD 8.5Mbps)
+http://hothanhdam:thanhdam1010@tvh.hothanhdam.dsmynas.com/stream/channelid/1863140476?profile=pass
+#EXTINF:-1 group-title="VTVcab" tvg-logo="https://i.imgur.com/moYwxwf.png" tvg-id="29d64d4018d338ee703a30a951394ca9",ON Sports HD (HD 8Mbps)
+http://hothanhdam:thanhdam1010@tvh.hothanhdam.dsmynas.com/stream/channelid/1078842921?profile=pass
+#EXTINF:-1 group-title="VTVcab" tvg-logo="https://i.imgur.com/cFs8OVb.png" tvg-id="33ec30b80b9db3a02a7f1b37d7ead71c",ON Sports+ (HD 8Mbps)
+http://hothanhdam:thanhdam1010@tvh.hothanhdam.dsmynas.com/stream/channelid/942730291?profile=pass
 
 #EXTINF:-1 tvg-id="onviegiaitri" group-title="🛰️VTVcab" tvg-logo="https://img.vtvprime.vn/gV1k4G1mCGQpnNGJFCJQISd0-p96jY14Ufz_mOb8h_o/rs:fit:836:468/czM6Ly9wcmQtc24taW1hZ2VzL2NoYW5uZWwvZjVhZDhkNmItMTQ4NS00YjYxLThhMDEtNTdiYzBiMjU2NGU1LnBuZw==.png", ON Vie Giải Trí
 https://freem3u.xyz/api/live/play.m3u8?vid=180
