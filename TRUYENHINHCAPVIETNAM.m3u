@@ -1,6 +1,6 @@
 #EXTM3U url-tvg="https://vnepg.site/epg.xml"
-
-
+#EXTINF:-1 tvg-id="vtv1hd" group-title="🇻🇳VTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/vtv1.png", VTsu7V1
+https://tvh.hothanhdam.dsmynas.com/stream/channel/33ec30b80b9db3a02a7f1b37d7ead71c?profile=webtv-h264-aac-matroska
 #EXTINF:-1 tvg-id="vtv1hd" group-title="🇻🇳VTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/vtv1.png", VTV1
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36 Edg/113.0.1774.57
 https://freem3u.xyz/api/live/play.m3u8?vid=2
