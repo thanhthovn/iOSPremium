@@ -44,7 +44,7 @@ https://freem3u.xyz/api/live/play.m3u8?vid=45
 
 #EXTINF:-1 tvg-id="vinhlong1hd" group-title="📡ĐỊA PHƯƠNG" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/vinhlong1.png", THVL1 | Báo và PTTH Vĩnh Long
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36 Edg/113.0.1774.57
-https://live.fptplay53.net/epzch2/vinhlong1_abr.smil/chunklist_b4200000.m3u8
+https://live.fptplay53.net/epzhd2/vinhlong1_vhls.smil/chunklist_b5000000.m3u8
 #EXTINF:-1 tvg-id="vinhlong2hd" group-title="📡ĐỊA PHƯƠNG" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/vinhlong2.png", THVL2 | Báo và PTTH Vĩnh Long
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36 Edg/113.0.1774.57
 https://live.fptplay53.net/epzhd2/vinhlong2_vhls.smil/chunklist_b5000000.m3u8
@@ -196,7 +196,7 @@ https://freem3u.xyz/api/live/play.m3u8?vid=68
 #EXTINF:-1 tvg-id="angiang1" group-title="📡ĐỊA PHƯƠNG" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/angiang1.png", ATV1 | Báo và PTTH An Giang
 https://tv.angiangtv.vn/live/kgtv/kgtv.m3u8
 #EXTINF:-1 tvg-id="angiang2" group-title="📡ĐỊA PHƯƠNG" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/angiang2.png", ATV2 | Báo và PTTH An Giang
-https://sgclient.duckdns.org/source/tv360.m3u8?id=35
+https://live.fptplay53.net/epzsd1/angiang_hls.smil/chunklist_b1800000.m3u8
 #EXTINF:-1 tvg-id="angiang3" group-title="📡ĐỊA PHƯƠNG" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/angiang3.png", ATV3 | Báo và PTTH An Giang
 https://tv.angiangtv.vn/live/kgtv1/kgtv1.m3u8
 
