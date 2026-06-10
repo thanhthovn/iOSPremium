@@ -123,12 +123,10 @@ https://live.fptplay53.net/epzhd1/htvcmusic_vhls.smil/chunklist.m3u8
 https://freem3u.xyz/api/live/play.m3u8?vid=33
 #EXTINF:-1 tvg-id="hanoi2" group-title="📡ĐỊA PHƯƠNG" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/hanoi2.png", H2 | Báo và PTTH Hà Nội
 https://live.fptplay53.net/fnxhd1/hntv2_vhls.smil/chunklist_b5000000.m3u8
-
 #EXTINF:-1 tvg-id="hitv" group-title="📡ĐỊA PHƯƠNG" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/hitv.png", Hi TV
-https://vod-h08-hlc.tv360.vn:18443/332_0.m3u8?Range=296843367-296843368&SessionID=4d9ac589-f074-4bbd-bb45-614b2dbe625c
-
+https://freem3u.xyz/api/live/play.m3u8?vid=32
 #EXTINF:-1 tvg-id="youtv" group-title="📡ĐỊA PHƯƠNG" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/youtv.png", You TV
-https://ec03-pop5-hht.tv360.vn/bpk-token/cudncxih3hbf37vgtoiribwrlukqnuk5/bpk-tv/447/output/447-audio_208000_eng=206000-video=1884800.m3u8
+https://freem3u.xyz/api/live/play.m3u8?vid=31
 
 #EXTINF:-1 tvg-id="haiphong" group-title="📡ĐỊA PHƯƠNG" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/haiphong.png", THP HD | Báo và PTTH TP Hải Phòng 
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36 Edg/113.0.1774.57
@@ -262,7 +260,6 @@ https://freem3u.xyz/api/live/play.m3u8?vid=92
 #EXTINF:-1 tvg-id="sctv1hd" group-title="🛰️SCTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/sctv1.png", SCTV1
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36 Edg/113.0.1774.57
 https://liveh12.vtvprime.vn/hls/SCTV1/03.m3u8
-
 #EXTINF:-1 tvg-id="sctv3hd" group-title="🛰️SCTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/sctv3.png", SCTV3
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36 Edg/113.0.1774.57
 https://liveh34.vtvprime.vn/hls/SCTV3/03.m3u8
@@ -439,7 +436,6 @@ https://vip.opstream17.com/20251003/19016_16e12822/3000k/hls/mixed.m3u8
 #EXTINF:-1 group-title="🎬CÂY TÁO NỞ HOA🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/caytaonohoa.png", Cây Táo Nở Hoa - Tập 9
 https://vip.opstream17.com/20251003/19017_6d3b4379/3000k/hls/mixed.m3u8
 #EXTINF:-1 group-title="🎬CÂY TÁO NỞ HOA🎥" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/caytaonohoa.png", Cây Táo Nở Hoa - Tập 10
-
 
 
 
