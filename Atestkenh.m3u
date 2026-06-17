@@ -1,7 +1,7 @@
 #EXTM3U url-tvg="https://vnepg.site/epg.xml"
 
 
-#EXTM3U
+
 
 #KODIPROP:inputstream=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
