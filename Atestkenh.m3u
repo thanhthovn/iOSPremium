@@ -1,6 +1,11 @@
 #EXTM3U url-tvg="https://vnepg.site/epg.xml"
 
 
+#KODIPROP:inputstream=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#EXTINF:-1,SCTV15 HD
+https://livevlisctcdnw.seenow.vn/mean/SCTV15HD/manifest.mpd
+
 
 #EXTINF:-1 tvg-id="cantho3" group-title="📡 TEST SEVER" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/wc2026.png", beIN Sports Max 1 FHD TR
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
