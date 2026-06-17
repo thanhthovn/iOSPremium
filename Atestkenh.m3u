@@ -3,9 +3,10 @@
 
 
 
+
+#EXTINF:-1,SCTV15 HD
 #KODIPROP:inputstream=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
-#EXTINF:-1,SCTV15 HD
 https://livevlisctcdnw.seenow.vn/mean/SCTV15HD/manifest.mpd
 
 
