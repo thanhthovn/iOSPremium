@@ -73,9 +73,6 @@ https://freem3u.xyz/api/live/play.m3u8?vid=201
 #EXTINF:-1 tvg-id="lamdong1" group-title="📡ĐỊA PHƯƠNG" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/lamdong.png", LTV1 HD | Báo và PTTH Lâm Đồng
 https://freem3u.xyz/api/live/play.m3u8?vid=69
 
-
-
-
 #EXTINF:-1 tvg-id="vinhlong4hd" group-title="📡ĐỊA PHƯƠNG" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/vinhlong4.png", THVL4 | Báo và PTTH Vĩnh Long
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36 Edg/113.0.1774.57
 https://live.fptplay53.net/epzhd2/vinhlong4hd_vhls.smil/chunklist_b5000000.m3u8
@@ -121,13 +118,13 @@ https://live.fptplay53.net/epzhd1/htvcdulich_vhls.smil/chunklist_b5000000.m3u8
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36 Edg/113.0.1774.57
 https://live.fptplay53.net/epzhd1/htvcmusic_vhls.smil/chunklist.m3u8
 
-#EXTINF:-1 tvg-id="hanoi1" group-title="📡ĐỊA PHƯƠNG" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/hanoi1.png", H1 | Báo và PTTH Hà Nội
+#EXTINF:-1 tvg-id="hanoi1" group-title="📡ĐỊA PHƯƠNG" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/hanoi1.png", H1 | Báo và PTTH TP Hà Nội
 https://freem3u.xyz/api/live/play.m3u8?vid=33
-#EXTINF:-1 tvg-id="hanoi2" group-title="📡ĐỊA PHƯƠNG" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/hanoi2.png", H2 | Báo và PTTH Hà Nội
+#EXTINF:-1 tvg-id="hanoi2" group-title="📡ĐỊA PHƯƠNG" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/hanoi2.png", H2 | Báo và PTTH TP Hà Nội
 https://live.fptplay53.net/fnxhd1/hntv2_vhls.smil/chunklist_b5000000.m3u8
-#EXTINF:-1 tvg-id="hitv" group-title="📡ĐỊA PHƯƠNG" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/hitv.png", Hi TV
+#EXTINF:-1 tvg-id="hitv" group-title="📡ĐỊA PHƯƠNG" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/hitv.png", Hi TV | Báo và PTTH TP Hà Nội
 https://freem3u.xyz/api/live/play.m3u8?vid=32
-#EXTINF:-1 tvg-id="youtv" group-title="📡ĐỊA PHƯƠNG" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/youtv.png", You TV
+#EXTINF:-1 tvg-id="youtv" group-title="📡ĐỊA PHƯƠNG" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/youtv.png", You TV | Báo và PTTH TP Hà Nội
 https://freem3u.xyz/api/live/play.m3u8?vid=31
 
 #EXTINF:-1 tvg-id="haiphong" group-title="📡ĐỊA PHƯƠNG" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/haiphong.png", THP HD | Báo và PTTH TP Hải Phòng 
@@ -138,11 +135,11 @@ https://live-hq.evgcdn.net/live/285a4c99665fdf84e94956c66bc7dc7eb5d/chunklist.m3
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36 Edg/147.0.0.0
 https://live-hq.evgcdn.net/live/28548ca35823d41426d8b3da7ed82bdab13/chunklist.m3u8
 
-#EXTINF:-1 tvg-id="cantho1" group-title="📡ĐỊA PHƯƠNG" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/cantho1.png", Cần Thơ 1 HD | Báo và PTTH TP Cần Thơ
+#EXTINF:-1 tvg-id="cantho1" group-title="📡ĐỊA PHƯƠNG" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/cantho1.png", Cần Thơ 1 | Báo và PTTH TP Cần Thơ
 https://freem3u.xyz/api/live/play.m3u8?vid=47
-#EXTINF:-1 tvg-id="cantho2" group-title="📡ĐỊA PHƯƠNG" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/cantho2.png", Cần Thơ 2 HD | Báo và PTTH TP Cần Thơ
+#EXTINF:-1 tvg-id="cantho2" group-title="📡ĐỊA PHƯƠNG" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/cantho2.png", Cần Thơ 2 | Báo và PTTH TP Cần Thơ
 https://freem3u.xyz/api/live/play.m3u8?vid=61
-#EXTINF:-1 tvg-id="cantho3" group-title="📡ĐỊA PHƯƠNG" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/cantho3.png", Cần Thơ 3 HD | Báo và PTTH TP Cần Thơ
+#EXTINF:-1 tvg-id="cantho3" group-title="📡ĐỊA PHƯƠNG" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/cantho3.png", Cần Thơ 3 | Báo và PTTH TP Cần Thơ
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36 Edg/113.0.1774.57
 https://freem3u.xyz/api/live/play.m3u8?vid=84
 
@@ -207,7 +204,7 @@ https://live.fptplay53.net/epzsd1/dongthap_vhls.smil/chunklist_b5000000.m3u8
 #EXTINF:-1 tvg-id="dongthap2" group-title="📡ĐỊA PHƯƠNG" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/dongthap2.png", Miền tây THĐT2 | Báo và PTTH Đồng Tháp
 https://live.fptplay53.net/epzsd1/dongthaphd_vhls.smil/chunklist_b5000000.m3u8
 
-#EXTINF:-1 tvg-id="tayninh1" group-title="📡ĐỊA PHƯƠNG" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/tayninh.png", Tây Ninh TV | Báo và PTTH Tây Ninh
+#EXTINF:-1 tvg-id="tayninh1" group-title="📡ĐỊA PHƯƠNG" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/tayninh.png", TN TV | Báo và PTTH Tây Ninh
 https://freem3u.xyz/api/live/play.m3u8?vid=72
 
 #EXTINF:-1 tvg-id="daklak" group-title="📡ĐỊA PHƯƠNG" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/daklak.png", DRT HD | Báo và PTTH Đắk Lắk
@@ -238,7 +235,7 @@ https://freem3u.xyz/api/live/play.m3u8?vid=83
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0
 https://freem3u.xyz/api/live/play.m3u8?vid=75
 
-#EXTINF:-1 tvg-id="hungyen" group-title="📡ĐỊA PHƯƠNG" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/hungyen.png", HYTV HD | Báo và PTTH Hưng Yên
+#EXTINF:-1 tvg-id="hungyen" group-title="📡ĐỊA PHƯƠNG" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/hungyen.png", HY | Báo và PTTH Hưng Yên
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0
 https://freem3u.xyz/api/live/play.m3u8?vid=64
 
@@ -246,16 +243,16 @@ https://freem3u.xyz/api/live/play.m3u8?vid=64
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0
 https://freem3u.xyz/api/live/play.m3u8?vid=39
 
-#EXTINF:-1 tvg-id="phutho" group-title="📡ĐỊA PHƯƠNG" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/phutho.png", PTV HD | Báo và PTTH Phú Thọ
+#EXTINF:-1 tvg-id="phutho" group-title="📡ĐỊA PHƯƠNG" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/phutho.png", PTV | Báo và PTTH Phú Thọ
 https://freem3u.xyz/api/live/play.m3u8?vid=77
 
 #EXTINF:-1 tvg-id="thainguyen" group-title="📡ĐỊA PHƯƠNG" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/thainguyen.png", TN | Báo và PTTH Thái Nguyên
 https://freem3u.xyz/api/live/play.m3u8?vid=88
 
-#EXTINF:-1 tvg-id="laocai" group-title="📡ĐỊA PHƯƠNG" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/laocai.png", THLC HD | Báo và PTTH Lào Cai
+#EXTINF:-1 tvg-id="laocai" group-title="📡ĐỊA PHƯƠNG" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/laocai.png", THLC | Báo và PTTH Lào Cai
 https://freem3u.xyz/api/live/play.m3u8?vid=71
 
-#EXTINF:-1 tvg-id="tuyenquang" group-title="📡ĐỊA PHƯƠNG" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/tuyenquang.png", TTV HD | Báo và PTTH Tuyên Quang
+#EXTINF:-1 tvg-id="tuyenquang" group-title="📡ĐỊA PHƯƠNG" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/tuyenquang.png", TTV | Báo và PTTH Tuyên Quang
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0
 https://freem3u.xyz/api/live/play.m3u8?vid=92
 
