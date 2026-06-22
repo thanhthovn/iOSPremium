@@ -71,7 +71,7 @@ https://live.fptplay53.net/epzhd2/vinhlong3_vhls.smil/chunklist_b5000000.m3u8
 https://freem3u.xyz/api/live/play.m3u8?vid=201
 
 #EXTINF:-1 tvg-id="lamdong1" group-title="📡ĐỊA PHƯƠNG" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/lamdong.png", LTV1 HD | Báo và PTTH Lâm Đồng
-https://freem3u.xyz/api/live/play.m3u8?vid=69
+https://live.fptplay53.net/epzsd1/lamdong_hls.smil/chunklist.m3u8
 
 #EXTINF:-1 tvg-id="vinhlong4hd" group-title="📡ĐỊA PHƯƠNG" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/vinhlong4.png", THVL4 | Báo và PTTH Vĩnh Long
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36 Edg/113.0.1774.57
@@ -94,7 +94,7 @@ https://live.fptplay53.net/epzhd1/htv3_hls.smil/chunklist.m3u8
 #EXTINF:-1 tvg-id="htv4" group-title="🇸🇴HTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/htv4.png", HTV4
 https://live.fptplay53.net/epzhd1/htv4_hls.smil/chunklist.m3u8
 #EXTINF:-1 tvg-id="htv5" group-title="🇸🇴HTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/htv5.png", HTV5
-https://freem3u.xyz/api/live/play.m3u8?vid=151
+https://livecdn-vthcm-bp.vieon.vn/c4508266f093ea06c2b2660d1b1aa719/1782196612000/livetv/group-06/45ef7f63082488218aa1a8c93bb7c185/playlist.m3u8?c=h
 #EXTINF:-1 tvg-id="htvthethaohd" group-title="🇸🇴HTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/htvthethao.png", HTV Thể Thao
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36 Edg/113.0.1774.57
 https://live.fptplay53.net/epzhd1/htvcthethao_vhls.smil/chunklist_b5000000.m3u8
@@ -187,7 +187,7 @@ https://cdn.sonlatv.vn/live/28595222e707a364251b8724717894baa46/chunklist.m3u8
 hhttps://live.mediatech.vn/live/2855dfeccb7f49a41a2b0441b3bfeda413c/playlist.m3u8
 
 #EXTINF:-1 tvg-id="laichau" group-title="📡ĐỊA PHƯƠNG" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/laichau.png", LTV | Báo và PTTH Lai Châu
-https://freem3u.xyz/api/live/play.m3u8?vid=68
+https://fo-hlc.tv360.vn/bpk-tv/374/output/index.m3u8?auth=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtZXRob2QiOiJHRVQiLCJleHAiOjE3ODIxMzE3NDUsInVyaSI6Ii9icGstdHYvMzc0L291dHB1dC9pbmRleC5tM3U4In0.6iMS27ORAzFlwA_-9HaBfSnzCvyHHJQ--UL7uXdtOfE&minrate=0&maxrate=10000000&uid=283173703
 
 #EXTINF:-1 tvg-id="angiang1" group-title="📡ĐỊA PHƯƠNG" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/angiang1.png", ATV1 | Báo và PTTH An Giang
 https://tv.angiangtv.vn/live/kgtv/kgtv.m3u8
@@ -216,7 +216,7 @@ https://live.fptplay53.net/epzsd1/khanhhoa_hls.smil/chunklist.m3u8
 
 #EXTINF:-1 tvg-id="khanhhoa1" group-title="📡ĐỊA PHƯƠNG" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/khanhhoa1.png", KTV1 HD | Báo và PTTH Khánh Hòa
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0
-https://freem3u.xyz/api/live/play.m3u8?vid=76
+https://livecdn-vthcm-bp.vieon.vn/7e6e2be3290c6fc86e16e4d44d17222d/1782196690000/livetv/group-01/90bb7cfb7814297c451327aadb037a89/playlist.m3u8?c=h
 
 #EXTINF:-1 tvg-id="gialai" group-title="📡ĐỊA PHƯƠNG" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/gialai.png", GTV | Báo và PTTH Gia Lai
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0
