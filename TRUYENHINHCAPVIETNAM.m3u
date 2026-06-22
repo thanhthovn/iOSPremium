@@ -247,14 +247,14 @@ https://freem3u.xyz/api/live/play.m3u8?vid=39
 https://freem3u.xyz/api/live/play.m3u8?vid=77
 
 #EXTINF:-1 tvg-id="thainguyen" group-title="📡ĐỊA PHƯƠNG" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/thainguyen.png", TN | Báo và PTTH Thái Nguyên
-https://freem3u.xyz/api/live/play.m3u8?vid=88
+https://live.fptplay53.net/epzsd1/tayninh01_hls.smil/chunklist.m3u8
 
 #EXTINF:-1 tvg-id="laocai" group-title="📡ĐỊA PHƯƠNG" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/laocai.png", THLC | Báo và PTTH Lào Cai
-https://freem3u.xyz/api/live/play.m3u8?vid=71
+https://live.fptplay53.net/fnxsd1/laocai_hls.smil/chunklist.m3u8
 
 #EXTINF:-1 tvg-id="tuyenquang" group-title="📡ĐỊA PHƯƠNG" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/tuyenquang.png", TTV | Báo và PTTH Tuyên Quang
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0
-https://freem3u.xyz/api/live/play.m3u8?vid=92
+https://streaming.tuyenquangtv.vn/channel/tuyenquang/playlist.m3u8
 
 #EXTINF:-1 tvg-id="sctv1hd" group-title="🛰️SCTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/sctv1.png", SCTV1
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36 Edg/113.0.1774.57
