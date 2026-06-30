@@ -1,6 +1,17 @@
 #EXTM3U url-tvg="https://vnepg.site/epg.xml"
 
 
+
+#EXTINF:-1 tvg-id="vtv1hd" group-title="🇻🇳VTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/vtv10.png", VTV99
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36 Edg/113.0.1774.57
+https://vtvgolive-wc2026.vtvdigital.vn/R9cORV9aXf5z-sxECD-bJQ/1782807314/vtv6/stream_480p.m3u8
+#EXTINF:-1 tvg-id="vtv1hd" group-title="🇻🇳VTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/vtv10.png", VTV99
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36 Edg/113.0.1774.57
+https://vtvgolive-wc2026.vtvdigital.vn/R9cORV9aXf5z-sxECD-bJQ/1782807314/vtv6/stream_720p.m3u8
+#EXTINF:-1 tvg-id="vtv1hd" group-title="🇻🇳VTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/vtv10.png", VTV99
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36 Edg/113.0.1774.57
+https://vtvgolive-wc2026.vtvdigital.vn/R9cORV9aXf5z-sxECD-bJQ/1782807314/vtv6/stream_1080p.m3u8
+
 #EXTINF:-1 tvg-id="vtv1hd" group-title="🇻🇳VTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/vtv1.png", VTV1
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36 Edg/113.0.1774.57
 https://live-a.fptplay53.net/live/media/vtv1/live247-hls-avc/index.m3u8
