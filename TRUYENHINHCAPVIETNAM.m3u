@@ -102,7 +102,7 @@ https://live.canthotv.vn/live/tv/playlist.m3u8
 https://live.fptplay53.net/epzhd2/cantho02_vhls.smil/chunklist_b5000000.m3u8
 #EXTINF:-1 tvg-id="cantho3" group-title="📡BÁO và PTTH Địa phương" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/cantho3.png", Cần Thơ 3 | Báo và PTTH TP Cần Thơ
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36 Edg/113.0.1774.57
-https://live.fptplay53.net/epzhd2/cantho02_vhls.smil/chunklist_b5000000.m3u8
+https://live.fptplay53.net/epzsd1/cantho03_hls.smil/chunklist.m3u8
 
 #EXTINF:-1 tvg-id="hanoi1" group-title="📡BÁO và PTTH Địa phương" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/hanoi1.png", H1 | Báo và PTTH TP Hà Nội
 https://live.fptplay53.net/fnxhd2/hanoitv1_hls.smil/chunklist.m3u8
@@ -122,6 +122,7 @@ https://live.fptplay53.net/epzsd1/dongnai1_hls.smil/chunklist.m3u8
 #EXTINF:-1 tvg-id="dongnai2" group-title="📡BÁO và PTTH Địa phương" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/dongnai2.png", ĐN2 NRTV HD | Báo và PTTH TP Đồng Nai
 https://live.fptplay53.net/epzsd1/dongnai2_hls.smil/chunklist.m3u8
 #EXTINF:-1 tvg-id="dongnai3" group-title="📡BÁO và PTTH Địa phương" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/dongnai3.png", ĐN3 NRTV | Báo và PTTH TP Đồng Nai
+https://live.fptplay53.net/epzsd1/dongnai3_hls.smil/chunklist.m3u8
 https://live.fptplay53.net/epzsd1/dongnai3_hls.smil/chunklist.m3u8
 
 #EXTINF:-1 tvg-id="hue" group-title="📡BÁO và PTTH Địa phương" tvg-logo="https://i.imgur.com/q5MBibm.png", HUE TV | Báo và PTTH TP Huế
@@ -143,7 +144,7 @@ https://freem3u.xyz/api/live/play.m3u8?vid=58
 https://live.mediatech.vn/live/2859591eef2e92249b682db021f4247c364/playlist.m3u8
 
 #EXTINF:-1 tvg-id="thanhhoa" group-title="📡BÁO và PTTH Địa phương" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/thanhhoa.png", TTV HD | Báo và PTTH Thanh Hóa
-https://d4.dhcn.vn/hls/bth_th/720p/index.m3u8
+https://live.fptplay53.net/fnxsd1/thanhhoa_hls.smil/chunklist_b2500000.m3u8
 
 #EXTINF:-1 tvg-id="quangninh1" group-title="📡BÁO và PTTH Địa phương" tvg-logo="https://media.baoquangninh.vn/upload/files/logo/logotrangchu1.png", QTV1 HD | Báo và PTTH Quảng Ninh
 https://live.baoquangninh.vn/qtvlive/tv1live.m3u8
