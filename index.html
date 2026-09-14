@@ -136,6 +136,7 @@
         .player-overlay.hidden {
             display: none;
         }
+
         #programTitle {
             font-weight: normal;
             color: red;
@@ -145,7 +146,7 @@
             -webkit-text-stroke: 0.25px gold;
         }
 
-.player-title {
+        .player-title {
             position: absolute;
             top: 14px;
             right: 16px;
@@ -192,7 +193,7 @@
             white-space: nowrap;
         }
 
-.unmute-banner.hidden {
+        .unmute-banner.hidden {
             display: none;
         }
 
@@ -375,6 +376,7 @@
             white-space: nowrap;
             font-size: 15px;
         }
+
         .channel-group-filter {
             width: 300px;
             min-width: 60px;
@@ -429,6 +431,18 @@
         .cinemax-btn:active {
             transform: scale(.96);
         }
+
+        /* Nút XỔ SỐ — màu vàng cam nổi bật */
+        .xoso-btn {
+            border-color: #f59e0b;
+            background: #78350f;
+        }
+
+        .xoso-btn:hover {
+            background: #b45309;
+            border-color: #fbbf24;
+        }
+
         .channel-count {
             color: #ffffff;
             font-size: 16px;
@@ -463,9 +477,7 @@
             cursor: wait;
         }
 
-        .channel-count.import-btn:hover,
-
-        .temp-m3u-action.load:hover {
+        .channel-count.import-btn:hover {
             background: #991b1b;
         }
 
@@ -675,20 +687,30 @@
                 font-size: 12px;
                 padding: 7px 10px;
             }
-.container { padding: 9px; }
+
+            .container { padding: 9px; }
+
             .channel-list {
                 grid-template-columns: repeat(2, minmax(0, 1fr));
                 gap: 10px;
                 padding: 8px;
             }
+
             .channel { min-height: 180px; padding: 10px 5px; }
+
             .channel-logo {
-                width: 110px; height: 110px;
-                min-width: 110px; min-height: 110px;
+                width: 110px;
+                height: 110px;
+                min-width: 110px;
+                min-height: 110px;
             }
+
             .channel-name { font-size: 18px; }
+
             .control-btn { width: 35px; height: 34px; }
+
             .standalone-logo { width: 50px; height: 50px; }
+        }
 
         @media (max-width: 520px) {
             .panel-title {
@@ -701,7 +723,7 @@
             }
 
             .channel-group-filter {
-                width: min(100%, 100%);
+                width: 100%;
                 min-width: 0;
                 max-width: 100%;
                 font-size: 11px;
@@ -721,18 +743,18 @@
                     <video id="video" playsinline preload="metadata"></video>
 
                     <div id="playerTitle" class="player-title">
-                        
-                    
-                <div id="programTitle">Thánh Thơ © 2026</div></div>
-<div id="playerOverlay" class="player-overlay">
-                        Đang tải danh sách kênh.....
+                        <div id="programTitle">Thánh Thơ © 2026</div>
                     </div>
 
+                    <div id="playerOverlay" class="player-overlay">
+                        Đang tải danh sách kênh.....
+                    </div>
 
                     <div id="unmuteBanner" class="unmute-banner hidden">
                         🔊 [BẬT ÂM THANH]
                     </div>
-<div class="video-controls">
+
+                    <div class="video-controls">
                         <div class="progress-row">
                             <div class="progress-time-row">
                                 <span id="currentTime" class="progress-time">00:00</span>
@@ -746,7 +768,8 @@
                             <button id="previousBtn" class="control-btn" type="button" title="Kênh trước">⏮</button>
                             <button id="playBtn" class="control-btn play-btn" type="button" title="Phát / Tạm dừng">▶</button>
                             <button id="nextBtn" class="control-btn" type="button" title="Kênh tiếp theo">⏭</button>
-                            <button id="currentChannelBtn" class="control-btn current-channel-btn" type="button" title="Đến kênh đang phát">▼</button>                            <div class="control-spacer"></div>
+                            <button id="currentChannelBtn" class="control-btn current-channel-btn" type="button" title="Đến kênh đang phát">▼</button>
+                            <div class="control-spacer"></div>
                             <button id="fullscreenBtn" class="control-btn" type="button" title="Toàn màn hình">⛶</button>
                         </div>
                     </div>
@@ -772,9 +795,15 @@
                            🧩
                         </button>
 
+                        <button id="xosoBtn" class="cinemax-btn xoso-btn" type="button" title="XEM KẾT QUẢ XỔ SỐ">
+                           🎰
+                        </button>
+
                         <button id="channelCount" class="channel-count" type="button" title="Đọc M3U hoặc xem trực tiếp M3U8">0 KÊNH</button>
                     </div>
-                </div><div id="channelList" class="channel-list">
+                </div>
+
+                <div id="channelList" class="channel-list">
                     <div class="loading">⏳ Đang tải danh sách kênh.....</div>
                 </div>
             </aside>
@@ -789,6 +818,9 @@
         const CALENDAR_URL = "https://thanhthovn.github.io/amlichvn/";
         const CINEMAX_URL = "https://thanhthovn.github.io/1ptvsc4n/";
         const DOWNLOAD_APP_URL = "https://1drv.ms/u/c/e92bb0b868c9b54b/IQDAtiObV-vZTqnq_xy47T4_AVqcoYbF40ZT1Wjkyukx9xY?e=jFlFse";
+
+        // Website xem kết quả xổ số kiến thiết Việt Nam
+        const XOSO_URL = "https://thanhthovn.github.io/xsktvn/";
 
         let channels = [];
         let currentChannelIndex = -1;
@@ -822,11 +854,10 @@
         const video = document.getElementById("video");
         const playerOverlay = document.getElementById("playerOverlay");
         const playerTitle = document.getElementById("playerTitle");
-        const programTitle = document.getElementById("programTitle");
         const unmuteBanner = document.getElementById("unmuteBanner");
         const channelList = document.getElementById("channelList");
         const channelCount = document.getElementById("channelCount");
-const channelGroupFilter = document.getElementById("channelGroupFilter");
+        const channelGroupFilter = document.getElementById("channelGroupFilter");
         let selectedChannelGroup = "__ALL__";
         const playBtn = document.getElementById("playBtn");
         const previousBtn = document.getElementById("previousBtn");
@@ -840,6 +871,7 @@ const channelGroupFilter = document.getElementById("channelGroupFilter");
         const calendarBtn = document.getElementById("calendarBtn");
         const cinemaxBtn = document.getElementById("cinemaxBtn");
         const downloadAppBtn = document.getElementById("downloadAppBtn");
+        const xosoBtn = document.getElementById("xosoBtn");
 
         let progressSeekable = false;
 
@@ -914,13 +946,6 @@ const channelGroupFilter = document.getElementById("channelGroupFilter");
             setupEventListeners();
             loadPlaylist();
         });
-
-
-        function decodeXmlEntities(value = "") {
-            const textarea = document.createElement("textarea");
-            textarea.innerHTML = value;
-            return textarea.value;
-        }
 
 
         // =========================================================
@@ -1271,12 +1296,10 @@ const channelGroupFilter = document.getElementById("channelGroupFilter");
 
             if (requestId !== playRequestId) return;
 
-
             if (index < 0 || index >= channels.length) return;
 
             currentChannelIndex = index;
             const channel = channels[index];
-
 
             if (channel.logo) {
                 activeChannelLogo.src = channel.logo;
@@ -1643,6 +1666,11 @@ const channelGroupFilter = document.getElementById("channelGroupFilter");
             // Nút TẢI APP: mở đúng trang download ở tab mới
             downloadAppBtn.addEventListener("click", () => {
                 window.open(DOWNLOAD_APP_URL, "_blank", "noopener,noreferrer");
+            });
+
+            // Nút XỔ SỐ: mở trang kết quả xổ số ở tab mới
+            xosoBtn.addEventListener("click", () => {
+                window.open(XOSO_URL, "_blank", "noopener,noreferrer");
             });
 
             // =========================================================
