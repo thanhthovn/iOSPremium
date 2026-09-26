@@ -389,7 +389,7 @@ http://47a63631.edemist.com/iptv/LVFGLXHUW45A8PBECGUURD6K/9011/index.m3u8
 
 #EXTINF:-1 tvg-id="" group-title="🔴LIVE⚽" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/fas2026.png", 🔴FIFA ASEAN CUP 2026 ⚽ 1️⃣
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36 Edg/113.0.1774.57
-https://live05.miekgo.app/live/78905744.m3u8?_t=1790412813659
+https://cdn.qd.je/163189/viu6
 
 #EXTINF:-1 tvg-id="" group-title="🔴LIVE⚽" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/fas2026.png", 🔴FIFA ASEAN CUP 2026 ⚽ 2️⃣
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36 Edg/113.0.1774.57
@@ -397,7 +397,7 @@ https://live05.meung.app/live/78905744.m3u8?_t=1790412762108
 
 #EXTINF:-1 tvg-id="" group-title="🔴LIVE⚽" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/fas2026.png", 🔴FIFA ASEAN CUP 2026 ⚽ 3️⃣
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36 Edg/113.0.1774.57
-https://live05.meung.app/live/78905744.m3u8?_t=1790412791902
+https://live05.miekgo.app/live/78905744.m3u8?_t=1790412813659
 
 #EXTINF:-1 tvg-id="" group-title="🔴LIVE⚽" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/fas2026.png", 🔴FIFA ASEAN CUP 2026 ⚽ 4️⃣
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36 Edg/113.0.1774.57
@@ -405,8 +405,7 @@ https://pull.niues.live/live/stream-9912144_lhd.m3u8?auth_key=1790403223-0-0-a3f
 
 #EXTINF:-1 tvg-id="" group-title="🔴LIVE⚽" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/fas2026.png", 🔴FIFA ASEAN CUP 2026 ⚽ 5️⃣
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36 Edg/113.0.1774.57
-https://media-tyo.hls.nhkworld.jp/hls/w/live/1/sig/b95e9aa9a33513b4d3416b7a201ec82c0d5e59c711f7fb0191d49f299d05b62e/a1.m3u8
-
+https://tglmp04.akamaized.net/out/v1/400fc0702dee453bb33ebcc29466e58a/manifest.mpd
 
 
 
