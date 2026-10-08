@@ -59,17 +59,17 @@ https://live.fptplay53.net/epzsd1/lamdong_hls.smil/chunklist.m3u8
 
 #EXTINF:-1 tvg-id="sctv2hd" group-title="🛰️SCTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/sctv2todaytv.png", SCTV2 | TODAY TV
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36 Edg/113.0.1774.57
-https://freem3u.xyz/api/live/play.m3u8?vid=201
+https://vtvgolive-sctvdrm.vtvdigital.vn/manifest/sctv2/playlist_720p.m3u8
 
 #EXTINF:-1 tvg-id="vinhlong1hd" group-title="📡BÁO và PTTH Địa phương" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/vinhlong1.png", THVL1 | Báo và PTTH Vĩnh Long
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36 Edg/113.0.1774.57
-https://live.fptplay53.net/epzhd2/vinhlong1_vhls.smil/chunklist_b5000000.m3u8
+https://vips-livecdn.fptplay.net/live/media/vinhlong1/live247-hls-avc/vinhlong1-avc1_5600000=10000-mp4a_140800_vie=20000.m3u8
 #EXTINF:-1 tvg-id="vinhlong2hd" group-title="📡BÁO và PTTH Địa phương" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/vinhlong2.png", THVL2 | Báo và PTTH Vĩnh Long
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36 Edg/113.0.1774.57
-https://live.fptplay53.net/epzhd2/vinhlong2_vhls.smil/chunklist_b5000000.m3u8
+https://vips-livecdn.fptplay.net/live/media/vinhlong2/live247-hls-avc/vinhlong2-avc1_5600000=10000-mp4a_140800_vie=20000.m3u8
 #EXTINF:-1 tvg-id="vinhlong3hd" group-title="📡BÁO và PTTH Địa phương" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/vinhlong3.png", THVL3 | Báo và PTTH Vĩnh Long
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36 Edg/113.0.1774.57
-https://live.fptplay53.net/epzhd2/vinhlong3_vhls.smil/chunklist_b5000000.m3u8
+https://vips-livecdn.fptplay.net/live/media/vinhlong3/live247-hls-avc/vinhlong3-avc1_5600000=10000-mp4a_140800_vie=20000.m3u8
 #EXTINF:-1 tvg-id="vinhlong4hd" group-title="📡BÁO và PTTH Địa phương" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/vinhlong4.png", THVL4 | Báo và PTTH Vĩnh Long
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36 Edg/113.0.1774.57
 https://live.fptplay53.net/epzhd2/vinhlong4-hd_vhls.smil/chunklist_b5000000.m3u8
@@ -108,7 +108,7 @@ https://live.fptplay53.net/fnxhd1/hntv2_vhls.smil/chunklist_b5000000.m3u8
 
 #EXTINF:-1 tvg-id="haiphong" group-title="📡BÁO và PTTH Địa phương" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/haiphong.png", THP | Báo và PTTH TP Hải Phòng 
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36 Edg/113.0.1774.57
-https://live-hq.evgcdn.net/live/285a4c99665fdf84e94956c66bc7dc7eb5d/chunklist.m3u8
+https://vips-livecdn.fptplay.net/live/media/haiphong/live-hls-avc/haiphong-avc1_5600000=10000-mp4a_131600=20000.m3u8
 #EXTINF:-1 tvg-id="haiphong3" group-title="📡BÁO và PTTH Địa phương" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/haiphong3.png", THP3 | Báo và PTTH TP Hải Phòng
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36 Edg/147.0.0.0
 https://live-hq.evgcdn.net/live/28548ca35823d41426d8b3da7ed82bdab13/chunklist.m3u8
@@ -257,70 +257,70 @@ https://freem3u.xyz/api/live/play.m3u8?vid=31
 
 #EXTINF:-1 tvg-id="sctv1hd" group-title="🛰️SCTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/sctv1.png", SCTV1
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36 Edg/113.0.1774.57
-https://vtvgolive-sctv.vtvdigital.vn/DgGs-z_HhvSxj2MmWtJG1g/1787558290/asdfasdvgas2vtvsctv/1/audio/playlist.m3u8
+https://vtvgolive-sctvdrm.vtvdigital.vn/manifest/sctv1/playlist_720p.m3u8
 #EXTINF:-1 tvg-id="sctv3hd" group-title="🛰️SCTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/sctv3.png", SCTV3
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36 Edg/113.0.1774.57
-https://vtvgolive-sctvdrm.vtvdigital.vn/Bohw19rzkUWe7BLjotkzUg/1787558520/manifest/sctv3/master.m3u8
+https://vtvgolive-sctvdrm.vtvdigital.vn/manifest/sctv3/playlist_720p.m3u8
 #EXTINF:-1 tvg-id="sctv4hd" group-title="🛰️SCTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/sctv4.png", SCTV4
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36 Edg/113.0.1774.57
-https://vtvgolive-sctvdrm.vtvdigital.vn/7TSNqMugE25MnvWPZL7GVA/1787558481/manifest/sctv4/master.m3u8
+https://vtvgolive-sctvdrm.vtvdigital.vn/manifest/sctv4/playlist_720p.m3u8
 #EXTINF:-1 tvg-id="sctv5hd" group-title="🛰️SCTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/sctv5.png", SCTV5
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36 Edg/113.0.1774.57
-https://vtvgolive-sctv.vtvdigital.vn/Uq_xeRFrP8xR1pC_sMBKpw/1787558539/5m63a995d8vtvsctv/5/index.m3u8
+https://vtvgolive-sctvdrm.vtvdigital.vn/manifest/sctv5/playlist_720p.m3u8
 #EXTINF:-1 tvg-id="sctv6hd" group-title="🛰️SCTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/sctv6.png", SCTV6
-#EXTVLCOPT:http-user-agent=VThanhTivi
-https://live.fptplay53.net/epzhd2/film360_vhls.smil/chunklist_b5000000.m3u8
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36 Edg/113.0.1774.57
+https://vtvgolive-sctvdrm.vtvdigital.vn/manifest/sctv6/playlist_720p.m3u8
 #EXTINF:-1 tvg-id="sctv7hd" group-title="🛰️SCTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/sctv7.png", SCTV7
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36 Edg/113.0.1774.57
-https://vtvgolive-sctvdrm.vtvdigital.vn/_v4qqewZ8ukBfLjAZG_4tA/1787558596/manifest/sctv7/master.m3u8
+https://vtvgolive-sctvdrm.vtvdigital.vn/manifest/sctv7/playlist_720p.m3u8
 #EXTINF:-1 tvg-id="sctv8hd" group-title="🛰️SCTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/sctv8.png", SCTV8
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36 Edg/113.0.1774.57
-https://vtvgolive-sctv.vtvdigital.vn/fT9OMCatJy4mmzGkKmK5Gw/1787558609/bdnc6qbiq1vtvsctv/8/index.m3u8
+https://vtvgolive-sctvdrm.vtvdigital.vn/manifest/sctv8/playlist_720p.m3u8
 #EXTINF:-1 tvg-id="sctv9hd" group-title="🛰️SCTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/sctv9.png", SCTV9
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36 Edg/113.0.1774.57
-https://vtvgolive-sctvdrm.vtvdigital.vn/M-d_Io82wk0vy0XlgrM1uA/1787558642/manifest/sctv9/master.m3u8
+https://vtvgolive-sctvdrm.vtvdigital.vn/manifest/sctv9/playlist_720p.m3u8
 #EXTINF:-1 tvg-id="sctv10hd" group-title="🛰️SCTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/sctv10.png", SCTV10
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36 Edg/113.0.1774.57
-https://vtvgolive-sctv.vtvdigital.vn/ExyL1FG5I_K3HRFcPCmNGg/1787558694/asdfasdvgas2vtvsctv/10/masterh264.m3u8
+https://vtvgolive-sctvdrm.vtvdigital.vn/manifest/sctv10/playlist_720p.m3u8
 #EXTINF:-1 tvg-id="sctv11hd" group-title="🛰️SCTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/sctv11.png", SCTV11
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36 Edg/113.0.1774.57
-https://vtvgolive-sctvdrm.vtvdigital.vn/Ats7YUDfAL_a-lAgcvCg5g/1787558715/manifest/sctv11/master.m3u8
+https://vtvgolive-sctvdrm.vtvdigital.vn/manifest/sctv11/playlist_720p.m3u8
 #EXTINF:-1 tvg-id="sctv12hd" group-title="🛰️SCTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/sctv12.png", SCTV12
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36 Edg/113.0.1774.57
-https://vtvgolive-sctvdrm.vtvdigital.vn/orBa21YAvDRw9eUDQUHVPg/1787558730/manifest/sctv12/master.m3u8
+https://vtvgolive-sctvdrm.vtvdigital.vn/manifest/sctv12/playlist_720p.m3u8
 #EXTINF:-1 tvg-id="sctv13hd" group-title="🛰️SCTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/sctv13.png", SCTV13
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36 Edg/113.0.1774.57
-https://vtvgolive-sctvdrm.vtvdigital.vn/2QFgzaxtLNzbG5lbt2stZQ/1787558745/manifest/sctv13/master.m3u8
+https://vtvgolive-sctvdrm.vtvdigital.vn/manifest/sctv13/playlist_720p.m3u8
 #EXTINF:-1 tvg-id="sctv14hd" group-title="🛰️SCTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/sctv14.png", SCTV14
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36 Edg/113.0.1774.57
-https://vtvgolive-sctv.vtvdigital.vn/febpNOxZl8Q6DDdALCeR6A/1787558761/6GoYKNrTy3vtvsctv/14/masterh264.m3u8
+https://vtvgolive-sctvdrm.vtvdigital.vn/manifest/sctv14/playlist_720p.m3u8
 #EXTINF:-1 tvg-id="sctv16hd" group-title="🛰️SCTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/sctv16.png", SCTV16
-https://vtvgolive-sctvdrm.vtvdigital.vn/_UsJfv4H8qxsNkqjN7saSw/1787558777/manifest/sctv16/master.m3u8
+https://vtvgolive-sctvdrm.vtvdigital.vn/manifest/sctv16/playlist_720p.m3u8
 #EXTINF:-1 tvg-id="sctv18hd" group-title="🛰️SCTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/sctv18.png", SCTV18
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36 Edg/113.0.1774.57
-https://vtvgolive-sctvdrm.vtvdigital.vn/fAv19dyuuifw4ozGxPfimg/1787558798/manifest/sctv18/master.m3u8
+https://vtvgolive-sctvdrm.vtvdigital.vn/manifest/sctv18/playlist_720p.m3u8
 #EXTINF:-1 tvg-id="sctv19hd" group-title="🛰️SCTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/sctv19.png", SCTV19
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36 Edg/113.0.1774.57
-https://vtvgolive-sctv.vtvdigital.vn/hMfTfEyDpefTLgfykAm4Pg/1787558815/5m63a995d8vtvsctv/19/index.m3u8
+https://vtvgolive-sctvdrm.vtvdigital.vn/manifest/sctv19/playlist_720p.m3u8
 #EXTINF:-1 tvg-id="sctv20hd" group-title="🛰️SCTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/sctv20.png", SCTV20
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36 Edg/113.0.1774.57
-https://vtvgolive-sctvdrm.vtvdigital.vn/RNdpydOc0Xug3QJL7_Zm4Q/1787558834/manifest/sctv20/master.m3u8
+https://vtvgolive-sctvdrm.vtvdigital.vn/manifest/sctv20/playlist_720p.m3u8
 #EXTINF:-1 tvg-id="sctv21hd" group-title="🛰️SCTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/sctv21.png", SCTV21 - Việt Nam Ký Ức
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36 Edg/113.0.1774.57
-https://vtvgolive-sctv.vtvdigital.vn/UlYILUKJRDwhdKK67wQcfg/1787558852/bdnc6qbiq1vtvsctv/21/index.m3u8
+https://vtvgolive-sctvdrm.vtvdigital.vn/manifest/sctv21/playlist_720p.m3u8
 #EXTINF:-1 tvg-id="sctvhdpth" group-title="🛰️SCTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/sctvphim.png", SCTV Phim Tổng Hợp
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36 Edg/113.0.1774.57
 https://vtvgolive-sctvdrm.vtvdigital.vn/OtpUKTlpBC4UiU3Dsn33lQ/1787558873/manifest/sctvpth/master.m3u8
 
 #EXTINF:-1 tvg-id="sctv17hd" group-title="🛰️SCTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/sctv17.png", SCTV17
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36 Edg/113.0.1774.57
-https://liveh34.vtvprime.vn/hls/SCTV17/04.m3u8
+https://vtvgolive-sctvdrm.vtvdigital.vn/manifest/sctv17/playlist_720p.m3u8
 #EXTINF:-1 tvg-id="sctv22hd" group-title="🛰️SCTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/sctv22.png", SCTV22
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36 Edg/113.0.1774.57
-https://liveh34.vtvprime.vn/hls/SCTV22/04.m3u8
+https://vtvgolive-sctvdrm.vtvdigital.vn/manifest/sctv22/playlist_720p.m3u8
 #EXTINF:-1 tvg-id="sctv15hd" group-title="🛰️SCTV" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/sctv15.png", SCTV15
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36 Edg/113.0.1774.57
-https://liveh34.vtvprime.vn/hls/SCTV15/04.m3u8
+https://vtvgolive-sctvdrm.vtvdigital.vn/manifest/sctv15/playlist_720p.m3u8
 
 #EXTINF:-1 tvg-id="onviegiaitri" group-title="🛰️VTVcab" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/onviegiaitri.png", ON Vie Giải Trí
 https://freem3u.xyz/api/live/play.m3u8?vid=180
