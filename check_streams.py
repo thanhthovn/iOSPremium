@@ -44,6 +44,39 @@ def safe_url(url):
     except Exception:
         return "[redacted URL]"
 
+def _safe_error_body(body, limit=320):
+    """Return a short, sanitized error-body snippet suitable for CI logs."""
+    text = body.decode("utf-8", errors="replace") if isinstance(body, bytes) else str(body or "")
+    text = re.sub(r"(?i)https?://[^\\s\"'<>]+", "[URL redacted]", text)
+    text = re.sub(r"(?i)\\b(authorization|cookie|set-cookie|token|access_token|refresh_token|signature|sig|key|api_key|password|passwd)\\b\\s*([=:])\\s*[^\\s,;<>\"']+", r"\\1\\2[redacted]", text)
+    text = re.sub(r"(?i)\\bBearer\\s+[^\\s,;]+", "Bearer [redacted]", text)
+    text = re.sub(r"[\\r\\n\\t]+", " ", text)
+    text = re.sub(r"\\s{2,}", " ", text).strip()
+    if len(text) > limit:
+        text = text[:limit] + "…"
+    return text or "[empty response body]"
+
+
+def _http_error_detail(exc, context="request"):
+    """Capture useful 403 diagnostics without exposing full URLs or credentials."""
+    allowed_headers = (
+        "Server", "Via", "Content-Type", "WWW-Authenticate", "X-Cache",
+        "CF-Ray", "X-Request-ID", "X-Correlation-ID", "X-Deny-Reason",
+        "X-Error-Code", "X-Tengine-Error",
+    )
+    safe_headers = {}
+    for name in allowed_headers:
+        value = exc.headers.get(name) if exc.headers else None
+        if value:
+            value = re.sub(r"[\\r\\n]+", " ", str(value)).strip()[:180]
+            safe_headers[name] = value
+    try:
+        body = exc.read(2048)
+    except Exception:
+        body = b""
+    snippet = _safe_error_body(body)
+    return f"HTTP {exc.code} ({context}); response_headers={json.dumps(safe_headers, ensure_ascii=False, sort_keys=True)}; response_body={snippet!r}"
+
 def _request_sample(url, headers, limit=256 * 1024, byte_range=None):
     request_headers = dict(headers)
     if byte_range:
@@ -110,7 +143,7 @@ def _validate_hls(url, body, headers, depth=0):
                             return True, "HLS master + variant + media segment OK"
                         variant_failures.append(detail)
                     except urllib.error.HTTPError as exc:
-                        variant_failures.append(f"variant HTTP {exc.code}")
+                        variant_failures.append(_http_error_detail(exc, "HLS variant"))
                     except Exception as exc:
                         variant_failures.append(type(exc).__name__)
         if variant_failures:
@@ -152,7 +185,7 @@ def _validate_hls(url, body, headers, depth=0):
                 return False, "media segment URL returned another playlist, not media bytes"
             return True, "HLS manifest + media segment OK" + (" (full-read fallback)" if not use_range else "")
         except urllib.error.HTTPError as exc:
-            last_error = f"media segment HTTP {exc.code}"
+            last_error = _http_error_detail(exc, "media segment")
         except Exception as exc:
             last_error = f"media segment check failed ({type(exc).__name__})"
     return False, last_error or "media segment check failed"
@@ -202,7 +235,7 @@ def fetch_candidate(url, user_agent):
         reason = f"HTTP {status}; response is not an HLS playlist/media response"
         return False, reason, final_url, _classify_failure(reason)
     except urllib.error.HTTPError as exc:
-        reason = f"HTTP {exc.code}"
+        reason = _http_error_detail(exc, "candidate URL") if exc.code == 403 else f"HTTP {exc.code}"
         return False, reason, url, _classify_failure(reason)
     except Exception as exc:
         reason = f"{type(exc).__name__}"
