@@ -1180,7 +1180,9 @@
                         resolve(result);
                     };
                     const onPlaying = () => {
-                        if (request !== miniPlayRequest) return finish({ playable: false, cancelled: true, message: "Đã chuyển sang link khác." });
+                        if (request !== miniPlayRequest) {
+                            return finish({ playable: false, cancelled: true, message: "Đã chuyển sang link khác." });
+                        }
                         miniNote.textContent = "✅ ĐANG PHÁT THỰC TẾ — link phát được.";
                         finish({ playable: true, message: "Phát được" });
                     };
@@ -1189,11 +1191,12 @@
                         finish({ playable: false, message: "Trình phát báo lỗi media." });
                     };
 
+                    // Timeout 15s để đủ thời gian load stream chậm
                     timer = setTimeout(() => {
                         if (request !== miniPlayRequest) return finish({ playable: false, cancelled: true, message: "Đã chuyển sang link khác." });
-                        miniNote.textContent = "⚠ Chưa xác nhận phát được: quá 10s không có sự kiện playing.";
+                        miniNote.textContent = "⚠ Chưa xác nhận phát được: quá 15s không có sự kiện playing.";
                         finish({ playable: false, message: "Hết thời gian chờ, chưa xác nhận phát được." });
-                    }, 10000);
+                    }, 15000);
 
                     miniVideo.addEventListener("playing", onPlaying, { once: true });
                     miniVideo.addEventListener("error", onVideoError, { once: true });
@@ -1258,24 +1261,6 @@
                 el.textContent = message;
             }
 
-            async function checkStream(url) {
-                const controller = new AbortController();
-                const timeout = setTimeout(() => controller.abort(), 9000);
-                try {
-                    const response = await fetch(url, { method: "GET", cache: "no-store", signal: controller.signal });
-                    if (!response.ok) return { type: "bad", text: `HTTP ${response.status}` };
-                    const body = await response.text();
-                    if (!body.trim()) return { type: "warn", text: `HTTP ${response.status}, nội dung rỗng` };
-                    if (!body.trimStart().startsWith("#EXTM3U")) {
-                        return { type: "warn", text: `HTTP ${response.status} — không thấy manifest HLS` };
-                    }
-                    return { type: "ok", text: `HLS manifest đọc được (HTTP ${response.status})` };
-                } catch (err) {
-                    if (err && err.name === "AbortError") return { type: "warn", text: "Quá thời gian chờ" };
-                    return { type: "warn", text: "Không đọc được phản hồi (CORS/token/IP)" };
-                } finally { clearTimeout(timeout); }
-            }
-
             async function getDestination(url) {
                 const controller = new AbortController();
                 const timeout = setTimeout(() => controller.abort(), 12000);
@@ -1329,7 +1314,7 @@
             }
 
             // TEST BẰNG LINK GỐC (url từ linkworks.txt) — không dùng link đích
-            // Status không kèm link cho gọn
+            // Không dùng checkStream nữa để tránh ăn băng thông làm nhiễu miniVideo
             async function testRow(button, statusEl, url, groupKey) {
                 button.disabled = true;
                 button.textContent = "ĐANG DÒ + PHÁT...";
@@ -1344,24 +1329,18 @@
                     // Vẫn dò link đích để hiển thị tham khảo
                     await resolveDestinationForRow(url, destinationEl);
 
-                    // TEST BẰNG LINK GỐC
-                    const protocolResult = await checkStream(url);
+                    // TEST BẰNG LINK GỐC — chỉ dùng playMiniLink
                     const playback = await playMiniLink(url, row?.querySelector(".scanner-url")?.textContent || "link");
 
                     if (playback.playable) {
-                        // LƯU LINK GỐC từ linkworks.txt
                         playableByGroup.set(groupKey, url);
                         console.log(`💾 Lưu link phát được cho kênh "${groupKey}": ${url}`);
                         setStatus(statusEl, `✅ PHÁT ĐƯỢC`, "ok");
                         return { type: "ok" };
                     }
 
-                    const result = {
-                        type: protocolResult.type === "bad" ? "bad" : "warn",
-                        text: `⚠ KHÔNG PHÁT ĐƯỢC — ${playback.message || "trình phát chưa bắt đầu phát"}`
-                    };
-                    setStatus(statusEl, result.text, result.type);
-                    return result;
+                    setStatus(statusEl, `⚠ KHÔNG PHÁT ĐƯỢC — ${playback.message || "trình phát chưa bắt đầu phát"}`, "warn");
+                    return { type: "warn" };
                 } finally {
                     button.disabled = false;
                     button.textContent = "TEST LẠI";
@@ -1672,7 +1651,8 @@
                         }
                         updateSummary();
                     }
-                    setTimeout(processNext, 25);
+                    // Delay 800ms để miniVideo kịp bắn playing hoặc timeout trước khi test link tiếp
+                    setTimeout(processNext, 800);
                 };
 
                 setTimeout(processNext, 0);
