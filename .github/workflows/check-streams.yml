@@ -29,6 +29,61 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Diagnose FPT from runner with curl
+        env:
+          PYTHONUTF8: "1"
+        run: |
+          python - <<'PY' > /tmp/fpt_candidates.txt
+          from pathlib import Path
+          from urllib.parse import urlsplit
+          seen = set()
+          for raw in Path("linkworks.txt").read_text(encoding="utf-8-sig").splitlines():
+              line = raw.strip()
+              if not line or line.startswith("#"):
+                  continue
+              parts = [p.strip() for p in line.split("|")]
+              urls = [p for p in parts if p.lower().startswith(("http://", "https://"))]
+              for url in urls:
+                  host = (urlsplit(url).hostname or "").lower()
+                  if host.endswith("fptplay.net") or host.endswith("fptplay.vn"):
+                      if url not in seen:
+                          seen.add(url)
+                          print(url)
+          PY
+          if [ ! -s /tmp/fpt_candidates.txt ]; then
+            echo "No FPT URLs found in linkworks.txt."
+            exit 0
+          fi
+          index=0
+          while IFS= read -r url; do
+            index=$((index + 1))
+            host="$(python -c 'import sys; from urllib.parse import urlsplit; print(urlsplit(sys.argv[1]).hostname or "unknown")' "$url")"
+            echo "FPT candidate $index ($host)"
+            profile=0
+            for mode in chrome default vlc; do
+              profile=$((profile + 1))
+              ua="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+              args=(-H "Accept: application/vnd.apple.mpegurl, application/x-mpegURL, */*" -H "Accept-Language: vi-VN,vi;q=0.9,en;q=0.8")
+              case "$mode" in
+                chrome)
+                  args+=(-A "$ua" -e "https://fptplay.vn/" -H "Origin: https://fptplay.vn")
+                  ;;
+                default)
+                  args+=(-A "$ua")
+                  ;;
+                vlc)
+                  args+=(-A "VLC/3.0.21 LibVLC/3.0.21")
+                  ;;
+              esac
+              code="$(curl -sS --max-time 15 -D /tmp/fpt_headers.txt -o /tmp/fpt_body.txt -w '%{http_code}' "${args[@]}" "$url" 2>/dev/null || true)"
+              server="$(awk 'BEGIN{IGNORECASE=1} /^server:/{sub(/^[^:]*:[[:space:]]*/, ""); gsub("\r",""); print; exit}' /tmp/fpt_headers.txt)"
+              ctype="$(awk 'BEGIN{IGNORECASE=1} /^content-type:/{sub(/^[^:]*:[[:space:]]*/, ""); gsub("\r",""); print; exit}' /tmp/fpt_headers.txt)"
+              title="$(grep -ioE '<title>[^<]{1,80}</title>' /tmp/fpt_body.txt | head -n 1 | tr '\n' ' ' || true)"
+              echo "  $mode: HTTP ${code:-000}; server=${server:-unknown}; content-type=${ctype:-unknown}; title=${title:-none}"
+            done
+          done < /tmp/fpt_candidates.txt
+          rm -f /tmp/fpt_candidates.txt /tmp/fpt_headers.txt /tmp/fpt_body.txt
+
       - name: Run checker
         env:
           PLAYLIST_FILE: TRUYENHINHCAPVIETNAM.m3u
