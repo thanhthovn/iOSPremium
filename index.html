@@ -850,7 +850,6 @@
         const M3U_URL = "https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/main/TRUYENHINHCAPVIETNAM.m3u";
 
         // Website xem lịch chương trình
-        // Có thể đổi URL này thành website lịch mà bạn muốn.
         const CALENDAR_URL = "https://thanhthovn.github.io/amlichvn/";
         const CINEMAX_URL = "https://thanhthovn.github.io/1ptvsc4n/";
         const DOWNLOAD_APP_URL = "https://1drv.ms/u/c/e92bb0b868c9b54b/IQDAtiObV-vZTqnq_xy47T4_AVqcoYbF40ZT1Wjkyukx9xY?e=jFlFse";
@@ -864,13 +863,6 @@
         let hls = null;
         let currentPlaylistUrl = M3U_URL;
 
-        // =========================================================
-        // LOW-END MODE
-        // Tối ưu cho máy yếu / trình duyệt yếu:
-        // - Giữ buffer vừa đủ.
-        // - Không giữ nhiều video cũ trong RAM.
-        // - Chỉ cho request phát mới nhất tiếp tục.
-        // =========================================================
         const LOW_END_HLS_CONFIG = {
             enableWorker: true,
             lowLatencyMode: false,
@@ -986,9 +978,6 @@
 
         // =========================================================
         // PHÁT TRỰC TIẾP LINK M3U8
-        // - Không cần playlist M3U.
-        // - Link được đưa thẳng vào HLS.js / native HLS.
-        // - Không làm thay đổi playlist M3U hiện tại.
         // =========================================================
         async function playDirectM3U8(url) {
             const requestId = ++playRequestId;
@@ -1143,7 +1132,6 @@
                     throw new Error("Playlist không có kênh");
                 }
 
-                // Chỉ đổi playlist sau khi tải và phân tích thành công.
                 channels = parsedChannels;
                 currentPlaylistUrl = sourceUrl;
 
@@ -1318,8 +1306,6 @@
         function playChannelByIndex(index, scrollToTop = true, isInitialAutoplay = false) {
             const requestId = ++playRequestId;
 
-            // Dọn stream cũ trước khi tạo stream mới.
-            // Giúp máy yếu không phải xử lý song song nhiều stream.
             if (hls) {
                 try { hls.stopLoad(); } catch (_) {}
                 try { hls.destroy(); } catch (_) {}
@@ -1345,8 +1331,6 @@
                 activeChannelLogo.style.display = "none";
             }
 
-            // Chỉ đổi trạng thái active, không render lại toàn bộ danh sách.
-            // Dùng reference đã lưu thay vì querySelectorAll() + querySelector() mỗi lần đổi kênh.
             if (activeChannelCard) {
                 activeChannelCard.classList.remove("active");
             }
@@ -1440,8 +1424,6 @@
         }
 
         function handlePlayError(err) {
-            // AbortError thường xuất hiện khi đổi kênh hoặc chủ động pause() trong lúc
-            // yêu cầu play() cũ chưa hoàn tất. Đây không phải lỗi luồng cần báo cho người dùng.
             if (err && (err.name === "AbortError" || /play\(\).*interrupted.*pause\(\)/i.test(String(err.message || err)))) {
                 return;
             }
@@ -1540,8 +1522,6 @@
         }
 
         function openLinkworksScanner() {
-            // Dừng trình phát chính trước khi mở cửa sổ scanner để tránh hai luồng chạy đồng thời.
-            // Không tự phát lại khi đóng scanner; người dùng có thể bấm Phát hoặc chọn kênh lại.
             ++playRequestId;
             if (hls) {
                 try { hls.stopLoad(); } catch (_) {}
@@ -1634,8 +1614,6 @@
                     miniVideo.addEventListener("playing", onPlaying, { once: true });
                     miniVideo.addEventListener("error", onVideoError, { once: true });
                     miniVideo.onerror = null;
-                    // Muted autoplay thường được trình duyệt cho phép khi dò hàng loạt.
-                    // Người dùng vẫn có thể bật tiếng bằng điều khiển của trình phát.
                     miniVideo.muted = true;
                     if (miniVideo.canPlayType("application/vnd.apple.mpegurl")) {
                         miniVideo.src = url;
@@ -1699,8 +1677,6 @@
                     if (!body.trimStart().startsWith("#EXTM3U")) {
                         return { type: "warn", text: `HTTP ${response.status} — có phản hồi nhưng không thấy manifest HLS #EXTM3U` };
                     }
-                    // Nếu là master playlist, kiểm tra thêm một variant đầu tiên.
-                    // Phải resolve variant theo URL cuối sau redirect của master playlist.
                     const masterBaseUrl = response.url || url;
                     const lines = body.split(/\r?\n/).map(x => x.trim()).filter(Boolean);
                     let nextUrl = "";
@@ -1713,8 +1689,6 @@
                     if (nextUrl) {
                         let variantResponse = await fetch(nextUrl, { cache: "no-store", signal: controller.signal });
                         let checkedVariantUrl = variantResponse.url || nextUrl;
-                        // Nếu variant lỗi (đặc biệt HTTP 404), lấy URL đích sau redirect rồi
-                        // kiểm tra lại chính URL đích trước khi kết luận trạng thái.
                         if (!variantResponse.ok) {
                             let destination = checkedVariantUrl;
                             try {
@@ -1752,16 +1726,13 @@
                 try {
                     const row = statusEl.closest(".scanner-link");
                     const destinationEl = row?.querySelector(".scanner-destination");
+                    // Xóa kết quả phát được của lần test trước để tránh dùng link cũ
+                    if (row) delete row.dataset.playableUrl;
                     const resolved = await resolveDestinationForRow(url, destinationEl);
-                    // Ưu tiên URL đích; nếu trình duyệt không lấy được đích thì thử URL gốc.
                     const testUrl = resolved.destination || url;
                     const protocolResult = await checkStream(testUrl);
-                    // Sau khi kiểm tra URL, phát ngay bằng trình phát thử và chỉ xác nhận
-                    // "Phát được" khi nhận được sự kiện playing từ video thực tế.
                     const playback = await playMiniLink(testUrl, row?.querySelector(".scanner-url")?.textContent || "link");
                     if (playback.playable) {
-                        // Lưu chính URL đã phát thành công (ưu tiên link đích nếu có)
-                        // để chức năng xuất M3U dùng đúng kết quả đã xác minh.
                         if (row) row.dataset.playableUrl = testUrl;
                         const result = { type: "ok", text: `✅ PHÁT ĐƯỢC — trình phát đã phát thực tế. URL: ${testUrl}` };
                         setStatus(statusEl, result.text, result.type);
@@ -1778,9 +1749,6 @@
                 }
             }
 
-            // GET LINK ĐÍCH: theo redirect giống checkNoSignal() trong công cụ M3U8 STREAM SCANNING.
-            // response.url là URL cuối cùng sau khi máy chủ chuyển hướng; nếu CORS chặn fetch,
-            // trình duyệt không thể đọc được đích và không được suy đoán URL đích.
             async function getDestination(url) {
                 const controller = new AbortController();
                 const timeout = setTimeout(() => controller.abort(), 12000);
@@ -1859,7 +1827,26 @@
                         const actions = document.createElement("div");
                         actions.style.cssText = "display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end;align-content:start";
                         const playBtn = document.createElement("button"); playBtn.type = "button"; playBtn.className = "scanner-btn primary"; playBtn.textContent = "▶ PHÁT";
-                        playBtn.addEventListener("click", () => { playMiniLink(destination.dataset.destination || url, `${group.id} · link ${ui + 1}`); });
+                        playBtn.addEventListener("click", async () => {
+                            const testUrl = destination.dataset.destination || url;
+                            const rowEl = playBtn.closest(".scanner-link");
+                            const statusEl = rowEl?.querySelector(".scanner-status");
+                            if (rowEl) delete rowEl.dataset.playableUrl;
+                            if (statusEl) setStatus(statusEl, "Đang phát thử...", "");
+                            playBtn.disabled = true;
+                            try {
+                                const playback = await playMiniLink(testUrl, `${group.id} · link ${ui + 1}`);
+                                if (playback.playable) {
+                                    if (rowEl) rowEl.dataset.playableUrl = testUrl;
+                                    if (statusEl) setStatus(statusEl, `✅ PHÁT ĐƯỢC — URL: ${testUrl}`, "ok");
+                                } else {
+                                    if (statusEl) setStatus(statusEl, `⚠ CHƯA XÁC NHẬN PHÁT ĐƯỢC — ${playback.message || "chưa phát"}`, "warn");
+                                }
+                                updateSummary();
+                            } finally {
+                                playBtn.disabled = false;
+                            }
+                        });
                         const btn = document.createElement("button"); btn.type = "button"; btn.className = "scanner-btn"; btn.textContent = "TEST LINK";
                         btn.addEventListener("click", async () => {
                             if (running) return;
@@ -1868,7 +1855,6 @@
                             }
                             updateSummary();
                         });
-                        // Link đích sẽ tự lấy khi TEST LINK / KIỂM TRA TẤT CẢ; bỏ các nút thủ công và copy.
                         row._scanner = { url, status, destination, testBtn: btn };
                         actions.append(playBtn, btn);
                         row.append(info, actions); section.appendChild(row);
@@ -1894,6 +1880,8 @@
                 return String(value || "").trim().replace(/^['"]|['"]$/g, "").toLocaleLowerCase();
             }
 
+            // Chỉ lấy link đã PHÁT ĐƯỢC THỰC TẾ (video bắn sự kiện 'playing')
+            // theo thứ tự từ trên xuống trong mỗi nhóm #tvg-id.
             function getPlayableLinksByTvgId() {
                 const winners = new Map();
                 const sections = [...results.querySelectorAll(".scanner-group")];
@@ -1902,11 +1890,12 @@
                     if (!group) return;
                     const key = normalizeTvgId(group.id);
                     if (!key || key === "chưa phân nhóm" || winners.has(key)) return;
-                    // Duyệt từ trên xuống: URL đầu tiên đã phát thực tế là link ưu tiên.
                     const rows = [...section.querySelectorAll(".scanner-link")];
                     for (const row of rows) {
                         const status = row.querySelector(".scanner-status");
                         const playableUrl = row.dataset.playableUrl;
+                        // BẮT BUỘC: status phải là "ok" VÀ có playableUrl
+                        // (status.ok chỉ được set khi video bắn sự kiện 'playing')
                         if (status?.classList.contains("ok") && playableUrl) {
                             winners.set(key, playableUrl);
                             break;
@@ -1933,27 +1922,45 @@
                     let activeTvgId = "";
                     let pendingExtinf = false;
                     let replacements = 0;
+
+                    // Giữ nguyên kiểu xuống dòng gốc của playlist
+                    const lineEnding = originalText.includes("\r\n") ? "\r\n" : "\n";
                     const lines = originalText.split(/\r?\n/);
-                    const output = lines.map(line => {
+                    const output = [];
+
+                    for (const line of lines) {
                         const trimmed = line.trim();
+
                         if (/^#EXTINF/i.test(trimmed)) {
                             activeTvgId = normalizeTvgId(getAttribute(trimmed, "tvg-id"));
                             pendingExtinf = true;
-                            return line;
+                            output.push(line);
+                            continue;
                         }
-                        if (!trimmed || trimmed.startsWith("#")) return line;
+
+                        if (!trimmed || trimmed.startsWith("#")) {
+                            output.push(line);
+                            continue;
+                        }
+
                         if (pendingExtinf) {
                             pendingExtinf = false;
                             const winner = winners.get(activeTvgId);
                             if (winner) {
+                                // Giữ nguyên khoảng trắng đầu/cuối dòng, chỉ thay URL
+                                const leading = line.match(/^\s*/)[0];
+                                const trailing = line.match(/\s*$/)[0];
+                                output.push(leading + winner + trailing);
                                 replacements++;
-                                return line.replace(trimmed, winner);
+                                continue;
                             }
                         }
-                        return line;
-                    }).join("\n");
 
-                    const blob = new Blob([output], { type: "audio/x-mpegurl;charset=utf-8" });
+                        output.push(line);
+                    }
+
+                    const finalText = output.join(lineEnding);
+                    const blob = new Blob([finalText], { type: "audio/x-mpegurl;charset=utf-8" });
                     const objectUrl = URL.createObjectURL(blob);
                     const a = document.createElement("a");
                     a.href = objectUrl;
@@ -1997,8 +2004,6 @@
                 loadBtn.disabled = true;
                 let cursor = 0;
 
-                // Xử lý từng hàng bằng một tác vụ riêng, không dùng vòng lặp dài
-                // trong click handler (một số môi trường Preview giới hạn mỗi lượt ~400 ms).
                 const processNext = async () => {
                     if (!document.body.contains(modal)) {
                         running = false;
@@ -2008,7 +2013,7 @@
                     if (cursor >= rows.length) {
                         running = false;
                         allBtn.disabled = false;
-                                loadBtn.disabled = false;
+                        loadBtn.disabled = false;
                         updateSummary();
                         return;
                     }
@@ -2023,7 +2028,6 @@
                         }
                         updateSummary();
                     }
-                    // Lên lịch hàng kế tiếp sau khi trả quyền điều khiển về trình duyệt.
                     setTimeout(processNext, 25);
                 };
 
@@ -2088,8 +2092,6 @@
             video.addEventListener("pause", showVideoControls);
             video.addEventListener("ended", showVideoControls);
 
-            // Giới hạn tần suất cập nhật progress/time label để giảm CPU trên máy yếu.
-            // Các event video có thể bắn rất dày, đặc biệt là timeupdate/progress.
             let progressUpdateTimer = null;
             const scheduleProgressUpdate = () => {
                 if (progressUpdateTimer !== null) return;
@@ -2216,28 +2218,22 @@
                 toggleFullscreen();
             });
 
-            // Nút XEM LỊCH: mở website lịch ở tab mới
             calendarBtn.addEventListener("click", () => {
                 window.open(CALENDAR_URL, "_blank", "noopener,noreferrer");
             });
 
-            // Nút IPTV SCANNING CHANNEL: mở cửa sổ kiểm tra linkworks.txt
             cinemaxBtn.addEventListener("click", openLinkworksScanner);
 
-            // Nút TẢI APP: mở đúng trang download ở tab mới
             downloadAppBtn.addEventListener("click", () => {
                 window.open(DOWNLOAD_APP_URL, "_blank", "noopener,noreferrer");
             });
 
-            // Nút XỔ SỐ: mở trang kết quả xổ số ở tab mới
             xosoBtn.addEventListener("click", () => {
                 window.open(XOSO_URL, "_blank", "noopener,noreferrer");
             });
 
             // =========================================================
-            // NÚT SỐ KÊNH → 2 Ô NHẬP RIÊNG:
-            // 1. Link M3U
-            // 2. Link M3U8 trực tiếp
+            // NÚT SỐ KÊNH → 2 Ô NHẬP RIÊNG: M3U và M3U8
             // =========================================================
             channelCount.addEventListener("click", async () => {
                 const modal = document.createElement("div");
@@ -2294,9 +2290,6 @@
                     if (e.target === modal) closeModal();
                 });
 
-                // ---------------------------------------------------------
-                // NÚT OK M3U
-                // ---------------------------------------------------------
                 m3uOkBtn.addEventListener("click", async () => {
                     const tempUrl = m3uInput.value.trim();
 
@@ -2326,9 +2319,6 @@
                     }
                 });
 
-                // ---------------------------------------------------------
-                // NÚT OK M3U8
-                // ---------------------------------------------------------
                 m3u8OkBtn.addEventListener("click", async () => {
                     const directUrl = m3u8Input.value.trim();
 
@@ -2356,7 +2346,6 @@
                     }
                 });
 
-                // Enter trong từng ô = bấm OK tương ứng.
                 m3uInput.addEventListener("keydown", (e) => {
                     if (e.key === "Enter") m3uOkBtn.click();
                 });
@@ -2370,12 +2359,6 @@
 
             // =========================================================
             // KEYBOARD SHORTCUTS
-            // ←  : Kênh trước
-            // →  : Kênh sau
-            // F  : Toàn màn hình
-            // X  : Trỏ về kênh đang phát
-            // H  : Trở về màn hình đang phát
-            // Không xử lý shortcut khi đang nhập vào ô INPUT/TEXTAREA.
             // =========================================================
             document.addEventListener("keydown", (e) => {
                 if (e.target.tagName === "INPUT" || e.target.tagName === "TEXTAREA") return;
