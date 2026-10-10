@@ -36,6 +36,14 @@ def parse_sources(text):
             groups.setdefault(current, []).append(line)
     return groups
 
+def safe_url(url):
+    """Hide token-bearing paths and query strings in committed reports."""
+    try:
+        parts = urllib.parse.urlsplit(url)
+        return f"{parts.scheme}://{parts.netloc}/[redacted]"
+    except Exception:
+        return "[redacted URL]"
+
 def fetch_candidate(url, user_agent):
     headers = {
         "User-Agent": user_agent or UA_DEFAULT,
@@ -62,7 +70,7 @@ def fetch_candidate(url, user_agent):
     except urllib.error.HTTPError as exc:
         return False, f"HTTP {exc.code}", url
     except Exception as exc:
-        return False, f"{type(exc).__name__}: {str(exc)[:180]}", url
+        return False, f"{type(exc).__name__}", url
 
 def parse_playlist(text):
     # Entries begin at EXTINF and continue to the next EXTINF or end of file.
@@ -113,8 +121,8 @@ def main():
         for url in urls:
             ok, reason, final_url = fetch_candidate(url, UA_DEFAULT)
             candidates_report.append({
-                "url": url, "ok": ok, "reason": reason,
-                "final_url": final_url
+                "url": safe_url(url), "ok": ok, "reason": reason,
+                "final_url": safe_url(final_url)
             })
             if ok:
                 selected = url  # Keep the source URL, not a temporary redirect URL.
