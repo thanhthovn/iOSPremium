@@ -107,8 +107,7 @@ def _http_error_detail(exc, context="request"):
     for name in allowed_headers:
         value = exc.headers.get(name) if exc.headers else None
         if value:
-            value = re.sub(r"[\r\n]+", " ", str(value)).strip()[:180]
-            safe_headers[name] = value
+            safe_headers[name] = _sanitize_diagnostic_text(value, 180)
     try:
         body = exc.read(2048)
     except Exception:
