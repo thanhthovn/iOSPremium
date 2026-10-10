@@ -13,6 +13,7 @@ from pathlib import Path
 PLAYLIST = Path(os.environ.get("PLAYLIST_FILE", "TRUYENHINHCAPVIETNAM.m3u"))
 SOURCES = Path(os.environ.get("SOURCES_FILE", "linkworks.txt"))
 REPORT = Path(os.environ.get("REPORT_FILE", "stream_status.json"))
+PREFER_FILE = Path(os.environ.get("PREFER_FILE", "prefer.json"))
 TIMEOUT = int(os.environ.get("CHECK_TIMEOUT", "12"))
 UA_DEFAULT = os.environ.get(
     "STREAM_USER_AGENT",
@@ -244,7 +245,84 @@ def _classify_failure(reason):
     return "failed"
 
 
-def fetch_candidate(url, user_agent, referer=None, origin=None):
+def load_preferences(path=PREFER_FILE):
+    """Load ordered request profiles from prefer.json; fall back safely if absent/invalid."""
+    defaults = {
+        "version": 1,
+        "default_profiles": [
+            {"name": "configured/default headers", "headers": {}},
+            {"name": "VLC User-Agent", "headers": {"User-Agent": "VLC/3.0.21 LibVLC/3.0.21"}},
+        ],
+        "profiles_by_host_suffix": {
+            "fptplay.net": [
+                {"name": "configured/default headers", "headers": {}},
+                {"name": "FPT Referer only", "headers": {"Referer": "https://fptplay.vn/"}},
+                {"name": "FPT Referer + Origin", "headers": {"Referer": "https://fptplay.vn/", "Origin": "https://fptplay.vn"}},
+                {"name": "VLC User-Agent", "headers": {"User-Agent": "VLC/3.0.21 LibVLC/3.0.21"}},
+            ],
+            "fptplay.vn": [
+                {"name": "configured/default headers", "headers": {}},
+                {"name": "FPT Referer only", "headers": {"Referer": "https://fptplay.vn/"}},
+                {"name": "FPT Referer + Origin", "headers": {"Referer": "https://fptplay.vn/", "Origin": "https://fptplay.vn"}},
+                {"name": "VLC User-Agent", "headers": {"User-Agent": "VLC/3.0.21 LibVLC/3.0.21"}},
+            ],
+        },
+    }
+    try:
+        with path.open("r", encoding="utf-8") as handle:
+            loaded = json.load(handle)
+        if not isinstance(loaded, dict):
+            raise ValueError("top-level JSON value must be an object")
+        if not isinstance(loaded.get("default_profiles", defaults["default_profiles"]), list):
+            raise ValueError("default_profiles must be a list")
+        if not isinstance(loaded.get("profiles_by_host_suffix", defaults["profiles_by_host_suffix"]), dict):
+            raise ValueError("profiles_by_host_suffix must be an object")
+        result = dict(defaults)
+        result.update(loaded)
+        return result
+    except FileNotFoundError:
+        print(f"Preference file not found: {path}; using built-in profiles.")
+    except (OSError, json.JSONDecodeError, ValueError) as exc:
+        print(f"Could not read {path}: {type(exc).__name__}; using built-in profiles.")
+    return defaults
+
+
+def _profiles_for_url(url, base_headers, preferences):
+    """Return request profiles in prefer.json order, overlaying each on base headers."""
+    host = (urllib.parse.urlsplit(url).hostname or "").lower()
+    suffix_profiles = preferences.get("profiles_by_host_suffix", {})
+    matching_suffixes = [
+        suffix for suffix in suffix_profiles
+        if isinstance(suffix, str) and host.endswith(suffix.lower().lstrip("."))
+    ]
+    if matching_suffixes:
+        suffix = max(matching_suffixes, key=len)
+        configured = suffix_profiles.get(suffix, [])
+    else:
+        configured = preferences.get("default_profiles", [])
+    if not isinstance(configured, list):
+        configured = []
+
+    profiles = []
+    for item in configured:
+        if not isinstance(item, dict):
+            continue
+        name = str(item.get("name") or "unnamed profile")
+        overrides = item.get("headers", {})
+        if not isinstance(overrides, dict):
+            continue
+        headers = dict(base_headers)
+        for key, value in overrides.items():
+            if isinstance(key, str) and isinstance(value, (str, int, float)):
+                headers[key] = str(value)
+        profiles.append((name, headers))
+    # A malformed/empty preference list must not disable all checks.
+    if not profiles:
+        profiles = [("configured/default headers", dict(base_headers))]
+    return profiles
+
+
+def fetch_candidate(url, user_agent, referer=None, origin=None, preferences=None):
     """Probe a candidate with alternate request profiles, including nested HLS URLs."""
     base_headers = {
         "User-Agent": user_agent or UA_DEFAULT,
@@ -257,20 +335,8 @@ def fetch_candidate(url, user_agent, referer=None, origin=None):
     if origin:
         base_headers["Origin"] = origin
 
-    profiles = [("configured/default headers", dict(base_headers))]
-
-    # Try alternate clients even when 403 happens on a variant or media segment,
-    # not only when the initial master-playlist request itself returns 403.
-    vlc_headers = dict(base_headers)
-    vlc_headers["User-Agent"] = "VLC/3.0.21 LibVLC/3.0.21"
-    profiles.append(("VLC User-Agent", vlc_headers))
-
-    host = (urllib.parse.urlsplit(url).hostname or "").lower()
-    if host.endswith("fptplay.net") or host.endswith("fptplay.vn"):
-        fpt_headers = dict(base_headers)
-        fpt_headers["Referer"] = referer or "https://fptplay.vn/"
-        fpt_headers["Origin"] = origin or "https://fptplay.vn"
-        profiles.append(("FPT Play Referer/Origin", fpt_headers))
+    preferences = preferences or load_preferences()
+    profiles = _profiles_for_url(url, base_headers, preferences)
 
     diagnostics = []
     saw_uncertain = False
@@ -335,6 +401,7 @@ def main():
     playlist_text = PLAYLIST.read_text(encoding="utf-8-sig")
     sources_text = SOURCES.read_text(encoding="utf-8-sig")
     sources = parse_sources(sources_text)
+    preferences = load_preferences()
     if not sources:
         raise SystemExit("linkworks.txt has no #tvg-id groups. Add IDs and URLs first.")
 
@@ -402,6 +469,7 @@ def main():
                 candidate.get("user_agent") or ua_by_id.get(tvg_id, UA_DEFAULT),
                 referer=candidate.get("referer"),
                 origin=candidate.get("origin"),
+                preferences=preferences,
             )
             candidates_report.append({
                 "priority": index + 1,
