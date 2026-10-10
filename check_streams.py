@@ -436,7 +436,7 @@ def fetch_candidate(url, user_agent, referer=None, origin=None, preferences=None
             diagnostics.append(detail)
             saw_uncertain = saw_uncertain or _classify_failure(detail) == "unknown"
 
-    reason = _sanitize_diagnostic_text("; ".join(diagnostics) or "candidate check failed", 500)
+    reason = _sanitize_diagnostic_text("; ".join(diagnostics) or "candidate check failed", 2000)
     return False, reason, url, "unknown" if saw_uncertain else "failed"
 
 def parse_playlist(text):
@@ -537,7 +537,7 @@ def main():
                 "url": safe_url(url),
                 "status": state,
                 "ok": ok,
-                "reason": _sanitize_diagnostic_text(reason, 500),
+                "reason": _sanitize_diagnostic_text(reason, 2000),
                 "final_url": safe_url(final_url),
             })
 
@@ -621,7 +621,7 @@ def main():
     # Defensive final pass before the JSON artifact is written.
     for channel in report["channels"].values():
         for candidate in channel.get("candidates", []):
-            candidate["reason"] = _sanitize_diagnostic_text(candidate.get("reason", ""), 500)
+            candidate["reason"] = _sanitize_diagnostic_text(candidate.get("reason", ""), 2000)
     REPORT.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"Checked {len(sources)} tvg-id groups; updated {report['updated_entries']} playlist entries.")
     print(f"Retained due to uncertain access: {report['retained_due_to_uncertainty']} groups.")
