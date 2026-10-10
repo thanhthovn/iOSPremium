@@ -16,9 +16,9 @@ https://vips-livecdn.fptplay.net/live/media/vtv5/live247-hls-avc/vtv5-avc1_56000
 #vtv6hd
 https://vtvgolive-sctvdrm.vtvdigital.vn/manifest/vtv6/playlist_720p.m3u8
 https://vips-livecdn.fptplay.net/live/media/vtv6/live247-hls-avc/vtv6-avc1_5600000=10000-mp4a_140800_vie=20000.m3u8
-#onlife
-#ongolf
-#tvbvn
-#cartoonhd
-#cartoonhd
-#discoveryhd
+#vinhlong3hd
+https://vips-livecdn.fptplay.net/live/media/vinhlong3/live247-hls-avc/vinhlong3-avc1_5600000=10000-mp4a_140800_vie=20000.m3u8
+#vinhlong4hd
+https://freem3u.xyz/api/live/play.m3u8?vid=220
+#vinhlong5hd
+https://freem3u.xyz/api/live/play.m3u8?vid=91
