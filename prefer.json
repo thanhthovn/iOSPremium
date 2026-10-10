@@ -15,6 +15,14 @@
   "profiles_by_host_suffix": {
     "fptplay.net": [
       {
+        "name": "Chrome User-Agent + FPT Referer + Origin",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+          "Referer": "https://fptplay.vn/",
+          "Origin": "https://fptplay.vn"
+        }
+      },
+      {
         "name": "configured/default headers",
         "headers": {}
       },
@@ -40,6 +48,14 @@
       }
     ],
     "fptplay.vn": [
+      {
+        "name": "Chrome User-Agent + FPT Referer + Origin",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+          "Referer": "https://fptplay.vn/",
+          "Origin": "https://fptplay.vn"
+        }
+      },
       {
         "name": "configured/default headers",
         "headers": {}
