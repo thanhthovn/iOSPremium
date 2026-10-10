@@ -1,0 +1,63 @@
+name: IPTV Link Scanner
+
+on:
+  # Chỉ chạy thủ công bằng nút "Run workflow"
+  workflow_dispatch:
+    inputs:
+      m3u_url:
+        description: 'URL playlist M3U nguồn (bỏ trống dùng mặc định)'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Cài thư viện
+        run: pip install -r requirements.txt
+
+      - name: Chạy scanner
+        env:
+          M3U_URL: ${{ github.event.inputs.m3u_url }}
+        run: |
+          if [ -z "$M3U_URL" ]; then
+            python scanner.py
+          else
+            python scanner.py --m3u-url "$M3U_URL"
+          fi
+
+      - name: Upload file M3U (artifact)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: m3u-result
+          path: TRUYENHINHCAPVIETNAM_checked.m3u
+          retention-days: 30
+          if-no-files-found: warn
+
+      - name: Commit file M3U mới (nếu có)
+        if: success()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add TRUYENHINHCAPVIETNAM_checked.m3u
+          if git diff --staged --quiet; then
+            echo "Không có thay đổi"
+          else
+            git commit -m "Auto update M3U checked [skip ci]"
+            git push
+          fi
