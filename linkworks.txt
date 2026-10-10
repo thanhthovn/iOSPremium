@@ -68,8 +68,11 @@ https://vips-livecdn.fptplay.net/live/media/quocphongvn/live-hls-avc/index.m3u8
 #vinhlong4hd
 #vinhlong5hd
 #htv1
+https://freem3u.xyz/api/live/play.m3u8?vid=190
 #htv2hd
+https://freem3u.xyz/api/live/play.m3u8?vid=191
 #htv3
+https://freem3u.xyz/api/live/play.m3u8?vid=192
 #htv4
 #htv5
 #htvthethaohd
