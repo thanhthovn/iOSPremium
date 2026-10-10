@@ -33,6 +33,7 @@ jobs:
         env:
           PLAYLIST_FILE: TRUYENHINHCAPVIETNAM.m3u
           SOURCES_FILE: linkworks.txt
+          REPORT_FILE: stream_status.json
           CHECK_TIMEOUT: "15"
           PYTHONIOENCODING: utf-8
           PYTHONUTF8: "1"
