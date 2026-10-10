@@ -21,7 +21,8 @@
       {
         "name": "FPT Referer only",
         "headers": {
-          "Referer": "https://fptplay.vn/"
+          "Referer": "https://fptplay.vn/",
+          "Origin": null
         }
       },
       {
@@ -46,7 +47,8 @@
       {
         "name": "FPT Referer only",
         "headers": {
-          "Referer": "https://fptplay.vn/"
+          "Referer": "https://fptplay.vn/",
+          "Origin": null
         }
       },
       {
