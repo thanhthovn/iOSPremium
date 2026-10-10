@@ -327,6 +327,61 @@ def _profiles_for_url(url, base_headers, preferences):
     return profiles
 
 
+def order_candidates_by_preference(candidate_items, preferences):
+    """Sort URL candidates by prefer.json rules; keep source order for ties/unmatched URLs."""
+    rules_by_suffix = preferences.get("url_preferences_by_host_suffix", {})
+    if not isinstance(rules_by_suffix, dict):
+        return list(candidate_items)
+
+    def rules_for_url(url):
+        host = (urllib.parse.urlsplit(url).hostname or "").lower()
+        matches = [
+            suffix for suffix in rules_by_suffix
+            if isinstance(suffix, str)
+            and (host == suffix.lower().lstrip(".") or host.endswith("." + suffix.lower().lstrip(".")))
+        ]
+        if not matches:
+            return []
+        suffix = max(matches, key=len)
+        rules = rules_by_suffix.get(suffix, [])
+        return rules if isinstance(rules, list) else []
+
+    # Candidate lists normally belong to one channel/source group. Find the
+    # applicable URL rules from the first URL that has a matching host.
+    rules = []
+    for candidate in candidate_items:
+        found = rules_for_url(candidate.get("url", ""))
+        if found:
+            rules = found
+            break
+    if not rules:
+        return list(candidate_items)
+
+    def preference_rank(candidate):
+        url = candidate.get("url", "")
+        for rank, rule in enumerate(rules):
+            if not isinstance(rule, dict):
+                continue
+            pattern = rule.get("pattern")
+            if not isinstance(pattern, str) or not pattern:
+                continue
+            try:
+                if re.search(pattern, url, re.IGNORECASE):
+                    return rank
+            except re.error:
+                continue
+        return len(rules)
+
+    # Stable sort: URLs with no matching rule keep their relative order and
+    # remain after explicitly preferred patterns.
+    return [
+        item for _, item in sorted(
+            enumerate(candidate_items),
+            key=lambda pair: (preference_rank(pair[1]), pair[0]),
+        )
+    ]
+
+
 def fetch_candidate(url, user_agent, referer=None, origin=None, preferences=None):
     """Probe a candidate with alternate request profiles, including nested HLS URLs."""
     base_headers = {
@@ -448,7 +503,8 @@ def main():
 
     # Candidates are ordered by preference. A blocked/transient higher-priority
     # URL is UNKNOWN, not dead: never replace the current URL based on that alone.
-    for tvg_id, candidate_items in sources.items():
+    for tvg_id, source_candidate_items in sources.items():
+        candidate_items = order_candidates_by_preference(source_candidate_items, preferences)
         urls = [item["url"] for item in candidate_items]
         existing_url = existing_url_by_id.get(tvg_id)
         if not urls:
