@@ -116,24 +116,34 @@ def _validate_hls(url, body, headers, depth=0):
         return False, "HLS manifest has no media segment/part URI"
 
     segment_url = urllib.parse.urljoin(url, media_uri)
-    try:
-        status, final_url, content_type, segment = _request_sample(
-            segment_url, headers, limit=4096, byte_range="bytes=0-4095"
-        )
-        if not 200 <= status < 400:
-            return False, f"media segment HTTP {status}"
-        if not segment:
-            return False, "media segment returned an empty body"
-        segment_sample = segment.lstrip(b"\xef\xbb\xbf \t\r\n").lower()
-        if segment_sample.startswith((b"<!doctype html", b"<html", b"<head", b"<body")):
-            return False, "media segment URL returned HTML instead of media bytes"
-        if segment_sample.startswith(b"#extm3u"):
-            return False, "media segment URL returned another playlist, not media bytes"
-        return True, "HLS manifest + media segment OK"
-    except urllib.error.HTTPError as exc:
-        return False, f"media segment HTTP {exc.code}"
-    except Exception as exc:
-        return False, f"media segment check failed ({type(exc).__name__})"
+    # Some CDNs reject HTTP Range requests even though the segment is playable.
+    # Try a small ranged read first, then retry without Range before rejecting it.
+    last_error = None
+    for use_range in (True, False):
+        try:
+            status, final_url, content_type, segment = _request_sample(
+                segment_url,
+                headers,
+                limit=4096,
+                byte_range="bytes=0-4095" if use_range else None,
+            )
+            if not 200 <= status < 400:
+                last_error = f"media segment HTTP {status}"
+                continue
+            if not segment:
+                last_error = "media segment returned an empty body"
+                continue
+            segment_sample = segment.lstrip(b"\xef\xbb\xbf \t\r\n").lower()
+            if segment_sample.startswith((b"<!doctype html", b"<html", b"<head", b"<body")):
+                return False, "media segment URL returned HTML instead of media bytes"
+            if segment_sample.startswith(b"#extm3u"):
+                return False, "media segment URL returned another playlist, not media bytes"
+            return True, "HLS manifest + media segment OK" + (" (full-read fallback)" if not use_range else "")
+        except urllib.error.HTTPError as exc:
+            last_error = f"media segment HTTP {exc.code}"
+        except Exception as exc:
+            last_error = f"media segment check failed ({type(exc).__name__})"
+    return False, last_error or "media segment check failed"
 
 
 def fetch_candidate(url, user_agent):
