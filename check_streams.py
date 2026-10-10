@@ -21,6 +21,7 @@ UA_DEFAULT = os.environ.get(
 )
 
 def parse_sources(text):
+    """Parse grouped URLs and optional pipe-delimited request metadata."""
     groups = {}
     current = None
     for raw in text.splitlines():
@@ -32,8 +33,32 @@ def parse_sources(text):
             if current:
                 groups.setdefault(current, [])
             continue
-        if current and line.lower().startswith(("http://", "https://")):
-            groups.setdefault(current, []).append(line)
+
+        parts = [part.strip() for part in line.split("|")]
+        if parts[0].lower().startswith(("http://", "https://")):
+            tvg_id, url, metadata = current, parts[0], parts[1:]
+        elif len(parts) >= 2 and parts[1].lower().startswith(("http://", "https://")):
+            tvg_id, url, metadata = parts[0], parts[1], parts[2:]
+        else:
+            continue
+        if not tvg_id or not url:
+            continue
+
+        candidate = {"url": url, "referer": None, "origin": None, "user_agent": None}
+        for item in metadata:
+            if "=" not in item:
+                continue
+            key, value = item.split("=", 1)
+            key, value = key.strip().lower(), value.strip()
+            if not value:
+                continue
+            if key in ("referer", "ref"):
+                candidate["referer"] = value
+            elif key == "origin":
+                candidate["origin"] = value
+            elif key in ("ua", "user-agent", "useragent"):
+                candidate["user_agent"] = value
+        groups.setdefault(tvg_id, []).append(candidate)
     return groups
 
 def safe_url(url):
@@ -220,12 +245,17 @@ def _classify_failure(reason):
     return "failed"
 
 
-def fetch_candidate(url, user_agent):
+def fetch_candidate(url, user_agent, referer=None, origin=None):
     headers = {
         "User-Agent": user_agent or UA_DEFAULT,
         "Accept": "application/vnd.apple.mpegurl, application/x-mpegURL, */*",
         "Connection": "close",
     }
+    # Only send Referer/Origin when explicitly configured in linkworks.txt.
+    if referer:
+        headers["Referer"] = referer
+    if origin:
+        headers["Origin"] = origin
     try:
         status, final_url, content_type, body = _request_sample(url, headers)
         if status < 200 or status >= 400:
@@ -318,7 +348,8 @@ def main():
 
     # Candidates are ordered by preference. A blocked/transient higher-priority
     # URL is UNKNOWN, not dead: never replace the current URL based on that alone.
-    for tvg_id, urls in sources.items():
+    for tvg_id, candidate_items in sources.items():
+        urls = [item["url"] for item in candidate_items]
         existing_url = existing_url_by_id.get(tvg_id)
         if not urls:
             report["channels"][tvg_id] = {
@@ -335,16 +366,21 @@ def main():
         selected_status = "no_working_candidate"
         uncertain_candidate = None
 
-        for index, url in enumerate(urls):
+        # Sequential iteration deliberately preserves source priority.
+        for index, candidate in enumerate(candidate_items):
+            url = candidate["url"]
             ok, reason, final_url, state = fetch_candidate(
-                url, ua_by_id.get(tvg_id, UA_DEFAULT)
+                url,
+                candidate.get("user_agent") or ua_by_id.get(tvg_id, UA_DEFAULT),
+                referer=candidate.get("referer"),
+                origin=candidate.get("origin"),
             )
             candidates_report.append({
                 "priority": index + 1,
                 "url": safe_url(url),
                 "status": state,
                 "ok": ok,
-                "reason": reason,
+                "reason": _sanitize_diagnostic_text(reason, 500),
                 "final_url": safe_url(final_url),
             })
 
@@ -420,6 +456,10 @@ def main():
     output = "".join(lines)
     if output != playlist_text:
         PLAYLIST.write_text(output, encoding="utf-8", newline="")
+    # Defensive final pass before the JSON artifact is written.
+    for channel in report["channels"].values():
+        for candidate in channel.get("candidates", []):
+            candidate["reason"] = _sanitize_diagnostic_text(candidate.get("reason", ""), 500)
     REPORT.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"Checked {len(sources)} tvg-id groups; updated {report['updated_entries']} playlist entries.")
     print(f"Retained due to uncertain access: {report['retained_due_to_uncertainty']} groups.")
