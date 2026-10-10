@@ -47,11 +47,11 @@ def safe_url(url):
 def _safe_error_body(body, limit=320):
     """Return a short, sanitized error-body snippet suitable for CI logs."""
     text = body.decode("utf-8", errors="replace") if isinstance(body, bytes) else str(body or "")
-    text = re.sub(r"(?i)https?://[^\\s\"'<>]+", "[URL redacted]", text)
-    text = re.sub(r"(?i)\\b(authorization|cookie|set-cookie|token|access_token|refresh_token|signature|sig|key|api_key|password|passwd)\\b\\s*([=:])\\s*[^\\s,;<>\"']+", r"\\1\\2[redacted]", text)
-    text = re.sub(r"(?i)\\bBearer\\s+[^\\s,;]+", "Bearer [redacted]", text)
-    text = re.sub(r"[\\r\\n\\t]+", " ", text)
-    text = re.sub(r"\\s{2,}", " ", text).strip()
+    text = re.sub(r"(?i)https?://[^\s\"'<>]+", "[URL redacted]", text)
+    text = re.sub(r"(?i)\b(authorization|cookie|set-cookie|token|access_token|refresh_token|signature|sig|key|api_key|password|passwd)\b\s*([=:])\s*[^\s,;<>\"']+", r"\1\2[redacted]", text)
+    text = re.sub(r"(?i)\bBearer\s+[^\s,;]+", "Bearer [redacted]", text)
+    text = re.sub(r"[\r\n\t]+", " ", text)
+    text = re.sub(r"\s{2,}", " ", text).strip()
     if len(text) > limit:
         text = text[:limit] + "…"
     return text or "[empty response body]"
@@ -68,7 +68,7 @@ def _http_error_detail(exc, context="request"):
     for name in allowed_headers:
         value = exc.headers.get(name) if exc.headers else None
         if value:
-            value = re.sub(r"[\\r\\n]+", " ", str(value)).strip()[:180]
+            value = re.sub(r"[\r\n]+", " ", str(value)).strip()[:180]
             safe_headers[name] = value
     try:
         body = exc.read(2048)
