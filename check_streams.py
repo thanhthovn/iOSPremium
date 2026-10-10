@@ -37,24 +37,38 @@ def parse_sources(text):
     return groups
 
 def safe_url(url):
-    """Hide token-bearing paths and query strings in committed reports."""
+    """Hide credentials, token-bearing paths, and query strings in reports."""
     try:
         parts = urllib.parse.urlsplit(url)
-        return f"{parts.scheme}://{parts.netloc}/[redacted]"
+        host = parts.hostname or "[redacted host]"
+        if parts.port:
+            host = f"{host}:{parts.port}"
+        return f"{parts.scheme}://{host}/[redacted]"
     except Exception:
         return "[redacted URL]"
 
-def _safe_error_body(body, limit=320):
-    """Return a short, sanitized error-body snippet suitable for CI logs."""
-    text = body.decode("utf-8", errors="replace") if isinstance(body, bytes) else str(body or "")
+def _sanitize_diagnostic_text(value, limit=320):
+    """Sanitize response text/header values before writing them to logs or reports."""
+    text = str(value or "")
+    # Remove complete URLs so query strings and signed paths cannot leak.
     text = re.sub(r"(?i)https?://[^\s\"'<>]+", "[URL redacted]", text)
-    text = re.sub(r"(?i)\b(authorization|cookie|set-cookie|token|access_token|refresh_token|signature|sig|key|api_key|password|passwd)\b\s*([=:])\s*[^\s,;<>\"']+", r"\1\2[redacted]", text)
+    # Hide common secret assignments, including JSON-style quoted keys.
+    text = re.sub(
+        r"""(?i)(["']?(?:authorization|cookie|set-cookie|token|access_token|refresh_token|signature|sig|key|api_key|password|passwd)["']?\s*[:=]\s*["']?)[^\s,;<>}"']+""",
+        r"\1[redacted]", text,
+    )
     text = re.sub(r"(?i)\bBearer\s+[^\s,;]+", "Bearer [redacted]", text)
     text = re.sub(r"[\r\n\t]+", " ", text)
     text = re.sub(r"\s{2,}", " ", text).strip()
     if len(text) > limit:
         text = text[:limit] + "…"
     return text or "[empty response body]"
+
+
+def _safe_error_body(body, limit=320):
+    """Return a short, sanitized error-body snippet suitable for CI logs."""
+    text = body.decode("utf-8", errors="replace") if isinstance(body, bytes) else str(body or "")
+    return _sanitize_diagnostic_text(text, limit)
 
 
 def _http_error_detail(exc, context="request"):
