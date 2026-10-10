@@ -1,0 +1,67 @@
+{
+  "version": 1,
+  "default_profiles": [
+    {
+      "name": "configured/default headers",
+      "headers": {}
+    },
+    {
+      "name": "VLC User-Agent",
+      "headers": {
+        "User-Agent": "VLC/3.0.21 LibVLC/3.0.21"
+      }
+    }
+  ],
+  "profiles_by_host_suffix": {
+    "fptplay.net": [
+      {
+        "name": "configured/default headers",
+        "headers": {}
+      },
+      {
+        "name": "FPT Referer only",
+        "headers": {
+          "Referer": "https://fptplay.vn/"
+        }
+      },
+      {
+        "name": "FPT Referer + Origin",
+        "headers": {
+          "Referer": "https://fptplay.vn/",
+          "Origin": "https://fptplay.vn"
+        }
+      },
+      {
+        "name": "VLC User-Agent",
+        "headers": {
+          "User-Agent": "VLC/3.0.21 LibVLC/3.0.21"
+        }
+      }
+    ],
+    "fptplay.vn": [
+      {
+        "name": "configured/default headers",
+        "headers": {}
+      },
+      {
+        "name": "FPT Referer only",
+        "headers": {
+          "Referer": "https://fptplay.vn/"
+        }
+      },
+      {
+        "name": "FPT Referer + Origin",
+        "headers": {
+          "Referer": "https://fptplay.vn/",
+          "Origin": "https://fptplay.vn"
+        }
+      },
+      {
+        "name": "VLC User-Agent",
+        "headers": {
+          "User-Agent": "VLC/3.0.21 LibVLC/3.0.21"
+        }
+      }
+    ]
+  }
+}
