@@ -146,6 +146,21 @@ def _validate_hls(url, body, headers, depth=0):
     return False, last_error or "media segment check failed"
 
 
+def _classify_failure(reason):
+    """Return 'unknown' for access/transient errors, otherwise a definitive failure."""
+    text = str(reason).lower()
+    if re.search(r"\bhttp\s+(401|403|408|425|429|500|501|502|503|504|507|509|520|521|522|523|524)\b", text):
+        return "unknown"
+    transient_names = (
+        "timeout", "urlerror", "connectionerror", "connectionreseterror",
+        "remoteDisconnected", "incompleteread", "temporaryfailure",
+        "networkisunreachable", "sslerror", "socket.timeout",
+    )
+    if any(name.lower() in text for name in transient_names):
+        return "unknown"
+    return "failed"
+
+
 def fetch_candidate(url, user_agent):
     headers = {
         "User-Agent": user_agent or UA_DEFAULT,
@@ -155,25 +170,31 @@ def fetch_candidate(url, user_agent):
     try:
         status, final_url, content_type, body = _request_sample(url, headers)
         if status < 200 or status >= 400:
-            return False, f"HTTP {status}", final_url
+            reason = f"HTTP {status}"
+            return False, reason, final_url, _classify_failure(reason)
 
         sample = body.lstrip(b"\xef\xbb\xbf \t\r\n")
         if sample.startswith(b"#EXTM3U"):
             valid, detail = _validate_hls(final_url, body, headers)
-            return valid, f"HTTP {status}; {detail}", final_url
+            reason = f"HTTP {status}; {detail}"
+            return valid, reason, final_url, "working" if valid else _classify_failure(reason)
 
         # Non-HLS direct media URLs can still be valid candidates.
         if content_type.startswith(("video/", "audio/")) and body:
             sample_lower = sample.lower()
             if sample_lower.startswith((b"<!doctype html", b"<html", b"<head", b"<body")):
-                return False, f"HTTP {status}; media URL returned HTML", final_url
-            return True, f"HTTP {status}; direct media response", final_url
+                reason = f"HTTP {status}; media URL returned HTML"
+                return False, reason, final_url, "failed"
+            return True, f"HTTP {status}; direct media response", final_url, "working"
 
-        return False, f"HTTP {status}; response is not an HLS playlist/media response", final_url
+        reason = f"HTTP {status}; response is not an HLS playlist/media response"
+        return False, reason, final_url, _classify_failure(reason)
     except urllib.error.HTTPError as exc:
-        return False, f"HTTP {exc.code}", url
+        reason = f"HTTP {exc.code}"
+        return False, reason, url, _classify_failure(reason)
     except Exception as exc:
-        return False, f"{type(exc).__name__}", url
+        reason = f"{type(exc).__name__}"
+        return False, reason, url, _classify_failure(reason)
 
 def parse_playlist(text):
     # Entries begin at EXTINF and continue to the next EXTINF or end of file.
@@ -211,6 +232,20 @@ def main():
         ua_match = re.search(r"(?im)^#EXTVLCOPT:http-user-agent=(.+?)\s*$", info)
         if ua_match:
             ua_by_id.setdefault(match.group(1).strip(), ua_match.group(1).strip())
+    # Remember current playlist URLs so uncertain candidates never force a switch.
+    existing_url_by_id = {}
+    for start, end in entries:
+        info = "".join(lines[start:end])
+        match = re.search(r'\btvg-id="([^"]*)"', info)
+        if not match or not match.group(1).strip():
+            continue
+        tvg_id = match.group(1).strip()
+        for i in range(start + 1, end):
+            candidate_line = lines[i].strip()
+            if candidate_line.lower().startswith(("http://", "https://")):
+                existing_url_by_id.setdefault(tvg_id, candidate_line)
+                break
+
     checks = {}
     report = {
         "checked_at": datetime.now(timezone.utc).isoformat(),
@@ -219,33 +254,79 @@ def main():
         "channels": {},
         "updated_entries": 0,
         "unchanged_entries": 0,
+        "retained_due_to_uncertainty": 0,
     }
 
-    # Check each candidate once per tvg-id, in the exact top-to-bottom order.
+    # Candidates are ordered by preference. A blocked/transient higher-priority
+    # URL is UNKNOWN, not dead: never replace the current URL based on that alone.
     for tvg_id, urls in sources.items():
+        existing_url = existing_url_by_id.get(tvg_id)
         if not urls:
             report["channels"][tvg_id] = {
-                "selected": None, "reason": "no candidate URLs in linkworks.txt",
-                "candidates": []
+                "selected": safe_url(existing_url) if existing_url else None,
+                "status": "no_candidates",
+                "reason": "no candidate URLs in linkworks.txt; existing URL retained",
+                "candidates": [],
             }
+            checks[tvg_id] = None
             continue
+
         candidates_report = []
         selected = None
-        for url in urls:
-            ok, reason, final_url = fetch_candidate(url, ua_by_id.get(tvg_id, UA_DEFAULT))
+        selected_status = "no_working_candidate"
+        uncertain_candidate = None
+
+        for index, url in enumerate(urls):
+            ok, reason, final_url, state = fetch_candidate(
+                url, ua_by_id.get(tvg_id, UA_DEFAULT)
+            )
             candidates_report.append({
-                "url": safe_url(url), "ok": ok, "reason": reason,
-                "final_url": safe_url(final_url)
+                "priority": index + 1,
+                "url": safe_url(url),
+                "status": state,
+                "ok": ok,
+                "reason": reason,
+                "final_url": safe_url(final_url),
             })
-            if ok:
-                selected = url  # Keep the source URL, not a temporary redirect URL.
+
+            if state == "unknown":
+                uncertain_candidate = url
+                # Lower-priority links must not replace the existing URL while
+                # a preferred candidate cannot be verified from this runner.
                 break
-        report["channels"][tvg_id] = {
-            "selected": safe_url(selected) if selected else None,
-            "reason": "first working candidate in source order" if selected else "all candidates failed; existing URL retained",
-            "candidates": candidates_report,
-        }
-        checks[tvg_id] = selected
+            if ok:
+                selected = url
+                selected_status = "working"
+                break
+
+        if uncertain_candidate:
+            checks[tvg_id] = None
+            report["retained_due_to_uncertainty"] += 1
+            report["channels"][tvg_id] = {
+                "selected": safe_url(existing_url) if existing_url else None,
+                "status": "retained_existing_uncertain",
+                "reason": "higher-priority candidate could not be verified; existing URL retained",
+                "candidates": candidates_report,
+                "not_checked": max(0, len(urls) - len(candidates_report)),
+            }
+        elif selected:
+            checks[tvg_id] = selected
+            report["channels"][tvg_id] = {
+                "selected": safe_url(selected),
+                "status": selected_status,
+                "reason": "first verified working candidate in source order",
+                "candidates": candidates_report,
+                "not_checked": max(0, len(urls) - len(candidates_report)),
+            }
+        else:
+            checks[tvg_id] = None
+            report["channels"][tvg_id] = {
+                "selected": safe_url(existing_url) if existing_url else None,
+                "status": "retained_existing_no_verified_candidate",
+                "reason": "all checked candidates failed definitively; existing URL retained",
+                "candidates": candidates_report,
+                "not_checked": max(0, len(urls) - len(candidates_report)),
+            }
 
     # Change only the stream URL line in entries whose non-empty tvg-id matches.
     for start, end in entries:
@@ -282,6 +363,7 @@ def main():
         PLAYLIST.write_text(output, encoding="utf-8", newline="")
     REPORT.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"Checked {len(sources)} tvg-id groups; updated {report['updated_entries']} playlist entries.")
+    print(f"Retained due to uncertain access: {report['retained_due_to_uncertainty']} groups.")
     print(f"Unchanged entries: {report['unchanged_entries']}. Report: {REPORT}")
 
 if __name__ == "__main__":
