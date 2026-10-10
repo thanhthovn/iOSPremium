@@ -384,16 +384,18 @@ def main():
             })
 
             if state == "unknown":
-                uncertain_candidate = url
-                # Lower-priority links must not replace the existing URL while
-                # a preferred candidate cannot be verified from this runner.
-                break
+                # This candidate could not be verified from this runner.
+                # Keep checking lower-priority candidates; a later verified
+                # working URL may be selected as the fallback.
+                if uncertain_candidate is None:
+                    uncertain_candidate = url
+                continue
             if ok:
                 selected = url
                 selected_status = "working"
                 break
 
-        if uncertain_candidate:
+        if uncertain_candidate and not selected:
             checks[tvg_id] = None
             report["retained_due_to_uncertainty"] += 1
             report["channels"][tvg_id] = {
