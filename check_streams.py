@@ -113,8 +113,18 @@ def _http_error_detail(exc, context="request"):
         body = exc.read(2048)
     except Exception:
         body = b""
-    snippet = _safe_error_body(body)
-    return f"HTTP {exc.code} ({context}); response_headers={json.dumps(safe_headers, ensure_ascii=False, sort_keys=True)}; response_body={snippet!r}"
+    # Keep per-profile errors compact so later FPT header profiles remain visible
+    # in the JSON report instead of being hidden by repeated OpenResty HTML pages.
+    snippet = _safe_error_body(body, limit=100)
+    compact_headers = {
+        key: value for key, value in safe_headers.items()
+        if key in ("Server", "Content-Type", "WWW-Authenticate", "X-Deny-Reason", "X-Error-Code", "X-Tengine-Error")
+    }
+    return (
+        f"HTTP {exc.code} ({context}); "
+        f"response_headers={json.dumps(compact_headers, ensure_ascii=False, sort_keys=True)}; "
+        f"response_body={snippet!r}"
+    )
 
 def _request_sample(url, headers, limit=256 * 1024, byte_range=None):
     request_headers = dict(headers)
