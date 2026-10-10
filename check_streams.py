@@ -98,6 +98,16 @@ def main():
         raise SystemExit("linkworks.txt has no #tvg-id groups. Add IDs and URLs first.")
 
     lines, entries = parse_playlist(playlist_text)
+    # Use the playlist entry's existing VLC User-Agent when checking candidates.
+    ua_by_id = {}
+    for start, end in entries:
+        info = "".join(lines[start:end])
+        match = re.search(r'\btvg-id="([^"]*)"', info)
+        if not match or not match.group(1).strip():
+            continue
+        ua_match = re.search(r"(?im)^#EXTVLCOPT:http-user-agent=(.+?)\s*$", info)
+        if ua_match:
+            ua_by_id.setdefault(match.group(1).strip(), ua_match.group(1).strip())
     checks = {}
     report = {
         "checked_at": datetime.now(timezone.utc).isoformat(),
@@ -119,7 +129,7 @@ def main():
         candidates_report = []
         selected = None
         for url in urls:
-            ok, reason, final_url = fetch_candidate(url, UA_DEFAULT)
+            ok, reason, final_url = fetch_candidate(url, ua_by_id.get(tvg_id, UA_DEFAULT))
             candidates_report.append({
                 "url": safe_url(url), "ok": ok, "reason": reason,
                 "final_url": safe_url(final_url)
@@ -146,10 +156,6 @@ def main():
             report["unchanged_entries"] += 1
             continue
 
-        # Respect the entry's existing VLC User-Agent when validating the chosen URL.
-        # Recheck with the channel's configured UA if it differs from the default.
-        ua_match = re.search(r"(?im)^#EXTVLCOPT:http-user-agent=(.+?)\s*$", info)
-        channel_ua = ua_match.group(1).strip() if ua_match else UA_DEFAULT
         old_url_line = None
         for i in range(start + 1, end):
             stripped = lines[i].strip()
@@ -162,12 +168,6 @@ def main():
 
         old_url = lines[old_url_line].strip()
         if old_url != selected:
-            # If the channel needs a specific UA, ensure the selected source still passes with it.
-            if channel_ua != UA_DEFAULT:
-                ok, _, _ = fetch_candidate(selected, channel_ua)
-                if not ok:
-                    report["unchanged_entries"] += 1
-                    continue
             ending = "\r\n" if lines[old_url_line].endswith("\r\n") else "\n" if lines[old_url_line].endswith("\n") else ""
             lines[old_url_line] = selected + ending
             report["updated_entries"] += 1
