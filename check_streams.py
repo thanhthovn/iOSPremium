@@ -12,7 +12,7 @@ from pathlib import Path
 
 PLAYLIST = Path(os.environ.get("PLAYLIST_FILE", "TRUYENHINHCAPVIETNAM.m3u"))
 SOURCES = Path(os.environ.get("SOURCES_FILE", "linkworks.txt"))
-REPORT = Path("stream_status.json")
+REPORT = Path(os.environ.get("REPORT_FILE", "stream_status.json"))
 TIMEOUT = int(os.environ.get("CHECK_TIMEOUT", "12"))
 UA_DEFAULT = os.environ.get(
     "STREAM_USER_AGENT",
