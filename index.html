@@ -356,10 +356,6 @@
             gap:12px; flex-wrap:wrap;
         }
         .scanner-headline h2 { font-size:18px; color:#fff; }
-        .scanner-subtitle {
-            margin-top:7px; color:var(--text-muted);
-            font-size:12px; line-height:1.5;
-        }
         .scanner-toolbar { display:flex; gap:8px; flex-wrap:wrap; margin-top:12px; }
         .scanner-btn {
             border:1px solid #536a3c; border-radius:6px; padding:9px 12px;
@@ -376,7 +372,7 @@
             margin-bottom:8px; overflow-wrap:anywhere;
         }
         .scanner-player video {
-            display:block; width:min(100%,560px); aspect-ratio:16/9;
+            display:block; width:min(70%,560px); aspect-ratio:16/9;
             height:auto; max-height:42vh; margin:0 auto; background:#000;
             border:1px solid #465838; border-radius:7px;
         }
@@ -1065,7 +1061,7 @@
 
         // =========================================================
         // PARSE LINKWORKS.TXT
-        // Mỗi dòng bắt đầu bằng # là TÊN NHÓM (chính là tvg-id)
+        // Mỗi dòng bắt đầu bằng # là TÊN KÊNH (chính là tvg-id)
         // =========================================================
         function parseLinkworks(text) {
             const groups = [];
@@ -1122,11 +1118,6 @@
                             <h2>🔗 IPTV SCANNING CHANNEL</h2>
                             <button class="scanner-btn scanner-close" id="scannerClose" type="button" title="Đóng">✕</button>
                         </div>
-                        <div class="scanner-subtitle">
-                            Đọc các URL từ <b>linkworks.txt</b>. Dòng bắt đầu bằng <b>#</b> là tên nhóm.
-                            Chỉ link <b>PHÁT ĐƯỢC THỰC TẾ</b> (video bắn sự kiện <b>playing</b>) mới được ghi đè khi xuất M3U.
-                            <b>Link ghi đè là link gốc trong linkworks.txt</b> (không phải link đích sau redirect).
-                        </div>
                         <div class="scanner-toolbar">
                             <button class="scanner-btn primary" id="scannerLoad" type="button">↻ TẢI linkworks.txt</button>
                             <button class="scanner-btn" id="scannerTestAll" type="button" disabled>▶ KIỂM TRA TẤT CẢ</button>
@@ -1153,7 +1144,7 @@
             let miniHls = null;
             let miniPlayRequest = 0;
 
-            // KHO LƯU LINK PHÁT ĐƯỢC — key: tvg-id normalized → URL gốc từ linkworks
+            // KHO LƯU LINK PHÁT ĐƯỢC — key: tên kênh (tvg-id normalized) → URL gốc từ linkworks
             const playableByGroup = new Map();
 
             function stopMiniPlayer() {
@@ -1360,7 +1351,7 @@
                     if (playback.playable) {
                         // LƯU LINK GỐC từ linkworks.txt
                         playableByGroup.set(groupKey, url);
-                        console.log(`💾 Lưu winner cho nhóm "${groupKey}": ${url}`);
+                        console.log(`💾 Lưu link phát được cho kênh "${groupKey}": ${url}`);
                         setStatus(statusEl, `✅ PHÁT ĐƯỢC`, "ok");
                         return { type: "ok" };
                     }
@@ -1382,7 +1373,7 @@
                 playableByGroup.clear();
 
                 if (!groups.length) {
-                    results.innerHTML = '<div class="scanner-empty">Không tìm thấy URL trong linkworks.txt.<br>Kiểm tra file có nằm cùng thư mục với index.html và đúng định dạng #tên-nhóm / URL.</div>';
+                    results.innerHTML = '<div class="scanner-empty">Không tìm thấy URL trong linkworks.txt.<br>Kiểm tra file có nằm cùng thư mục với index.html và đúng định dạng #tên-kênh / URL.</div>';
                     allBtn.disabled = true;
                     stopBtn.disabled = true;
                     exportBtn.disabled = true;
@@ -1480,7 +1471,7 @@
                 const checked = statuses.filter(el => el.textContent !== "Chưa kiểm tra").length;
                 const ok = statuses.filter(el => el.classList.contains("ok")).length;
                 const bad = statuses.filter(el => el.classList.contains("bad")).length;
-                summary.textContent = `${groups.length} nhóm · ${total} link · Đã test ${checked}/${total} · PHÁT ĐƯỢC: ${playableByGroup.size} nhóm · Lỗi: ${bad}`;
+                summary.textContent = `${groups.length} kênh · ${total} link · Đã test ${checked}/${total} · PHÁT ĐƯỢC: ${playableByGroup.size} kênh · Lỗi: ${bad}`;
             }
 
             // XUẤT M3U — ghi đè bằng LINK GỐC từ linkworks.txt
@@ -1491,7 +1482,7 @@
 
                 try {
                     console.log("=== XUẤT M3U ===");
-                    console.log("Winners (key → link gốc phát được):", [...playableByGroup.entries()]);
+                    console.log("Kênh có link phát được:", [...playableByGroup.entries()]);
 
                     if (playableByGroup.size === 0) {
                         summary.textContent = "⚠ Chưa có link nào PHÁT ĐƯỢC (video bắn sự kiện playing). Hãy TEST LINK trước.";
@@ -1674,7 +1665,7 @@
                             if (!playableByGroup.has(item.groupKey)) {
                                 await testRow(item.testBtn, item.status, item.url, item.groupKey);
                             } else {
-                                setStatus(item.status, "⏭ Bỏ qua — nhóm đã có link phát được ở trên.", "");
+                                setStatus(item.status, "⏭ Bỏ qua — kênh này đã có link phát được ở trên.", "");
                             }
                         } catch (err) {
                             setStatus(item.status, "Lỗi khi kiểm tra: " + String(err?.message || err), "warn");
