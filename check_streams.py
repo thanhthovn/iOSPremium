@@ -245,88 +245,73 @@ def _classify_failure(reason):
 
 
 def fetch_candidate(url, user_agent, referer=None, origin=None):
-    headers = {
+    """Probe a candidate with alternate request profiles, including nested HLS URLs."""
+    base_headers = {
         "User-Agent": user_agent or UA_DEFAULT,
         "Accept": "application/vnd.apple.mpegurl, application/x-mpegURL, */*",
+        "Accept-Language": "vi-VN,vi;q=0.9,en;q=0.8",
         "Connection": "close",
     }
-    # Only send Referer/Origin when explicitly configured in linkworks.txt.
     if referer:
-        headers["Referer"] = referer
+        base_headers["Referer"] = referer
     if origin:
-        headers["Origin"] = origin
-    try:
-        status, final_url, content_type, body = _request_sample(url, headers)
-        if status < 200 or status >= 400:
-            reason = f"HTTP {status}"
-            return False, reason, final_url, _classify_failure(reason)
+        base_headers["Origin"] = origin
 
-        sample = body.lstrip(b"\xef\xbb\xbf \t\r\n")
-        if sample.startswith(b"#EXTM3U"):
-            valid, detail = _validate_hls(final_url, body, headers)
-            reason = f"HTTP {status}; {detail}"
-            return valid, reason, final_url, "working" if valid else _classify_failure(reason)
+    profiles = [("configured/default headers", dict(base_headers))]
 
-        # Non-HLS direct media URLs can still be valid candidates.
-        if content_type.startswith(("video/", "audio/")) and body:
-            sample_lower = sample.lower()
-            if sample_lower.startswith((b"<!doctype html", b"<html", b"<head", b"<body")):
-                reason = f"HTTP {status}; media URL returned HTML"
-                return False, reason, final_url, "failed"
-            return True, f"HTTP {status}; direct media response", final_url, "working"
+    # Try alternate clients even when 403 happens on a variant or media segment,
+    # not only when the initial master-playlist request itself returns 403.
+    vlc_headers = dict(base_headers)
+    vlc_headers["User-Agent"] = "VLC/3.0.21 LibVLC/3.0.21"
+    profiles.append(("VLC User-Agent", vlc_headers))
 
-        reason = f"HTTP {status}; response is not an HLS playlist/media response"
-        return False, reason, final_url, _classify_failure(reason)
-    except urllib.error.HTTPError as exc:
-        if exc.code != 403:
-            reason = f"HTTP {exc.code}"
-            return False, reason, url, _classify_failure(reason)
+    host = (urllib.parse.urlsplit(url).hostname or "").lower()
+    if host.endswith("fptplay.net") or host.endswith("fptplay.vn"):
+        fpt_headers = dict(base_headers)
+        fpt_headers["Referer"] = referer or "https://fptplay.vn/"
+        fpt_headers["Origin"] = origin or "https://fptplay.vn"
+        profiles.append(("FPT Play Referer/Origin", fpt_headers))
 
-        # A 403 can depend on request headers. Retry a small set of diagnostic
-        # profiles before deciding this runner cannot verify the FPT candidate.
-        diagnostics = [_http_error_detail(exc, "candidate URL / default headers")]
-        profiles = []
+    diagnostics = []
+    saw_uncertain = False
+    for profile_name, headers in profiles:
+        try:
+            status, final_url, content_type, body = _request_sample(url, headers)
+            if status < 200 or status >= 400:
+                reason = f"HTTP {status}"
+                state = _classify_failure(reason)
+                diagnostics.append(f"{profile_name}: {reason}")
+                saw_uncertain = saw_uncertain or state == "unknown"
+                continue
 
-        vlc_headers = dict(headers)
-        vlc_headers["User-Agent"] = "VLC/3.0.21 LibVLC/3.0.21"
-        profiles.append(("VLC User-Agent", vlc_headers))
-
-        # Try the official web-player origin only when the source file did not
-        # explicitly configure Referer/Origin. This is diagnostic, not proof
-        # that FPT requires these headers.
-        if not referer and not origin:
-            web_headers = dict(headers)
-            web_headers["Referer"] = "https://fptplay.vn/"
-            web_headers["Origin"] = "https://fptplay.vn"
-            profiles.append(("FPT Play Referer/Origin", web_headers))
-
-        for profile_name, profile_headers in profiles:
-            try:
-                retry_status, retry_url, retry_type, retry_body = _request_sample(
-                    url, profile_headers
-                )
-                if 200 <= retry_status < 400:
-                    sample = retry_body.lstrip(b"\xef\xbb\xbf \t\r\n")
-                    if sample.startswith(b"#EXTM3U"):
-                        valid, detail = _validate_hls(retry_url, retry_body, profile_headers)
-                        reason = f"HTTP {retry_status} with {profile_name}; {detail}"
-                        return valid, reason, retry_url, "working" if valid else _classify_failure(reason)
-                    if retry_type.startswith(("video/", "audio/")) and retry_body:
-                        return True, f"HTTP {retry_status} with {profile_name}; direct media response", retry_url, "working"
-                    diagnostics.append(f"{profile_name}: HTTP {retry_status}, response is not HLS/media")
-                else:
-                    diagnostics.append(f"{profile_name}: HTTP {retry_status}")
-            except urllib.error.HTTPError as retry_exc:
-                detail = _http_error_detail(retry_exc, profile_name)
+            sample = body.lstrip(b"\\xef\\xbb\\xbf \\t\\r\\n")
+            if sample.startswith(b"#EXTM3U"):
+                valid, detail = _validate_hls(final_url, body, headers)
+                reason = f"HTTP {status} with {profile_name}; {detail}"
+                if valid:
+                    return True, reason, final_url, "working"
                 diagnostics.append(f"{profile_name}: {detail}")
-            except Exception as retry_exc:
-                diagnostics.append(f"{profile_name}: {type(retry_exc).__name__}")
+                saw_uncertain = saw_uncertain or _classify_failure(detail) == "unknown"
+                continue
 
-        reason = "403 persists across request profiles; " + "; ".join(diagnostics)
-        return False, _sanitize_diagnostic_text(reason, 500), url, "unknown"
-    except Exception as exc:
-        reason = f"{type(exc).__name__}"
-        return False, reason, url, _classify_failure(reason)
+            if content_type.startswith(("video/", "audio/")) and body:
+                if sample.lower().startswith((b"<!doctype html", b"<html", b"<head", b"<body")):
+                    diagnostics.append(f"{profile_name}: media URL returned HTML")
+                    continue
+                return True, f"HTTP {status} with {profile_name}; direct media response", final_url, "working"
+
+            diagnostics.append(f"{profile_name}: HTTP {status}; response is not HLS/media")
+        except urllib.error.HTTPError as exc:
+            detail = _http_error_detail(exc, profile_name)
+            diagnostics.append(detail)
+            saw_uncertain = saw_uncertain or _classify_failure(detail) == "unknown"
+        except Exception as exc:
+            detail = f"{profile_name}: {type(exc).__name__}"
+            diagnostics.append(detail)
+            saw_uncertain = saw_uncertain or _classify_failure(detail) == "unknown"
+
+    reason = _sanitize_diagnostic_text("; ".join(diagnostics) or "candidate check failed", 500)
+    return False, reason, url, "unknown" if saw_uncertain else "failed"
 
 def parse_playlist(text):
     # Entries begin at EXTINF and continue to the next EXTINF or end of file.
