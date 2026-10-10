@@ -86,6 +86,7 @@ def _validate_hls(url, body, headers, depth=0):
     if any(line.strip().startswith("#EXT-X-STREAM-INF:") for line in lines):
         if depth >= 2:
             return False, "nested master playlist depth limit reached"
+        variant_failures = []
         for i, raw in enumerate(lines):
             if raw.strip().startswith("#EXT-X-STREAM-INF:"):
                 for candidate_line in lines[i + 1:]:
@@ -100,15 +101,26 @@ def _validate_hls(url, body, headers, depth=0):
                             variant_url, headers
                         )
                         if not 200 <= status < 400:
+                            variant_failures.append(f"variant HTTP {status}")
                             continue
                         valid, detail = _validate_hls(
                             final_url, variant_body, headers, depth + 1
                         )
                         if valid:
                             return True, "HLS master + variant + media segment OK"
-                    except Exception:
-                        continue
-                return False, "master playlist found, but no variant passed media validation"
+                        variant_failures.append(detail)
+                    except urllib.error.HTTPError as exc:
+                        variant_failures.append(f"variant HTTP {exc.code}")
+                    except Exception as exc:
+                        variant_failures.append(type(exc).__name__)
+        if variant_failures:
+            # Preserve access-denied and transient errors so the caller can mark
+            # this candidate as uncertain rather than treating it as dead.
+            if any(re.search(r"\bHTTP\s+(401|403|408|425|429|500|501|502|503|504|507|509|520|521|522|523|524)\b", x) for x in variant_failures):
+                return False, "master playlist variant could not be verified: " + "; ".join(variant_failures[:3])
+            if any(any(k in x.lower() for k in ("timeout", "urlerror", "connection", "sslerror")) for x in variant_failures):
+                return False, "master playlist variant check had transient errors: " + "; ".join(variant_failures[:3])
+        return False, "master playlist found, but no variant passed media validation"
 
     # Media playlists should contain at least one segment URI or LL-HLS part.
     media_uri = _first_media_uri(lines)
