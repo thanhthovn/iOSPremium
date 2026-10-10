@@ -313,7 +313,12 @@ def _profiles_for_url(url, base_headers, preferences):
             continue
         headers = dict(base_headers)
         for key, value in overrides.items():
-            if isinstance(key, str) and isinstance(value, (str, int, float)):
+            if not isinstance(key, str):
+                continue
+            if value is None:
+                # null explicitly removes a base header for isolated test profiles.
+                headers.pop(key, None)
+            elif isinstance(value, (str, int, float)):
                 headers[key] = str(value)
         profiles.append((name, headers))
     # A malformed/empty preference list must not disable all checks.
