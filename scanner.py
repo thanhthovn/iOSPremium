@@ -48,6 +48,7 @@ except ImportError:
 # ============================================================
 # CẤU HÌNH
 # ============================================================
+import os
 M3U_URL = os.environ.get(
     "M3U_URL",
     "https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/main/TRUYENHINHCAPVIETNAM.m3u"
