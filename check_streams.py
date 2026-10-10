@@ -146,7 +146,7 @@ def _first_media_uri(lines):
 
 def _validate_hls(url, body, headers, depth=0):
     """Validate a manifest and fetch one real media segment/part when available."""
-    sample = body.lstrip(b"\xef\xbb\xbf \t\r\n")
+    sample = body.lstrip(bytes([239, 187, 191, 32, 9, 13, 10]))
     if not sample.startswith(b"#EXTM3U"):
         return False, "response is not an HLS manifest"
 
@@ -284,7 +284,7 @@ def fetch_candidate(url, user_agent, referer=None, origin=None):
                 saw_uncertain = saw_uncertain or state == "unknown"
                 continue
 
-            sample = body.lstrip(b"\\xef\\xbb\\xbf \\t\\r\\n")
+            sample = body.lstrip(bytes([239, 187, 191, 32, 9, 13, 10]))
             if sample.startswith(b"#EXTM3U"):
                 valid, detail = _validate_hls(final_url, body, headers)
                 reason = f"HTTP {status} with {profile_name}; {detail}"
