@@ -2,54 +2,95 @@ name: Check IPTV streams
 
 on:
   schedule:
-    - cron: "0 * * * *"
+    - cron: "*/30 * * * *"
   workflow_dispatch:
 
 permissions:
   contents: write
 
 concurrency:
-  group: iptv-stream-check
+  group: iptv-check
   cancel-in-progress: false
 
 jobs:
-  check-streams:
+  check:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 30
+
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v4
         with:
           ref: main
+          fetch-depth: 1
 
-      - name: Set up Python
+      - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
 
-      - name: Check candidate links and update playlist
-        run: python check_streams.py
+      - name: Run checker
         env:
           PLAYLIST_FILE: TRUYENHINHCAPVIETNAM.m3u
           SOURCES_FILE: linkworks.txt
-          CHECK_TIMEOUT: "12"
+          CHECK_TIMEOUT: "15"
+          PYTHONIOENCODING: utf-8
+          PYTHONUTF8: "1"
+          LANG: C.UTF-8
+          LC_ALL: C.UTF-8
+        run: python check_streams.py
 
-      - name: Commit changes
+      - name: Show summary
+        if: always()
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add TRUYENHINHCAPVIETNAM.m3u
-          if git diff --cached --quiet; then
-            echo "Playlist unchanged; no commit needed."
+          echo "## Kết quả check IPTV" >> "$GITHUB_STEP_SUMMARY"
+          if [ -f stream_status.json ]; then
+            python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          import json
+          from pathlib import Path
+
+          data = json.loads(Path("stream_status.json").read_text(encoding="utf-8"))
+          channels = data.get("channels", {})
+          print(f"- Số nhóm kênh: **{len(channels)}**")
+          print(f"- Entry playlist đã cập nhật: **{data.get('updated_entries', 0)}**")
+          print(f"- Entry giữ nguyên: **{data.get('unchanged_entries', 0)}**")
+          print(f"- Giữ link cũ do chưa xác minh được: **{data.get('retained_due_to_uncertainty', 0)}**")
+          print()
+          print("| Kênh | Trạng thái | Link đã chọn | Kết quả từng ứng viên |")
+          print("|---|---|---|---|")
+          for tvg_id, channel in channels.items():
+              selected = channel.get("selected") or "—"
+              status = channel.get("status", "unknown")
+              candidates = channel.get("candidates", [])
+              details = "<br>".join(
+                  f"#{c.get('priority', '?')} {c.get('status', '?')}: {c.get('reason', '')}"
+                  for c in candidates
+              ) or "—"
+              details = details.replace("|", "\\|")
+              selected = selected.replace("|", "\\|")
+              print(f"| `{tvg_id}` | {status} | {selected} | {details} |")
+          PY
           else
-            git commit -m "chore: refresh IPTV playlist"
-            git push
+            echo "Không tìm thấy stream_status.json; xem log bước Run checker." >> "$GITHUB_STEP_SUMMARY"
           fi
 
-      - name: Upload stream check report
+      - name: Upload report
         if: always() && hashFiles('stream_status.json') != ''
         uses: actions/upload-artifact@v4
         with:
-          name: iptv-stream-status
+          name: stream-status-${{ github.run_number }}
           path: stream_status.json
           retention-days: 7
+
+      - name: Commit updated playlist
+        if: success()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet -- TRUYENHINHCAPVIETNAM.m3u; then
+            echo "Playlist không thay đổi — bỏ qua commit."
+            exit 0
+          fi
+          git add TRUYENHINHCAPVIETNAM.m3u
+          git commit -m "chore: update streams $(date -u +'%Y-%m-%d %H:%M UTC')"
+          git push
