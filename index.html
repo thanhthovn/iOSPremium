@@ -667,6 +667,53 @@
             background: #536a3c;
         }
 
+
+
+        /* =========================================================
+           IPTV SCANNER - KIỂM TRA LINK TRONG linkworks.txt
+           ========================================================= */
+        .scanner-modal {
+            position: fixed; inset: 0; z-index: 10000; display: flex;
+            align-items: center; justify-content: center; padding: 14px;
+            background: rgba(0,0,0,.82); backdrop-filter: blur(5px);
+        }
+        .scanner-box {
+            width: min(1050px, 100%); max-height: 92vh; display: flex;
+            flex-direction: column; overflow: hidden; border: 2px solid var(--military-border);
+            border-radius: 12px; background: #10170d; box-shadow: 0 18px 55px #000b;
+        }
+        .scanner-head { padding: 15px; background: linear-gradient(135deg,#263b20,#11180e); border-bottom: 1px solid var(--military-border); }
+        .scanner-headline { display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap; }
+        .scanner-headline h2 { font-size:18px; color:#fff; }
+        .scanner-subtitle { margin-top:7px; color:var(--text-muted); font-size:12px; line-height:1.5; }
+        .scanner-toolbar { display:flex; gap:8px; flex-wrap:wrap; margin-top:12px; }
+        .scanner-btn { border:1px solid #536a3c; border-radius:6px; padding:9px 12px; color:#fff; background:#263b20; font-weight:700; cursor:pointer; }
+        .scanner-btn:hover { background:#536a3c; }
+        .scanner-btn.primary { background:#a51f1f; border-color:#d13a3a; }
+        .scanner-btn:disabled { opacity:.55; cursor:wait; }
+        .scanner-player { padding:12px 15px; border-bottom:1px solid #34452a; background:#080b07; }
+        .scanner-player-title { color:#d9e8c5; font-size:13px; font-weight:700; margin-bottom:8px; overflow-wrap:anywhere; }
+        .scanner-player video { display:block; width:min(100%,560px); aspect-ratio:16/9; height:auto; max-height:42vh; margin:0 auto; background:#000; border:1px solid #465838; border-radius:7px; }
+        .scanner-player-note { margin-top:7px; color:var(--text-muted); font-size:11px; text-align:center; }
+        .scanner-summary { padding:10px 15px; border-bottom:1px solid #34452a; color:#e5e7eb; font-size:13px; }
+        .scanner-results { overflow:auto; padding:12px; }
+        .scanner-group { margin-bottom:12px; border:1px solid #34452a; border-radius:8px; overflow:hidden; }
+        .scanner-group-title { padding:10px 12px; background:#1c2916; color:#d9e8c5; font-weight:700; overflow-wrap:anywhere; }
+        .scanner-link { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:10px; align-items:center; padding:10px 12px; border-top:1px solid #283722; }
+        .scanner-url { min-width:0; overflow-wrap:anywhere; color:#d1d5db; font-size:12px; line-height:1.45; }
+        .scanner-destination { margin-top:5px; color:#9ca3af; font-size:11px; line-height:1.4; overflow-wrap:anywhere; }
+        .scanner-destination strong { color:#fbbf24; }
+        .scanner-status { margin-top:4px; font-size:12px; color:#a8b19b; }
+        .scanner-status.ok { color:#86efac; } .scanner-status.bad { color:#fca5a5; } .scanner-status.warn { color:#fcd34d; }
+        .scanner-empty { padding:22px; text-align:center; color:#fcd34d; line-height:1.6; }
+        .scanner-close { font-size:20px; line-height:1; padding:6px 10px; }
+        @media(max-width:600px) {
+            .scanner-box { max-height:95vh; }
+            .scanner-headline h2 { font-size:15px; }
+            .scanner-link { grid-template-columns:minmax(0,1fr); }
+            .scanner-link .scanner-btn { justify-self:start; }
+        }
+
         @media (max-width: 600px) {
             .unmute-banner {
                 top: 8px !important;
@@ -1393,6 +1440,11 @@
         }
 
         function handlePlayError(err) {
+            // AbortError thường xuất hiện khi đổi kênh hoặc chủ động pause() trong lúc
+            // yêu cầu play() cũ chưa hoàn tất. Đây không phải lỗi luồng cần báo cho người dùng.
+            if (err && (err.name === "AbortError" || /play\(\).*interrupted.*pause\(\)/i.test(String(err.message || err)))) {
+                return;
+            }
             console.error("Lỗi phát luồng video:", err);
             playerOverlay.style.color = "#f87171";
             playerOverlay.classList.remove("hidden");
@@ -1459,6 +1511,528 @@
             }, delay);
         }
 
+
+
+        // =========================================================
+        // IPTV LINK SCANNER
+        // Định dạng linkworks.txt: mỗi nhóm bắt đầu bằng #tvg-id,
+        // các URL phía dưới thuộc nhóm đó cho đến #tvg-id kế tiếp.
+        // Thứ tự URL được giữ nguyên (ưu tiên link đầu tiên trước).
+        // =========================================================
+        function parseLinkworks(text) {
+            const groups = [];
+            let current = null;
+            for (const raw of String(text || "").split(/\r?\n/)) {
+                const line = raw.trim();
+                if (!line) continue;
+                if (/^#tvg-id\b/i.test(line)) {
+                    current = { id: line.replace(/^#tvg-id\s*/i, "").replace(/^=\s*/, "").trim() || "Kênh không tên", urls: [] };
+                    groups.push(current);
+                    continue;
+                }
+                if (line.startsWith("#")) continue;
+                if (/^https?:\/\//i.test(line)) {
+                    if (!current) { current = { id: "Chưa phân nhóm", urls: [] }; groups.push(current); }
+                    current.urls.push(line);
+                }
+            }
+            return groups.filter(group => group.urls.length);
+        }
+
+        function openLinkworksScanner() {
+            // Dừng trình phát chính trước khi mở cửa sổ scanner để tránh hai luồng chạy đồng thời.
+            // Không tự phát lại khi đóng scanner; người dùng có thể bấm Phát hoặc chọn kênh lại.
+            ++playRequestId;
+            if (hls) {
+                try { hls.stopLoad(); } catch (_) {}
+                try { hls.destroy(); } catch (_) {}
+                hls = null;
+            }
+            try { video.pause(); } catch (_) {}
+            video.removeAttribute("src");
+            try { video.load(); } catch (_) {}
+            updatePlayButton();
+            playerOverlay.classList.remove("hidden");
+            playerOverlay.style.color = "#a8b19b";
+            playerOverlay.textContent = "Trình phát đã tạm dừng khi mở IPTV SCANNING CHANNEL.";
+
+            const modal = document.createElement("div");
+            modal.className = "scanner-modal";
+            modal.innerHTML = `
+                <section class="scanner-box" role="dialog" aria-modal="true" aria-label="IPTV link scanner">
+                    <header class="scanner-head">
+                        <div class="scanner-headline">
+                            <h2>🔗 IPTV SCANNING CHANNEL</h2>
+                            <button class="scanner-btn scanner-close" id="scannerClose" type="button" title="Đóng">✕</button>
+                        </div>
+                        <div class="scanner-subtitle">Đọc các URL từ <b>linkworks.txt</b>, kiểm tra theo thứ tự đã khai báo. Kết quả phụ thuộc vào CORS, quyền truy cập máy chủ và giới hạn IP của từng luồng.</div>
+                        <div class="scanner-toolbar">
+                            <button class="scanner-btn primary" id="scannerLoad" type="button">↻ TẢI linkworks.txt</button>
+                            <button class="scanner-btn" id="scannerTestAll" type="button" disabled>▶ KIỂM TRA TẤT CẢ</button>
+                            <button class="scanner-btn" id="scannerExportM3U" type="button" disabled>⬇ XUẤT M3U</button>
+                        </div>
+                    </header>
+                    <div class="scanner-player">
+                        <div class="scanner-player-title" id="scannerPlayerTitle">Trình phát thử link — chưa chọn link</div>
+                        <video id="scannerVideo" controls playsinline preload="none"></video>
+                        <div class="scanner-player-note" id="scannerPlayerNote">Nhấn “PHÁT” ở một link bên dưới để thử phát tại đây.</div>
+                    </div>
+                    <div class="scanner-summary" id="scannerSummary">Đang tải linkworks.txt...</div>
+                    <div class="scanner-results" id="scannerResults"><div class="scanner-empty">Đang đọc danh sách link...</div></div>
+                </section>`;
+            document.body.appendChild(modal);
+            const summary = modal.querySelector("#scannerSummary");
+            const results = modal.querySelector("#scannerResults");
+            const miniVideo = modal.querySelector("#scannerVideo");
+            const miniTitle = modal.querySelector("#scannerPlayerTitle");
+            const miniNote = modal.querySelector("#scannerPlayerNote");
+            let miniHls = null;
+            let miniPlayRequest = 0;
+            function stopMiniPlayer() {
+                miniPlayRequest++;
+                if (miniHls) { try { miniHls.destroy(); } catch (_) {} miniHls = null; }
+                try { miniVideo.pause(); } catch (_) {}
+                miniVideo.removeAttribute("src");
+                try { miniVideo.load(); } catch (_) {}
+            }
+            function playMiniLink(url, label) {
+                const request = ++miniPlayRequest;
+                if (miniHls) { try { miniHls.destroy(); } catch (_) {} miniHls = null; }
+                try { miniVideo.pause(); } catch (_) {}
+                miniVideo.removeAttribute("src");
+                miniVideo.load();
+                miniTitle.textContent = "Đang phát thử: " + label;
+                miniNote.textContent = "Đang thử phát thực tế…";
+
+                return new Promise((resolve) => {
+                    let settled = false;
+                    const cleanup = () => {
+                        clearTimeout(timer);
+                        miniVideo.removeEventListener("playing", onPlaying);
+                        miniVideo.removeEventListener("error", onVideoError);
+                    };
+                    const finish = (result) => {
+                        if (settled) return;
+                        settled = true;
+                        cleanup();
+                        resolve(result);
+                    };
+                    const onPlaying = () => {
+                        if (request !== miniPlayRequest) return finish({ playable: false, cancelled: true, message: "Đã chuyển sang link khác trước khi xác nhận phát." });
+                        miniNote.textContent = "✅ ĐANG PHÁT THỰC TẾ — link phát được.";
+                        finish({ playable: true, message: "Phát được" });
+                    };
+                    const onVideoError = () => {
+                        if (request !== miniPlayRequest) return finish({ playable: false, cancelled: true, message: "Đã chuyển sang link khác trước khi xác nhận phát." });
+                        finish({ playable: false, message: "Trình phát báo lỗi media." });
+                    };
+                    const timer = setTimeout(() => {
+                        if (request !== miniPlayRequest) return finish({ playable: false, cancelled: true, message: "Đã chuyển sang link khác trước khi xác nhận phát." });
+                        miniNote.textContent = "⚠ Chưa xác nhận phát được: quá thời gian chờ phát video.";
+                        finish({ playable: false, message: "Hết thời gian chờ, chưa xác nhận phát được." });
+                    }, 10000);
+                    miniVideo.addEventListener("playing", onPlaying, { once: true });
+                    miniVideo.addEventListener("error", onVideoError, { once: true });
+                    miniVideo.onerror = null;
+                    // Muted autoplay thường được trình duyệt cho phép khi dò hàng loạt.
+                    // Người dùng vẫn có thể bật tiếng bằng điều khiển của trình phát.
+                    miniVideo.muted = true;
+                    if (miniVideo.canPlayType("application/vnd.apple.mpegurl")) {
+                        miniVideo.src = url;
+                        miniVideo.play().catch(err => {
+                            if (request !== miniPlayRequest) return finish({ playable: false, cancelled: true, message: "Đã chuyển sang link khác trước khi xác nhận phát." });
+                            miniNote.textContent = err?.name === "NotAllowedError" ? "Trình duyệt chặn tự phát; chưa xác nhận phát được." : "Không phát được: " + (err?.message || "lỗi phát");
+                            finish({ playable: false, message: miniNote.textContent });
+                        });
+                    } else if (window.Hls && Hls.isSupported()) {
+                        miniHls = new Hls(LOW_END_HLS_CONFIG);
+                        miniHls.loadSource(url);
+                        miniHls.attachMedia(miniVideo);
+                        miniHls.on(Hls.Events.MANIFEST_PARSED, () => {
+                            if (request !== miniPlayRequest) return;
+                            miniVideo.play().catch(err => {
+                                if (request !== miniPlayRequest) return finish({ playable: false, cancelled: true, message: "Đã chuyển sang link khác trước khi xác nhận phát." });
+                                miniNote.textContent = err?.name === "NotAllowedError" ? "Trình duyệt chặn tự phát; chưa xác nhận phát được." : "Không phát được: " + (err?.message || "lỗi phát");
+                                finish({ playable: false, message: miniNote.textContent });
+                            });
+                        });
+                        miniHls.on(Hls.Events.ERROR, (_event, data) => {
+                            if (request !== miniPlayRequest || !data.fatal) return;
+                            miniNote.textContent = "Lỗi phát luồng: " + (data.details || data.type || "không xác định");
+                            finish({ playable: false, message: miniNote.textContent });
+                        });
+                    } else {
+                        miniVideo.src = url;
+                        miniVideo.play().catch(err => {
+                            if (request !== miniPlayRequest) return finish({ playable: false, cancelled: true, message: "Đã chuyển sang link khác trước khi xác nhận phát." });
+                            miniNote.textContent = err?.name === "NotAllowedError" ? "Trình duyệt chặn tự phát; chưa xác nhận phát được." : "Không phát được: " + (err?.message || "lỗi phát");
+                            finish({ playable: false, message: miniNote.textContent });
+                        });
+                    }
+                });
+            }
+
+            const loadBtn = modal.querySelector("#scannerLoad");
+            const allBtn = modal.querySelector("#scannerTestAll");
+            const exportBtn = modal.querySelector("#scannerExportM3U");
+            let groups = [];
+            let running = false;
+            const close = () => { stopMiniPlayer(); modal.remove(); };
+            modal.querySelector("#scannerClose").addEventListener("click", close);
+            modal.addEventListener("click", e => { if (e.target === modal) close(); });
+            const escHandler = e => { if (e.key === "Escape" && document.body.contains(modal)) { close(); document.removeEventListener("keydown", escHandler); } };
+            document.addEventListener("keydown", escHandler);
+
+            function setStatus(el, message, type = "") {
+                el.className = "scanner-status" + (type ? " " + type : "");
+                el.textContent = message;
+            }
+
+            async function checkStream(url) {
+                const controller = new AbortController();
+                const timeout = setTimeout(() => controller.abort(), 9000);
+                try {
+                    const response = await fetch(url, { method: "GET", cache: "no-store", signal: controller.signal });
+                    if (!response.ok) return { type: "bad", text: `HTTP ${response.status} — máy chủ từ chối hoặc không tìm thấy link` };
+                    const body = await response.text();
+                    if (!body.trim()) return { type: "warn", text: `HTTP ${response.status}, nhưng nội dung rỗng; chưa xác nhận phát được` };
+                    if (!body.trimStart().startsWith("#EXTM3U")) {
+                        return { type: "warn", text: `HTTP ${response.status} — có phản hồi nhưng không thấy manifest HLS #EXTM3U` };
+                    }
+                    // Nếu là master playlist, kiểm tra thêm một variant đầu tiên.
+                    // Phải resolve variant theo URL cuối sau redirect của master playlist.
+                    const masterBaseUrl = response.url || url;
+                    const lines = body.split(/\r?\n/).map(x => x.trim()).filter(Boolean);
+                    let nextUrl = "";
+                    for (let i = 0; i < lines.length - 1; i++) {
+                        if (lines[i].startsWith("#EXT-X-STREAM-INF")) {
+                            const candidate = lines.slice(i + 1).find(x => x && !x.startsWith("#"));
+                            if (candidate) { nextUrl = new URL(candidate, masterBaseUrl).href; break; }
+                        }
+                    }
+                    if (nextUrl) {
+                        let variantResponse = await fetch(nextUrl, { cache: "no-store", signal: controller.signal });
+                        let checkedVariantUrl = variantResponse.url || nextUrl;
+                        // Nếu variant lỗi (đặc biệt HTTP 404), lấy URL đích sau redirect rồi
+                        // kiểm tra lại chính URL đích trước khi kết luận trạng thái.
+                        if (!variantResponse.ok) {
+                            let destination = checkedVariantUrl;
+                            try {
+                                const destResult = await getDestination(nextUrl);
+                                if (destResult.destination) destination = destResult.destination;
+                            } catch (_) {}
+                            if (destination && destination !== nextUrl) {
+                                checkedVariantUrl = destination;
+                                variantResponse = await fetch(destination, { cache: "no-store", signal: controller.signal });
+                                checkedVariantUrl = variantResponse.url || destination;
+                            }
+                            if (!variantResponse.ok) {
+                                return {
+                                    type: "warn",
+                                    text: `Manifest chính OK; variant trả HTTP ${variantResponse.status} tại link đích. Chưa xác nhận phát được. Link kiểm tra: ${checkedVariantUrl}`
+                                };
+                            }
+                        }
+                        const variantText = await variantResponse.text();
+                        if (!variantText.trimStart().startsWith("#EXTM3U")) return { type: "warn", text: `Manifest chính OK nhưng link variant/đích không phải HLS hợp lệ: ${checkedVariantUrl}` };
+                        const hasSegment = variantText.split(/\r?\n/).some(x => x.trim() && !x.trim().startsWith("#"));
+                        return hasSegment ? { type: "ok", text: `HLS manifest + variant/link đích đọc được; chưa bảo đảm phát video thực tế. Link kiểm tra: ${checkedVariantUrl}` } : { type: "warn", text: `Manifest đọc được nhưng chưa thấy segment media. Link kiểm tra: ${checkedVariantUrl}` };
+                    }
+                    const hasSegment = lines.some(x => x && !x.startsWith("#"));
+                    return hasSegment ? { type: "ok", text: "HLS manifest đọc được; chưa bảo đảm phát video thực tế" } : { type: "warn", text: "Manifest đọc được nhưng chưa thấy segment media" };
+                } catch (err) {
+                    if (err && err.name === "AbortError") return { type: "warn", text: "Quá thời gian chờ — máy chủ chậm hoặc không phản hồi" };
+                    return { type: "warn", text: "Trình duyệt không đọc được phản hồi (có thể do CORS, token, cookie hoặc giới hạn IP); không thể kết luận link hỏng" };
+                } finally { clearTimeout(timeout); }
+            }
+
+            async function testRow(button, statusEl, url) {
+                button.disabled = true; button.textContent = "ĐANG DÒ + PHÁT...";
+                setStatus(statusEl, "Đang tự lấy link đích, kiểm tra và thử phát thực tế...", "");
+                try {
+                    const row = statusEl.closest(".scanner-link");
+                    const destinationEl = row?.querySelector(".scanner-destination");
+                    const resolved = await resolveDestinationForRow(url, destinationEl);
+                    // Ưu tiên URL đích; nếu trình duyệt không lấy được đích thì thử URL gốc.
+                    const testUrl = resolved.destination || url;
+                    const protocolResult = await checkStream(testUrl);
+                    // Sau khi kiểm tra URL, phát ngay bằng trình phát thử và chỉ xác nhận
+                    // "Phát được" khi nhận được sự kiện playing từ video thực tế.
+                    const playback = await playMiniLink(testUrl, row?.querySelector(".scanner-url")?.textContent || "link");
+                    if (playback.playable) {
+                        // Lưu chính URL đã phát thành công (ưu tiên link đích nếu có)
+                        // để chức năng xuất M3U dùng đúng kết quả đã xác minh.
+                        if (row) row.dataset.playableUrl = testUrl;
+                        const result = { type: "ok", text: `✅ PHÁT ĐƯỢC — trình phát đã phát thực tế. URL: ${testUrl}` };
+                        setStatus(statusEl, result.text, result.type);
+                        return result;
+                    }
+                    const result = {
+                        type: protocolResult.type === "bad" ? "bad" : "warn",
+                        text: `⚠ CHƯA XÁC NHẬN PHÁT ĐƯỢC — ${playback.message || "trình phát chưa bắt đầu phát"}. Kiểm tra HTTP/HLS: ${protocolResult.text}. URL đã thử: ${testUrl}`
+                    };
+                    setStatus(statusEl, result.text, result.type);
+                    return result;
+                } finally {
+                    button.disabled = false; button.textContent = "TEST LẠI";
+                }
+            }
+
+            // GET LINK ĐÍCH: theo redirect giống checkNoSignal() trong công cụ M3U8 STREAM SCANNING.
+            // response.url là URL cuối cùng sau khi máy chủ chuyển hướng; nếu CORS chặn fetch,
+            // trình duyệt không thể đọc được đích và không được suy đoán URL đích.
+            async function getDestination(url) {
+                const controller = new AbortController();
+                const timeout = setTimeout(() => controller.abort(), 12000);
+                try {
+                    const response = await fetch(url, {
+                        method: "GET", redirect: "follow", cache: "no-store", signal: controller.signal
+                    });
+                    const destination = response.url || url;
+                    let noSignal = destination.toLowerCase().includes("no-signal");
+                    try {
+                        const body = await response.text();
+                        if (body.toLowerCase().includes("no-signal")) noSignal = true;
+                    } catch (_) {}
+                    return {
+                        destination,
+                        type: noSignal ? "bad" : (response.ok ? "ok" : "warn"),
+                        message: noSignal ? "Đích trả về no-signal — có thể không có tín hiệu" :
+                            `Đã theo redirect · HTTP ${response.status}${destination !== url ? " · URL đích khác URL gốc" : " · Không thấy redirect sang URL khác"}`
+                    };
+                } catch (err) {
+                    return {
+                        destination: "",
+                        type: "warn",
+                        message: err?.name === "AbortError" ? "GET LINK ĐÍCH quá thời gian chờ" :
+                            "Không lấy được link đích: trình duyệt/máy chủ có thể chặn CORS, token hoặc quyền truy cập"
+                    };
+                } finally { clearTimeout(timeout); }
+            }
+
+            async function resolveDestinationForRow(url, destinationEl) {
+                if (destinationEl?.dataset.destination) {
+                    return { destination: destinationEl.dataset.destination, type: "ok", message: "Đã có link đích" };
+                }
+                if (destinationEl) destinationEl.textContent = "LINK ĐÍCH: Đang tự động lấy...";
+                const result = await getDestination(url);
+                if (destinationEl) {
+                    if (result.destination) {
+                        destinationEl.replaceChildren();
+                        const label = document.createElement("strong");
+                        label.textContent = "LINK ĐÍCH: ";
+                        const value = document.createElement("span");
+                        value.textContent = result.destination;
+                        destinationEl.append(label, value);
+                        destinationEl.dataset.destination = result.destination;
+                    } else {
+                        destinationEl.textContent = "LINK ĐÍCH: " + result.message;
+                        destinationEl.dataset.destination = "";
+                    }
+                    updateSummary();
+                }
+                return result;
+            }
+
+            function render() {
+                results.innerHTML = "";
+                if (!groups.length) {
+                    results.innerHTML = '<div class="scanner-empty">Không tìm thấy URL trong linkworks.txt.<br>Kiểm tra file có nằm cùng thư mục với index.html và đúng định dạng #tvg-id / URL.</div>';
+                    allBtn.disabled = true;
+                    exportBtn.disabled = true;
+                    return;
+                }
+                groups.forEach((group, gi) => {
+                    const section = document.createElement("section"); section.className = "scanner-group";
+                    const heading = document.createElement("div"); heading.className = "scanner-group-title";
+                    heading.textContent = `${group.id} · ${group.urls.length} link`;
+                    section.appendChild(heading);
+                    group.urls.forEach((url, ui) => {
+                        const row = document.createElement("div"); row.className = "scanner-link";
+                        const info = document.createElement("div");
+                        const urlEl = document.createElement("div"); urlEl.className = "scanner-url"; urlEl.textContent = `${ui + 1}. ${url}`;
+                        const status = document.createElement("div"); status.className = "scanner-status"; status.textContent = "Chưa kiểm tra";
+                        const destination = document.createElement("div"); destination.className = "scanner-destination";
+                        destination.textContent = "LINK ĐÍCH: Chưa lấy";
+                        destination.dataset.destination = "";
+                        info.append(urlEl, destination, status);
+                        const actions = document.createElement("div");
+                        actions.style.cssText = "display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end;align-content:start";
+                        const playBtn = document.createElement("button"); playBtn.type = "button"; playBtn.className = "scanner-btn primary"; playBtn.textContent = "▶ PHÁT";
+                        playBtn.addEventListener("click", () => { playMiniLink(destination.dataset.destination || url, `${group.id} · link ${ui + 1}`); });
+                        const btn = document.createElement("button"); btn.type = "button"; btn.className = "scanner-btn"; btn.textContent = "TEST LINK";
+                        btn.addEventListener("click", async () => {
+                            if (running) return;
+                            try { await testRow(btn, status, url); } catch (err) {
+                                setStatus(status, "Lỗi khi kiểm tra: " + String(err?.message || err), "warn");
+                            }
+                            updateSummary();
+                        });
+                        // Link đích sẽ tự lấy khi TEST LINK / KIỂM TRA TẤT CẢ; bỏ các nút thủ công và copy.
+                        row._scanner = { url, status, destination, testBtn: btn };
+                        actions.append(playBtn, btn);
+                        row.append(info, actions); section.appendChild(row);
+                    });
+                    results.appendChild(section);
+                });
+                allBtn.disabled = false;
+                exportBtn.disabled = false;
+                updateSummary();
+            }
+
+            function updateSummary() {
+                const total = groups.reduce((n, g) => n + g.urls.length, 0);
+                const statuses = [...results.querySelectorAll(".scanner-status")];
+                const checked = statuses.filter(el => el.textContent !== "Chưa kiểm tra" && el.textContent !== "Đang kiểm tra link...").length;
+                const ok = statuses.filter(el => el.classList.contains("ok")).length;
+                const bad = statuses.filter(el => el.classList.contains("bad")).length;
+                const destinations = [...results.querySelectorAll(".scanner-destination")].filter(el => !!el.dataset.destination).length;
+                summary.textContent = `${groups.length} nhóm · ${total} link · Đã test ${checked}/${total} · HLS đọc được: ${ok} · HTTP lỗi/no-signal: ${bad} · Lấy được link đích: ${destinations}`;
+            }
+
+            function normalizeTvgId(value) {
+                return String(value || "").trim().replace(/^['"]|['"]$/g, "").toLocaleLowerCase();
+            }
+
+            function getPlayableLinksByTvgId() {
+                const winners = new Map();
+                const sections = [...results.querySelectorAll(".scanner-group")];
+                sections.forEach((section, index) => {
+                    const group = groups[index];
+                    if (!group) return;
+                    const key = normalizeTvgId(group.id);
+                    if (!key || key === "chưa phân nhóm" || winners.has(key)) return;
+                    // Duyệt từ trên xuống: URL đầu tiên đã phát thực tế là link ưu tiên.
+                    const rows = [...section.querySelectorAll(".scanner-link")];
+                    for (const row of rows) {
+                        const status = row.querySelector(".scanner-status");
+                        const playableUrl = row.dataset.playableUrl;
+                        if (status?.classList.contains("ok") && playableUrl) {
+                            winners.set(key, playableUrl);
+                            break;
+                        }
+                    }
+                });
+                return winners;
+            }
+
+            async function exportM3U() {
+                exportBtn.disabled = true;
+                const originalLabel = exportBtn.textContent;
+                exportBtn.textContent = "ĐANG TẠO M3U...";
+                try {
+                    if (!currentPlaylistUrl) throw new Error("Chưa có link playlist M3U nguồn.");
+                    const response = await fetch(currentPlaylistUrl, { cache: "no-store" });
+                    if (!response.ok) throw new Error(`Không tải được playlist nguồn: HTTP ${response.status}`);
+                    const originalText = await response.text();
+                    if (!originalText.trimStart().startsWith("#EXTM3U")) {
+                        throw new Error("Nội dung nguồn không phải playlist M3U hợp lệ.");
+                    }
+
+                    const winners = getPlayableLinksByTvgId();
+                    let activeTvgId = "";
+                    let pendingExtinf = false;
+                    let replacements = 0;
+                    const lines = originalText.split(/\r?\n/);
+                    const output = lines.map(line => {
+                        const trimmed = line.trim();
+                        if (/^#EXTINF/i.test(trimmed)) {
+                            activeTvgId = normalizeTvgId(getAttribute(trimmed, "tvg-id"));
+                            pendingExtinf = true;
+                            return line;
+                        }
+                        if (!trimmed || trimmed.startsWith("#")) return line;
+                        if (pendingExtinf) {
+                            pendingExtinf = false;
+                            const winner = winners.get(activeTvgId);
+                            if (winner) {
+                                replacements++;
+                                return line.replace(trimmed, winner);
+                            }
+                        }
+                        return line;
+                    }).join("\n");
+
+                    const blob = new Blob([output], { type: "audio/x-mpegurl;charset=utf-8" });
+                    const objectUrl = URL.createObjectURL(blob);
+                    const a = document.createElement("a");
+                    a.href = objectUrl;
+                    a.download = "TRUYENHINHCAPVIETNAM_checked.m3u";
+                    document.body.appendChild(a);
+                    a.click();
+                    a.remove();
+                    setTimeout(() => URL.revokeObjectURL(objectUrl), 1500);
+                    summary.textContent = `Đã xuất M3U · thay ${replacements} kênh bằng link đã phát được · giữ nguyên link gốc cho kênh chưa xác nhận.`;
+                } catch (err) {
+                    summary.textContent = "Không xuất được M3U: " + String(err?.message || err) + " (có thể playlist nguồn chặn CORS).";
+                } finally {
+                    exportBtn.disabled = false;
+                    exportBtn.textContent = originalLabel;
+                }
+            }
+
+            exportBtn.addEventListener("click", exportM3U);
+
+            async function loadFile() {
+                loadBtn.disabled = true; allBtn.disabled = true; exportBtn.disabled = true;
+                summary.textContent = "Đang tải linkworks.txt...";
+                results.innerHTML = '<div class="scanner-empty">Đang tải file...</div>';
+                try {
+                    const response = await fetch(new URL("linkworks.txt", document.baseURI).href, { cache: "no-store" });
+                    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+                    groups = parseLinkworks(await response.text());
+                    render();
+                } catch (err) {
+                    groups = [];
+                    exportBtn.disabled = true;
+                    results.innerHTML = `<div class="scanner-empty">Không đọc được linkworks.txt (${String(err.message || err)}).<br>Hãy đặt linkworks.txt cùng thư mục với trang HTML và chạy trang qua HTTP/HTTPS (GitHub Pages cũng được). Không nên mở bằng file:// vì trình duyệt thường chặn fetch file cục bộ.</div>`;
+                    summary.textContent = "Không tải được danh sách link.";
+                } finally { loadBtn.disabled = false; }
+            }
+
+            allBtn.addEventListener("click", () => {
+                if (running) return;
+                running = true;
+                allBtn.disabled = true;
+                loadBtn.disabled = true;
+                let cursor = 0;
+
+                // Xử lý từng hàng bằng một tác vụ riêng, không dùng vòng lặp dài
+                // trong click handler (một số môi trường Preview giới hạn mỗi lượt ~400 ms).
+                const processNext = async () => {
+                    if (!document.body.contains(modal)) {
+                        running = false;
+                        return;
+                    }
+                    const rows = results.querySelectorAll(".scanner-link");
+                    if (cursor >= rows.length) {
+                        running = false;
+                        allBtn.disabled = false;
+                                loadBtn.disabled = false;
+                        updateSummary();
+                        return;
+                    }
+
+                    const row = rows[cursor++];
+                    const item = row._scanner;
+                    if (item && item.status && item.status.textContent === "Chưa kiểm tra") {
+                        try {
+                            await testRow(item.testBtn, item.status, item.url);
+                        } catch (err) {
+                            setStatus(item.status, "Lỗi khi kiểm tra: " + String(err?.message || err), "warn");
+                        }
+                        updateSummary();
+                    }
+                    // Lên lịch hàng kế tiếp sau khi trả quyền điều khiển về trình duyệt.
+                    setTimeout(processNext, 25);
+                };
+
+                setTimeout(processNext, 0);
+            });
+
+            loadBtn.addEventListener("click", loadFile);
+            loadFile();
+        }
 
         function setupEventListeners() {
 
@@ -1647,10 +2221,8 @@
                 window.open(CALENDAR_URL, "_blank", "noopener,noreferrer");
             });
 
-            // Nút CINEMAX: mở trang xem phim ở tab mới
-            cinemaxBtn.addEventListener("click", () => {
-                window.open(CINEMAX_URL, "_blank", "noopener,noreferrer");
-            });
+            // Nút IPTV SCANNING CHANNEL: mở cửa sổ kiểm tra linkworks.txt
+            cinemaxBtn.addEventListener("click", openLinkworksScanner);
 
             // Nút TẢI APP: mở đúng trang download ở tab mới
             downloadAppBtn.addEventListener("click", () => {
