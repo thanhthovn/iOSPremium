@@ -38,10 +38,18 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add TRUYENHINHCAPVIETNAM.m3u stream_status.json
+          git add TRUYENHINHCAPVIETNAM.m3u
           if git diff --cached --quiet; then
-            echo "No playlist or report changes to commit."
+            echo "Playlist unchanged; no commit needed."
           else
-            git commit -m "chore: check IPTV streams and refresh playlist"
+            git commit -m "chore: refresh IPTV playlist"
             git push
           fi
+
+      - name: Upload stream check report
+        if: always() && hashFiles('stream_status.json') != ''
+        uses: actions/upload-artifact@v4
+        with:
+          name: iptv-stream-status
+          path: stream_status.json
+          retention-days: 7
