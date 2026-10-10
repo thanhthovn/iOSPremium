@@ -435,9 +435,12 @@ def main():
                     uncertain_candidate = url
                 continue
             if ok:
-                selected = url
-                selected_status = "working"
-                break
+                # Keep the first verified working candidate by priority, but
+                # continue checking the remaining candidates for diagnostics.
+                if selected is None:
+                    selected = url
+                    selected_status = "working"
+                continue
 
         if uncertain_candidate and not selected:
             checks[tvg_id] = None
