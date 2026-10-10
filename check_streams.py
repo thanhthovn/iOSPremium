@@ -44,28 +44,121 @@ def safe_url(url):
     except Exception:
         return "[redacted URL]"
 
+def _request_sample(url, headers, limit=256 * 1024, byte_range=None):
+    request_headers = dict(headers)
+    if byte_range:
+        request_headers["Range"] = byte_range
+    req = urllib.request.Request(url, headers=request_headers)
+    with urllib.request.urlopen(req, timeout=TIMEOUT) as response:
+        status = response.getcode()
+        final_url = response.geturl()
+        content_type = response.headers.get("Content-Type", "").lower()
+        body = response.read(limit)
+    return status, final_url, content_type, body
+
+
+def _first_media_uri(lines):
+    """Return the first media segment URI, including common LL-HLS parts."""
+    for raw in lines:
+        line = raw.strip()
+        if not line:
+            continue
+        if line.startswith("#EXT-X-PART:"):
+            match = re.search(r'\bURI="([^"]+)"', line)
+            if match:
+                return match.group(1)
+        if line.startswith("#"):
+            continue
+        return line
+    return None
+
+
+def _validate_hls(url, body, headers, depth=0):
+    """Validate a manifest and fetch one real media segment/part when available."""
+    sample = body.lstrip(b"\xef\xbb\xbf \t\r\n")
+    if not sample.startswith(b"#EXTM3U"):
+        return False, "response is not an HLS manifest"
+
+    text = sample.decode("utf-8", errors="replace")
+    lines = text.splitlines()
+
+    # For master playlists, follow the first listed variant and validate its media.
+    if any(line.strip().startswith("#EXT-X-STREAM-INF:") for line in lines):
+        if depth >= 2:
+            return False, "nested master playlist depth limit reached"
+        for i, raw in enumerate(lines):
+            if raw.strip().startswith("#EXT-X-STREAM-INF:"):
+                for candidate_line in lines[i + 1:]:
+                    candidate_line = candidate_line.strip()
+                    if not candidate_line:
+                        continue
+                    if candidate_line.startswith("#"):
+                        continue
+                    variant_url = urllib.parse.urljoin(url, candidate_line)
+                    try:
+                        status, final_url, content_type, variant_body = _request_sample(
+                            variant_url, headers
+                        )
+                        if not 200 <= status < 400:
+                            continue
+                        valid, detail = _validate_hls(
+                            final_url, variant_body, headers, depth + 1
+                        )
+                        if valid:
+                            return True, "HLS master + variant + media segment OK"
+                    except Exception:
+                        continue
+                return False, "master playlist found, but no variant passed media validation"
+
+    # Media playlists should contain at least one segment URI or LL-HLS part.
+    media_uri = _first_media_uri(lines)
+    if not media_uri:
+        return False, "HLS manifest has no media segment/part URI"
+
+    segment_url = urllib.parse.urljoin(url, media_uri)
+    try:
+        status, final_url, content_type, segment = _request_sample(
+            segment_url, headers, limit=4096, byte_range="bytes=0-4095"
+        )
+        if not 200 <= status < 400:
+            return False, f"media segment HTTP {status}"
+        if not segment:
+            return False, "media segment returned an empty body"
+        segment_sample = segment.lstrip(b"\xef\xbb\xbf \t\r\n").lower()
+        if segment_sample.startswith((b"<!doctype html", b"<html", b"<head", b"<body")):
+            return False, "media segment URL returned HTML instead of media bytes"
+        if segment_sample.startswith(b"#extm3u"):
+            return False, "media segment URL returned another playlist, not media bytes"
+        return True, "HLS manifest + media segment OK"
+    except urllib.error.HTTPError as exc:
+        return False, f"media segment HTTP {exc.code}"
+    except Exception as exc:
+        return False, f"media segment check failed ({type(exc).__name__})"
+
+
 def fetch_candidate(url, user_agent):
     headers = {
         "User-Agent": user_agent or UA_DEFAULT,
         "Accept": "application/vnd.apple.mpegurl, application/x-mpegURL, */*",
         "Connection": "close",
     }
-    req = urllib.request.Request(url, headers=headers)
     try:
-        with urllib.request.urlopen(req, timeout=TIMEOUT) as response:
-            status = response.getcode()
-            final_url = response.geturl()
-            content_type = response.headers.get("Content-Type", "").lower()
-            body = response.read(256 * 1024)
+        status, final_url, content_type, body = _request_sample(url, headers)
         if status < 200 or status >= 400:
             return False, f"HTTP {status}", final_url
+
         sample = body.lstrip(b"\xef\xbb\xbf \t\r\n")
-        # HLS must return a real playlist, not merely an HTTP 200 error page.
         if sample.startswith(b"#EXTM3U"):
-            return True, f"HTTP {status}; HLS playlist", final_url
-        # A few providers return a media response rather than a manifest URL.
+            valid, detail = _validate_hls(final_url, body, headers)
+            return valid, f"HTTP {status}; {detail}", final_url
+
+        # Non-HLS direct media URLs can still be valid candidates.
         if content_type.startswith(("video/", "audio/")) and body:
-            return True, f"HTTP {status}; media content-type {content_type}", final_url
+            sample_lower = sample.lower()
+            if sample_lower.startswith((b"<!doctype html", b"<html", b"<head", b"<body")):
+                return False, f"HTTP {status}; media URL returned HTML", final_url
+            return True, f"HTTP {status}; direct media response", final_url
+
         return False, f"HTTP {status}; response is not an HLS playlist/media response", final_url
     except urllib.error.HTTPError as exc:
         return False, f"HTTP {exc.code}", url
@@ -138,7 +231,7 @@ def main():
                 selected = url  # Keep the source URL, not a temporary redirect URL.
                 break
         report["channels"][tvg_id] = {
-            "selected": selected,
+            "selected": safe_url(selected) if selected else None,
             "reason": "first working candidate in source order" if selected else "all candidates failed; existing URL retained",
             "candidates": candidates_report,
         }
