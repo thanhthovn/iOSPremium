@@ -306,7 +306,7 @@ def fetch_candidate(url, user_agent, referer=None, origin=None):
                     url, profile_headers
                 )
                 if 200 <= retry_status < 400:
-                    sample = retry_body.lstrip(b"\\xef\\xbb\\xbf \\t\\r\\n")
+                    sample = retry_body.lstrip(b"\xef\xbb\xbf \t\r\n")
                     if sample.startswith(b"#EXTM3U"):
                         valid, detail = _validate_hls(retry_url, retry_body, profile_headers)
                         reason = f"HTTP {retry_status} with {profile_name}; {detail}"
