@@ -36,6 +36,7 @@ jobs:
           python -m playwright install --with-deps chromium
 
       - name: Scan channels, check links, and export M3U
+        working-directory: automation/iptv_scan
         run: python main.py
 
       - name: Publish M3U file to repository root
