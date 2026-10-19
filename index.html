@@ -1060,6 +1060,81 @@
         }
 
         // =========================================================
+        // NO-SIGNAL DETECTION
+        // Sau khi miniVideo bắn "playing", kiểm tra URL đích + HTTP status
+        // + Content-Type + 4KB đầu body để phát hiện stream giả no-signal.
+        // =========================================================
+        const NO_SIGNAL_PATTERNS = [
+            /no[-_\s]?signal/i,
+            /signal[-_\s]?lost/i,
+            /channel[-_\s]?(offline|dead|unavailable)/i,
+            /stream[-_\s]?(not[-_\s]?found|offline|unavailable)/i,
+            /not[-_\s]?available/i,
+        ];
+
+        function looksLikeNoSignal(text) {
+            if (!text) return false;
+            return NO_SIGNAL_PATTERNS.some(re => re.test(text));
+        }
+
+        async function readHead(response, maxBytes = 4096) {
+            if (!response.body) return await response.text();
+            const reader = response.body.getReader();
+            const decoder = new TextDecoder();
+            let received = 0;
+            let out = "";
+            try {
+                while (received < maxBytes) {
+                    const { value, done } = await reader.read();
+                    if (done) break;
+                    received += value.byteLength;
+                    out += decoder.decode(value, { stream: true });
+                }
+            } catch (_) {}
+            finally { try { reader.cancel(); } catch (_) {} }
+            return out;
+        }
+
+        async function checkNoSignal(url, { timeoutMs = 8000 } = {}) {
+            const controller = new AbortController();
+            const timer = setTimeout(() => controller.abort(), timeoutMs);
+            try {
+                const response = await fetch(url, {
+                    redirect: "follow",
+                    cache: "no-store",
+                    signal: controller.signal,
+                });
+                const finalUrl = response.url || url;
+
+                if (looksLikeNoSignal(finalUrl)) {
+                    return { status: "no-signal", destination: finalUrl, reason: "final-url" };
+                }
+                if (!response.ok) {
+                    return { status: "no-signal", destination: finalUrl, reason: "http-" + response.status };
+                }
+
+                const ct = (response.headers.get("content-type") || "").toLowerCase();
+                const head = await readHead(response, 4096);
+
+                if (looksLikeNoSignal(head)) {
+                    return { status: "no-signal", destination: finalUrl, reason: "body" };
+                }
+                if (ct.includes("text/html")) {
+                    return { status: "unknown", destination: finalUrl, reason: "html" };
+                }
+                if (head.trimStart().startsWith("#EXTM3U")) {
+                    return { status: "ok", destination: finalUrl, reason: "extm3u" };
+                }
+                return { status: "unknown", destination: finalUrl, reason: "no-marker" };
+            } catch (err) {
+                if (err?.name === "AbortError") return { status: "unknown", destination: "", reason: "timeout" };
+                return { status: "unknown", destination: "", reason: "network" };
+            } finally {
+                clearTimeout(timer);
+            }
+        }
+
+        // =========================================================
         // PARSE LINKWORKS.TXT
         // Mỗi dòng bắt đầu bằng # là TÊN KÊNH (chính là tvg-id)
         // =========================================================
@@ -1145,7 +1220,10 @@
             let miniPlayRequest = 0;
 
             // KHO LƯU LINK PHÁT ĐƯỢC — key: tên kênh (tvg-id normalized) → URL gốc từ linkworks
-            const playableByGroup = new Map();
+            // verifiedByGroup: đã xác minh tín hiệu thật (không no-signal)
+            // unverifiedByGroup: phát được nhưng không xác minh được (timeout/CORS/html)
+            const verifiedByGroup = new Map();
+            const unverifiedByGroup = new Map();
 
             function stopMiniPlayer() {
                 miniPlayRequest++;
@@ -1179,12 +1257,40 @@
                         cleanup();
                         resolve(result);
                     };
-                    const onPlaying = () => {
+                    const onPlaying = async () => {
                         if (request !== miniPlayRequest) {
                             return finish({ playable: false, cancelled: true, message: "Đã chuyển sang link khác." });
                         }
-                        miniNote.textContent = "✅ ĐANG PHÁT THỰC TẾ — link phát được.";
-                        finish({ playable: true, message: "Phát được" });
+
+                        // 🔍 Kiểm tra no-signal trước khi kết luận "phát được"
+                        miniNote.textContent = "🔍 Đang kiểm tra tín hiệu thật...";
+                        const check = await checkNoSignal(url);
+
+                        if (request !== miniPlayRequest) {
+                            return finish({ playable: false, cancelled: true, message: "Đã chuyển sang link khác." });
+                        }
+
+                        if (check.status === "no-signal") {
+                            miniNote.textContent = `🔴 KHÔNG TÍN HIỆU (${check.reason}) — ${check.destination || url}`;
+                            finish({
+                                playable: false,
+                                message: "no-signal (" + check.reason + ")",
+                                destination: check.destination,
+                                noSignal: true
+                            });
+                            return;
+                        }
+
+                        miniNote.textContent = check.status === "ok"
+                            ? "✅ ĐANG PHÁT THỰC TẾ — link phát được."
+                            : "🟡 PHÁT NHƯNG KHÔNG XÁC MINH ĐƯỢC — " + check.reason;
+
+                        finish({
+                            playable: true,
+                            verified: check.status === "ok",
+                            message: "Phát được",
+                            destination: check.destination,
+                        });
                     };
                     const onVideoError = () => {
                         if (request !== miniPlayRequest) return finish({ playable: false, cancelled: true, message: "Đã chuyển sang link khác." });
@@ -1198,8 +1304,8 @@
                         finish({ playable: false, message: "Hết thời gian chờ, chưa xác nhận phát được." });
                     }, 15000);
 
-                    miniVideo.addEventListener("playing", onPlaying, { once: true });
-                    miniVideo.addEventListener("error", onVideoError, { once: true });
+                    miniVideo.addEventListener("playing", onPlaying);
+                    miniVideo.addEventListener("error", onVideoError);
                     miniVideo.muted = true;
 
                     if (miniVideo.canPlayType("application/vnd.apple.mpegurl")) {
@@ -1313,30 +1419,49 @@
                 return result;
             }
 
+            function commitPlayable(groupKey, url, verified) {
+                if (verified) {
+                    verifiedByGroup.set(groupKey, url);
+                    unverifiedByGroup.delete(groupKey);
+                } else if (!verifiedByGroup.has(groupKey)) {
+                    unverifiedByGroup.set(groupKey, url);
+                }
+            }
+
+            function clearPlayable(groupKey) {
+                verifiedByGroup.delete(groupKey);
+                unverifiedByGroup.delete(groupKey);
+            }
+
             // TEST BẰNG LINK GỐC (url từ linkworks.txt) — không dùng link đích
-            // Không dùng checkStream nữa để tránh ăn băng thông làm nhiễu miniVideo
             async function testRow(button, statusEl, url, groupKey) {
                 button.disabled = true;
                 button.textContent = "ĐANG DÒ + PHÁT...";
-                setStatus(statusEl, "Đang tự lấy link đích, kiểm tra và thử phát thực tế...", "");
+                setStatus(statusEl, "Đang thử phát và kiểm tra tín hiệu thật...", "");
 
                 try {
-                    playableByGroup.delete(groupKey);
+                    clearPlayable(groupKey);
 
                     const row = statusEl.closest(".scanner-link");
                     const destinationEl = row?.querySelector(".scanner-destination");
 
-                    // Vẫn dò link đích để hiển thị tham khảo
                     await resolveDestinationForRow(url, destinationEl);
 
-                    // TEST BẰNG LINK GỐC — chỉ dùng playMiniLink
                     const playback = await playMiniLink(url, row?.querySelector(".scanner-url")?.textContent || "link");
 
                     if (playback.playable) {
-                        playableByGroup.set(groupKey, url);
-                        console.log(`💾 Lưu link phát được cho kênh "${groupKey}": ${url}`);
-                        setStatus(statusEl, `✅ PHÁT ĐƯỢC`, "ok");
-                        return { type: "ok" };
+                        commitPlayable(groupKey, url, !!playback.verified);
+                        if (playback.verified) {
+                            setStatus(statusEl, `✅ PHÁT ĐƯỢC (đã xác minh tín hiệu)`, "ok");
+                            return { type: "ok" };
+                        }
+                        setStatus(statusEl, `🟡 PHÁT NHƯNG CHƯA XÁC MINH TÍN HIỆU (${playback.destination || "không rõ đích"})`, "warn");
+                        return { type: "warn" };
+                    }
+
+                    if (playback.noSignal) {
+                        setStatus(statusEl, `🔴 KHÔNG TÍN HIỆU — ${playback.message}`, "bad");
+                        return { type: "bad" };
                     }
 
                     setStatus(statusEl, `⚠ KHÔNG PHÁT ĐƯỢC — ${playback.message || "trình phát chưa bắt đầu phát"}`, "warn");
@@ -1349,7 +1474,8 @@
 
             function render() {
                 results.innerHTML = "";
-                playableByGroup.clear();
+                verifiedByGroup.clear();
+                unverifiedByGroup.clear();
 
                 if (!groups.length) {
                     results.innerHTML = '<div class="scanner-empty">Không tìm thấy URL trong linkworks.txt.<br>Kiểm tra file có nằm cùng thư mục với index.html và đúng định dạng #tên-kênh / URL.</div>';
@@ -1399,13 +1525,18 @@
                         playBtnEl.textContent = "▶ PHÁT";
                         playBtnEl.addEventListener("click", async () => {
                             playBtnEl.disabled = true;
-                            setStatus(status, "Đang phát thử...", "");
+                            setStatus(status, "Đang phát thử và kiểm tra tín hiệu...", "");
                             try {
-                                // Dùng LINK GỐC từ linkworks.txt
                                 const playback = await playMiniLink(url, `#${group.id} · link ${ui + 1}`);
                                 if (playback.playable) {
-                                    playableByGroup.set(groupKey, url);
-                                    setStatus(status, `✅ PHÁT ĐƯỢC`, "ok");
+                                    commitPlayable(groupKey, url, !!playback.verified);
+                                    if (playback.verified) {
+                                        setStatus(status, `✅ PHÁT ĐƯỢC (đã xác minh tín hiệu)`, "ok");
+                                    } else {
+                                        setStatus(status, `🟡 PHÁT NHƯNG CHƯA XÁC MINH TÍN HIỆU`, "warn");
+                                    }
+                                } else if (playback.noSignal) {
+                                    setStatus(status, `🔴 KHÔNG TÍN HIỆU — ${playback.message}`, "bad");
                                 } else {
                                     setStatus(status, `⚠ KHÔNG PHÁT ĐƯỢC — ${playback.message || "chưa phát"}`, "warn");
                                 }
@@ -1450,23 +1581,26 @@
                 const checked = statuses.filter(el => el.textContent !== "Chưa kiểm tra").length;
                 const ok = statuses.filter(el => el.classList.contains("ok")).length;
                 const bad = statuses.filter(el => el.classList.contains("bad")).length;
-                summary.textContent = `${groups.length} kênh · ${total} link · Đã test ${checked}/${total} · PHÁT ĐƯỢC: ${playableByGroup.size} kênh · Lỗi: ${bad}`;
+                const warn = statuses.filter(el => el.classList.contains("warn")).length;
+                summary.textContent = `${groups.length} kênh · ${total} link · Đã test ${checked}/${total} · ✅ ${ok} · 🟡 ${warn} · 🔴 ${bad} · Kênh phát được: ${verifiedByGroup.size + unverifiedByGroup.size} (xác minh: ${verifiedByGroup.size})`;
             }
 
-            // XUẤT M3U — ghi đè bằng LINK GỐC từ linkworks.txt
+            // XUẤT M3U — ưu tiên link đã xác minh, fallback link chưa xác minh
             async function exportM3U() {
                 exportBtn.disabled = true;
                 const originalLabel = exportBtn.textContent;
                 exportBtn.textContent = "ĐANG TẠO M3U...";
 
                 try {
-                    console.log("=== XUẤT M3U ===");
-                    console.log("Kênh có link phát được:", [...playableByGroup.entries()]);
-
-                    if (playableByGroup.size === 0) {
-                        summary.textContent = "⚠ Chưa có link nào PHÁT ĐƯỢC (video bắn sự kiện playing). Hãy TEST LINK trước.";
+                    if (verifiedByGroup.size === 0 && unverifiedByGroup.size === 0) {
+                        summary.textContent = "⚠ Chưa có link nào PHÁT ĐƯỢC. Hãy TEST LINK trước.";
                         return;
                     }
+
+                    // Map tổng hợp: verified ưu tiên
+                    const playableByGroup = new Map();
+                    for (const [k, v] of unverifiedByGroup) playableByGroup.set(k, v);
+                    for (const [k, v] of verifiedByGroup) playableByGroup.set(k, v);
 
                     if (!currentPlaylistUrl) throw new Error("Chưa có link playlist M3U nguồn.");
                     const response = await fetch(currentPlaylistUrl, { cache: "no-store" });
@@ -1479,6 +1613,7 @@
                     const lineEnding = originalText.includes("\r\n") ? "\r\n" : "\n";
                     const lines = originalText.split(/\r?\n/);
                     let replacements = 0;
+                    let verifiedReplacements = 0;
 
                     function findNextUrlIndex(startIdx) {
                         for (let i = startIdx + 1; i < lines.length; i++) {
@@ -1541,14 +1676,12 @@
                                 const trailing = urlLine.match(/\s*$/)[0];
                                 lines[urlIdx] = leading + winner + trailing;
                                 replacements++;
-                                console.log(`✅ Match [${matchedBy}] id="${keyId}" name="${keyName}" display="${keyDisplay}"`);
+                                if (verifiedByGroup.has(keyId) || verifiedByGroup.has(keyName) || verifiedByGroup.has(keyDisplay)) {
+                                    verifiedReplacements++;
+                                }
                             }
-                        } else {
-                            console.log(`➖ Không match: id="${keyId}" name="${keyName}" display="${keyDisplay}"`);
                         }
                     }
-
-                    console.log(`=== TỔNG GHI ĐÈ: ${replacements} kênh ===`);
 
                     if (replacements === 0) {
                         summary.textContent = `⚠ Có ${playableByGroup.size} link phát được nhưng không match kênh nào. Xem Console (F12) để rõ lý do.`;
@@ -1566,7 +1699,7 @@
                     a.remove();
                     setTimeout(() => URL.revokeObjectURL(objectUrl), 1500);
 
-                    summary.textContent = `✅ Đã xuất M3U · ghi đè ${replacements} kênh bằng link gốc PHÁT ĐƯỢC.`;
+                    summary.textContent = `✅ Đã xuất M3U · ghi đè ${replacements} kênh (xác minh: ${verifiedReplacements}).`;
                 } catch (err) {
                     console.error("LỖI XUẤT M3U:", err);
                     summary.textContent = "Không xuất được M3U: " + String(err?.message || err);
@@ -1617,7 +1750,6 @@
                     }
 
                     if (stopRequested) {
-                        console.log("⏹ Người dùng yêu cầu dừng kiểm tra.");
                         summary.textContent = "⏹ Đã dừng kiểm tra. Bạn có thể bấm ⬇ XUẤT M3U với kết quả hiện có.";
                         running = false;
                         allBtn.disabled = false;
@@ -1641,7 +1773,8 @@
                     const item = row._scanner;
                     if (item && item.status && item.status.textContent === "Chưa kiểm tra") {
                         try {
-                            if (!playableByGroup.has(item.groupKey)) {
+                            const alreadyHas = verifiedByGroup.has(item.groupKey) || unverifiedByGroup.has(item.groupKey);
+                            if (!alreadyHas) {
                                 await testRow(item.testBtn, item.status, item.url, item.groupKey);
                             } else {
                                 setStatus(item.status, "⏭ Bỏ qua — kênh này đã có link phát được ở trên.", "");
@@ -1651,7 +1784,6 @@
                         }
                         updateSummary();
                     }
-                    // Delay 800ms để miniVideo kịp bắn playing hoặc timeout trước khi test link tiếp
                     setTimeout(processNext, 800);
                 };
 
