@@ -8,7 +8,7 @@ on:
       - 'automation/iptv_scan/**'
   schedule:
     # Daily at 03:00 Vietnam time (20:00 UTC on the previous day)
-    - cron: "0 20 * * *"
+    - cron: "0 05 * * *"
 
 permissions:
   contents: write
