@@ -140,9 +140,9 @@ https://freem3u.xyz/api/live/play.m3u8?vid=74
 #EXTINF:-1 tvg-id="thanhhoa" group-title="📡BÁO và PTTH Địa phương" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/thanhhoa.png", TTV HD | Báo và PTTH Thanh Hóa
 https://freem3u.xyz/api/live/play.m3u8?vid=89
 
-#EXTINF:-1 tvg-id="quangninh1" group-title="📡BÁO và PTTH Địa phương" tvg-logo="https://media.baoquangninh.vn/upload/files/logo/logotrangchu1.png", QTV1 HD | Báo và PTTH Quảng Ninh
+#EXTINF:-1 tvg-id="quangninh1" group-title="📡BÁO và PTTH Địa phương" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/quangninh1.png", QTV1 HD | Báo và PTTH Quảng Ninh
 https://freem3u.xyz/api/live/play.m3u8?vid=82
-#EXTINF:-1 tvg-id="quangninh3" group-title="📡BÁO và PTTH Địa phương" tvg-logo="https://media.baoquangninh.vn/upload/files/logo/logotrangchu2.png", QTV3 HD | Báo và PTTH Quảng Ninh
+#EXTINF:-1 tvg-id="quangninh3" group-title="📡BÁO và PTTH Địa phương" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/quangninh3.png", QTV3 HD | Báo và PTTH Quảng Ninh
 https://live.baoquangninh.vn/qtvlive/tv3live.m3u8
 
 #EXTINF:-1 tvg-id="langson" group-title="📡BÁO và PTTH Địa phương" tvg-logo="https://raw.githubusercontent.com/thanhthovn/iOSPremium/refs/heads/logo/langson.png", LSTV HD | Báo và PTTH Lạng Sơn
