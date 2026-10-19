@@ -1,0 +1,70 @@
+name: Daily IPTV Scan
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Daily at 03:00 Vietnam time (20:00 UTC on the previous day)
+    - cron: "0 20 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-iptv-scan
+  cancel-in-progress: false
+
+jobs:
+  scan-and-export:
+    runs-on: ubuntu-latest
+    timeout-minutes: 250
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Playwright and Chromium
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install playwright
+          python -m playwright install --with-deps chromium
+
+      - name: Scan channels, check links, and export M3U
+        run: python main.py
+
+      - name: Publish M3U file to repository root
+        if: success()
+        shell: bash
+        run: |
+          set -euo pipefail
+          shopt -s nullglob
+          files=(automation/iptv_scan/output/*.m3u automation/iptv_scan/output/*.M3U)
+          if [ ${#files[@]} -eq 0 ]; then
+            echo "No M3U was exported; leaving the repository M3U unchanged."
+            exit 0
+          fi
+          cp "${files[0]}" TRUYENHINHCAPVIETNAM_checked.m3u
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add TRUYENHINHCAPVIETNAM_checked.m3u
+          if git diff --cached --quiet; then
+            echo "The published M3U has not changed; no commit needed."
+          else
+            git commit -m "Update checked IPTV M3U playlist"
+            git push
+          fi
+
+      - name: Upload scan results and M3U
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: IPTV-M3U-Results
+          path: automation/iptv_scan/output/
+          if-no-files-found: warn
+          retention-days: 14
