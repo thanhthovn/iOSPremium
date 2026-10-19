@@ -54,10 +54,10 @@ jobs:
             echo "No M3U was exported; leaving the repository M3U unchanged."
             exit 0
           fi
-          cp "${files[0]}" TRUYENHINHCAPVIETNAM_checked.m3u
+          cp "${files[0]}" TRUYENHINHCAPVIETNAM.m3u
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add TRUYENHINHCAPVIETNAM_checked.m3u
+          git add TRUYENHINHCAPVIETNAM.m3u
           if git diff --cached --quiet; then
             echo "The published M3U has not changed; no commit needed."
           else
