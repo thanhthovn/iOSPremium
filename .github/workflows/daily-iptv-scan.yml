@@ -26,9 +26,7 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          ref: main
-
+      
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
@@ -39,6 +37,9 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install playwright
           python -m playwright install --with-deps chromium
+
+      - name: Run IPTV scanner unit tests
+        run: python -m unittest discover -s automation/iptv_scan -p 'test_*.py' -v
 
       - name: Scan channels, check links, and export M3U
         working-directory: automation/iptv_scan
