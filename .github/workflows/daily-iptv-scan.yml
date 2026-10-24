@@ -26,9 +26,7 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          ref: main
-
+      
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
@@ -40,6 +38,9 @@ jobs:
           python -m pip install playwright
           python -m playwright install --with-deps chromium
 
+      - name: Run IPTV scanner unit tests
+        run: python -m unittest discover -s automation/iptv_scan -p 'test_*.py' -v
+
       - name: Scan channels, check links, and export M3U
         working-directory: automation/iptv_scan
         run: python main.py
@@ -49,13 +50,26 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          shopt -s nullglob
-          files=(automation/iptv_scan/output/*.m3u automation/iptv_scan/output/*.M3U)
-          if [ ${#files[@]} -eq 0 ]; then
-            echo "No M3U was exported; leaving the repository M3U unchanged."
-            exit 0
+          source="automation/iptv_scan/output/TRUYENHINHCAPVIETNAM_checked.m3u"
+          if [ ! -f "$source" ]; then
+            echo "::error::Scanner did not produce the expected validated M3U: $source"
+            exit 1
           fi
-          cp "${files[0]}" TRUYENHINHCAPVIETNAM.m3u
+          python - "$source" <<'PY'
+          from pathlib import Path
+          import sys
+
+          path = Path(sys.argv[1])
+          content = path.read_text(encoding="utf-8-sig").strip()
+          if not content.startswith("#EXTM3U"):
+              raise SystemExit(f"Invalid M3U header in {path}")
+          urls = [line.strip() for line in content.splitlines()
+                  if line.strip() and not line.lstrip().startswith("#")]
+          if not urls:
+              raise SystemExit(f"No stream URLs in {path}")
+          print(f"Validated {len(urls)} stream URLs in {path}")
+          PY
+          cp "$source" TRUYENHINHCAPVIETNAM.m3u
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add TRUYENHINHCAPVIETNAM.m3u
