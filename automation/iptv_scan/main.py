@@ -174,7 +174,7 @@ def main():
 
         except Exception as exc:
             (OUTPUT_DIR / "browser-errors.txt").write_text(
-                "\\n".join([*errors, f"Fatal scan error: {type(exc).__name__}: {exc}"]) + "\\n",
+                "\n".join([*errors, f"Fatal scan error: {type(exc).__name__}: {exc}"]) + "\n",
                 encoding="utf-8",
             )
             try:
