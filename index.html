@@ -1440,7 +1440,8 @@
                 setStatus(statusEl, "Đang thử phát và kiểm tra tín hiệu thật...", "");
 
                 try {
-                    clearPlayable(groupKey);
+                    // Preserve known results while testing backups. Verified links
+                    // take precedence over unverified links in commitPlayable().
 
                     const row = statusEl.closest(".scanner-link");
                     const destinationEl = row?.querySelector(".scanner-destination");
@@ -1773,12 +1774,9 @@
                     const item = row._scanner;
                     if (item && item.status && item.status.textContent === "Chưa kiểm tra") {
                         try {
-                            const alreadyHas = verifiedByGroup.has(item.groupKey) || unverifiedByGroup.has(item.groupKey);
-                            if (!alreadyHas) {
-                                await testRow(item.testBtn, item.status, item.url, item.groupKey);
-                            } else {
-                                setStatus(item.status, "⏭ Bỏ qua — kênh này đã có link phát được ở trên.", "");
-                            }
+                            // Test all source URLs, including backup links. The maps
+                            // retain a verified URL over an unverified fallback.
+                            await testRow(item.testBtn, item.status, item.url, item.groupKey);
                         } catch (err) {
                             setStatus(item.status, "Lỗi khi kiểm tra: " + String(err?.message || err), "warn");
                         }
