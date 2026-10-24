@@ -96,7 +96,7 @@ def main():
 
                 # Do not rely only on observing the disabled state: a fast scan may
                 # finish between polling intervals. The summary is the completion signal.
-                progress = re.search(r"Đã test\\s*(\\d+)\\s*/\\s*(\\d+)", status, re.IGNORECASE)
+                progress = re.search(r"Đã test\s*(\d+)\s*/\s*(\d+)", status, re.IGNORECASE)
                 if progress and int(progress.group(1)) == int(progress.group(2)):
                     break
                 if saw_running:
@@ -125,12 +125,19 @@ def main():
                 encoding="utf-8",
             )
 
+            # The UI reports "Kênh phát được: N (xác minh: M)".
+            # Keep compatibility with the older "PHÁT ĐƯỢC: N kênh" wording.
             match = re.search(
-                r"PHÁT ĐƯỢC:\s*(\d+)\s*kênh",
+                r"Kênh phát được:\s*(\d+)|PHÁT ĐƯỢC:\s*(\d+)\s*kênh",
                 final_summary,
                 re.IGNORECASE,
             )
-            playable_channels = int(match.group(1)) if match else 0
+            if not match:
+                raise RuntimeError(
+                    "Could not parse playable-channel count from scanner summary: "
+                    f"{final_summary!r}. Refusing to report success without exporting."
+                )
+            playable_channels = int(next(group for group in match.groups() if group is not None))
             print(f"Checking complete. Playable channels: {playable_channels}")
 
             if playable_channels > 0:
@@ -147,7 +154,7 @@ def main():
                 if not exported_text.lstrip().startswith("#EXTM3U"):
                     destination.unlink(missing_ok=True)
                     raise RuntimeError("Exported file is not a valid M3U playlist (#EXTM3U missing).")
-                if not re.search(r"(?m)^\\s*https?://\\S+", exported_text):
+                if not re.search(r"(?m)^\s*https?://\S+", exported_text):
                     destination.unlink(missing_ok=True)
                     raise RuntimeError("Exported M3U contains no HTTP(S) stream URLs.")
                 print(f"M3U saved and validated to {destination}")
