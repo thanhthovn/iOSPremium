@@ -44,18 +44,29 @@ jobs:
         working-directory: automation/iptv_scan
         run: python main.py
 
-      - name: Publish M3U file to repository root
+      - name: Publish validated M3U file to repository root
         if: success()
         shell: bash
         run: |
           set -euo pipefail
-          shopt -s nullglob
-          files=(automation/iptv_scan/output/*.m3u automation/iptv_scan/output/*.M3U)
-          if [ ${#files[@]} -eq 0 ]; then
-            echo "No M3U was exported; leaving the repository M3U unchanged."
-            exit 0
+          source_file="automation/iptv_scan/output/TRUYENHINHCAPVIETNAM_checked.m3u"
+
+          if [[ ! -s "$source_file" ]]; then
+            echo "::error::Expected scan output is missing or empty: $source_file"
+            exit 1
           fi
-          cp "${files[0]}" TRUYENHINHCAPVIETNAM.m3u
+
+          if ! head -c 4096 "$source_file" | grep -q '^#EXTM3U'; then
+            echo "::error::Exported file does not start with #EXTM3U"
+            exit 1
+          fi
+
+          if ! grep -Eq '^[[:space:]]*https?://[^[:space:]]+' "$source_file"; then
+            echo "::error::Exported M3U contains no HTTP(S) stream URLs"
+            exit 1
+          fi
+
+          cp "$source_file" TRUYENHINHCAPVIETNAM.m3u
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add TRUYENHINHCAPVIETNAM.m3u

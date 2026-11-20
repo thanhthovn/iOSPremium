@@ -30,8 +30,10 @@ def main():
         page.on("pageerror", lambda exc: errors.append(f"Page error: {exc}"))
         page.on(
             "console",
-            lambda msg: print(f"[browser:{msg.type}] {msg.text}")
-            if msg.type == "error" else None,
+            lambda msg: (
+                errors.append(f"Console error: {msg.text}")
+                if msg.type == "error" else None
+            ),
         )
 
         try:
@@ -90,8 +92,15 @@ def main():
 
                 if check_all_button.is_disabled():
                     saw_running = True
-                elif saw_running:
-                    # The site re-enables this button after the full scan completes.
+                    continue
+
+                # Do not rely only on observing the disabled state: a fast scan may
+                # finish between polling intervals. The summary is the completion signal.
+                progress = re.search(r"Đã test\s*(\d+)\s*/\s*(\d+)", status, re.IGNORECASE)
+                if progress and int(progress.group(1)) == int(progress.group(2)):
+                    break
+                if saw_running:
+                    # The site re-enabled this button after the scan completed.
                     break
             else:
                 raise TimeoutError(
@@ -116,12 +125,19 @@ def main():
                 encoding="utf-8",
             )
 
+            # The UI reports "Kênh phát được: N (xác minh: M)".
+            # Keep compatibility with the older "PHÁT ĐƯỢC: N kênh" wording.
             match = re.search(
-                r"PHÁT ĐƯỢC:\s*(\d+)\s*kênh",
+                r"Kênh phát được:\s*(\d+)|PHÁT ĐƯỢC:\s*(\d+)\s*kênh",
                 final_summary,
                 re.IGNORECASE,
             )
-            playable_channels = int(match.group(1)) if match else 0
+            if not match:
+                raise RuntimeError(
+                    "Could not parse playable-channel count from scanner summary: "
+                    f"{final_summary!r}. Refusing to report success without exporting."
+                )
+            playable_channels = int(next(group for group in match.groups() if group is not None))
             print(f"Checking complete. Playable channels: {playable_channels}")
 
             if playable_channels > 0:
@@ -130,12 +146,18 @@ def main():
                     export_button.click()
 
                 download = download_info.value
-                filename = Path(download.suggested_filename).name
-                if not filename.lower().endswith(".m3u"):
-                    filename = "TRUYENHINHCAPVIETNAM_checked.m3u"
-                destination = OUTPUT_DIR / filename
+                # Use one deterministic filename so the workflow cannot publish
+                # an unrelated/stale M3U when multiple files exist in output/.
+                destination = OUTPUT_DIR / "TRUYENHINHCAPVIETNAM_checked.m3u"
                 download.save_as(str(destination))
-                print(f"M3U saved to {destination}")
+                exported_text = destination.read_text(encoding="utf-8-sig")
+                if not exported_text.lstrip().startswith("#EXTM3U"):
+                    destination.unlink(missing_ok=True)
+                    raise RuntimeError("Exported file is not a valid M3U playlist (#EXTM3U missing).")
+                if not re.search(r"(?m)^\s*https?://\S+", exported_text):
+                    destination.unlink(missing_ok=True)
+                    raise RuntimeError("Exported M3U contains no HTTP(S) stream URLs.")
+                print(f"M3U saved and validated to {destination}")
 
                 (OUTPUT_DIR / "ket_qua.txt").write_text(
                     modal_text
@@ -150,7 +172,11 @@ def main():
                 encoding="utf-8",
             )
 
-        except Exception:
+        except Exception as exc:
+            (OUTPUT_DIR / "browser-errors.txt").write_text(
+                "\n".join([*errors, f"Fatal scan error: {type(exc).__name__}: {exc}"]) + "\n",
+                encoding="utf-8",
+            )
             try:
                 page.screenshot(path=str(OUTPUT_DIR / "error.png"), full_page=True)
                 (OUTPUT_DIR / "error-page.txt").write_text(
