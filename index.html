@@ -565,6 +565,7 @@
                         <button id="cinemaxBtn" class="cinemax-btn" type="button" title="DÒ KÊNH TRONG LIST M3U">🔗</button>
                         <button id="downloadAppBtn" class="cinemax-btn download-app-btn" type="button" title="TẢI ỨNG DỤNG">🧩</button>
                         <button id="xosoBtn" class="cinemax-btn xoso-btn" type="button" title="XEM KẾT QUẢ XỔ SỐ">🎰</button>
+                        <button id="footballBtn" class="cinemax-btn football-btn" type="button" title="LÀM MỚI LIST & PHÁT KÊNH CUỐI">⚽</button>
                         <button id="channelCount" class="channel-count" type="button" title="Đọc M3U hoặc xem trực tiếp M3U8">0 KÊNH</button>
                     </div>
                 </div>
@@ -626,6 +627,7 @@
         const cinemaxBtn = document.getElementById("cinemaxBtn");
         const downloadAppBtn = document.getElementById("downloadAppBtn");
         const xosoBtn = document.getElementById("xosoBtn");
+        const footballBtn = document.getElementById("footballBtn");
 
         let progressSeekable = false;
         let measuredStreamKbps = 0;
@@ -921,9 +923,13 @@
             });
         }
 
-        async function loadPlaylist(sourceUrl = M3U_URL, signal = null) {
+        async function loadPlaylist(sourceUrl = M3U_URL, signal = null, options = {}) {
+            const { playLast = false, bustCache = false } = options;
             try {
-                const response = await fetch(sourceUrl, { cache: "no-store", signal });
+                const fetchUrl = bustCache && !sourceUrl.includes("?")
+                    ? `${sourceUrl}?_=${Date.now()}`
+                    : sourceUrl;
+                const response = await fetch(fetchUrl, { cache: "no-store", signal });
                 if (!response.ok) throw new Error("HTTP " + response.status);
                 const text = await response.text();
                 const parsedChannels = parseM3U(text);
@@ -931,12 +937,17 @@
 
                 channels = parsedChannels;
                 currentPlaylistUrl = sourceUrl;
+                if (playLast) selectedChannelGroup = "__ALL__";
                 updateChannelGroupFilter();
                 renderChannels();
 
-                let defaultIndex = channels.findIndex(ch => ch.name.toUpperCase().includes("ANTV"));
-                if (defaultIndex === -1) defaultIndex = 0;
-                playChannelByIndex(defaultIndex, false, true);
+                if (playLast) {
+                    playChannelByIndex(channels.length - 1, true, false);
+                } else {
+                    let defaultIndex = channels.findIndex(ch => ch.name.toUpperCase().includes("VTV6"));
+                    if (defaultIndex === -1) defaultIndex = 0;
+                    playChannelByIndex(defaultIndex, false, true);
+                }
             } catch (error) {
                 if (error?.name === "AbortError") return;
                 console.error("PLAYLIST ERROR:", error);
@@ -2008,6 +2019,17 @@
             cinemaxBtn.addEventListener("click", openM3uChannelChecker);
             downloadAppBtn.addEventListener("click", () => window.open(DOWNLOAD_APP_URL, "_blank", "noopener,noreferrer"));
             xosoBtn.addEventListener("click", () => window.open(XOSO_URL, "_blank", "noopener,noreferrer"));
+            footballBtn.addEventListener("click", async () => {
+                if (footballBtn.disabled) return;
+                footballBtn.disabled = true;
+                footballBtn.textContent = "⏳";
+                try {
+                    await loadPlaylist(currentPlaylistUrl || M3U_URL, null, { playLast: true, bustCache: true });
+                } catch (_) {} finally {
+                    footballBtn.disabled = false;
+                    footballBtn.textContent = "⚽";
+                }
+            });
 
             channelCount.addEventListener("click", async () => {
                 const modal = document.createElement("div");
